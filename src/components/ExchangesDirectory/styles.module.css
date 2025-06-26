@@ -1,0 +1,362 @@
+.exchangesContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1rem;
+}
+
+.exchangeCard {
+  --ramp-card-background: #fff;
+  --ramp-card-border-color: #e0e0e0;
+  --ramp-card-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  --ramp-card-hover-shadow: 0 4px 12px rgba(0,0,0,0.1);
+
+  border: 1px solid var(--ramp-card-border-color);
+  border-radius: 8px;
+  background-color: var(--ramp-card-background);
+  box-shadow: var(--ramp-card-shadow);
+  transition: box-shadow 0.3s ease;
+  margin-bottom: 20px;
+  padding: 0;
+}
+
+:global([data-theme='dark']) .exchangeCard {
+  --ramp-card-background: var(--ifm-background-surface-color);
+  --ramp-card-border-color: var(--ifm-color-emphasis-300);
+  --ramp-card-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  --ramp-card-hover-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.exchangeCard:hover {
+  box-shadow: var(--ramp-card-hover-shadow);
+}
+
+.exchangeHeader {
+  padding: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.exchangeIdentity {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.exchangeLogo {
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.exchangeName {
+  font-weight: 600;
+  font-size: 1.5em;
+}
+
+.websiteLink {
+  text-decoration: none;
+  font-weight: 500;
+  color: var(--ifm-color-primary);
+}
+
+.websiteLink:hover {
+  text-decoration: underline;
+}
+
+.exchangeDetails {
+  --ramp-details-background: #f9f9f9;
+  --ramp-details-border-color: #e0e0e0;
+
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  border-top: 1px solid var(--ramp-details-border-color);
+  background-color: var(--ramp-details-background);
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+:global([data-theme='dark']) .exchangeDetails {
+  --ramp-details-background: var(--ifm-background-color);
+  --ramp-details-border-color: var(--ifm-color-emphasis-300);
+}
+
+@media (max-width: 996px) {
+  .exchangeDetails {
+    grid-template-columns: 1fr;
+  }
+}
+
+.detailItem {
+  font-size: 0.9em;
+}
+
+.detailItem strong {
+  --detail-item-strong-color: #333;
+
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--detail-item-strong-color);
+  font-size: 1.1em;
+}
+
+:global([data-theme='dark']) .detailItem strong {
+  --detail-item-strong-color: var(--ifm-font-color-base);
+}
+
+.detailItem p {
+  --detail-item-p-color: #666;
+
+  margin: 0;
+  color: var(--detail-item-p-color);
+  line-height: 1.6;
+}
+
+:global([data-theme='dark']) .detailItem p {
+  --detail-item-p-color: var(--ifm-font-color-secondary);
+}
+
+.geographiesList {
+  line-height: 2;
+}
+
+.geoTagContainer {
+  position: relative;
+  display: inline-block;
+  margin: 2px;
+}
+
+.geoTag {
+  --geo-tag-background: #f0f0f0;
+  --geo-tag-border-color: #e0e0e0;
+
+  background-color: var(--geo-tag-background);
+  padding: 4px 8px;
+  border-radius: 6px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border: 1px solid var(--geo-tag-border-color);
+  font-size: 0.95em;
+}
+
+:global([data-theme='dark']) .geoTag {
+  --geo-tag-background: var(--ifm-color-emphasis-200);
+  --geo-tag-border-color: var(--ifm-color-emphasis-400);
+}
+
+.flagIcon {
+  --flag-icon-border-color: #ccc;
+
+  width: 18px;
+  height: 14px;
+  object-fit: cover;
+  border: 1px solid var(--flag-icon-border-color);
+}
+
+:global([data-theme='dark']) .flagIcon {
+  --flag-icon-border-color: var(--ifm-color-emphasis-300);
+}
+
+.popover {
+  --popover-background: #ffffff;
+  --popover-border-color: #e0e0e0;
+  --popover-shadow: 0 8px 24px rgba(0,0,0,0.12);
+
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--popover-background);
+  border: 1px solid var(--popover-border-color);
+  border-radius: 12px;
+  padding: 0;
+  width: 320px;
+  z-index: 10;
+  box-shadow: var(--popover-shadow);
+  text-align: left;
+  line-height: 1.6;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease, top 0.2s ease;
+}
+
+:global([data-theme='dark']) .popover {
+  --popover-background: var(--ifm-background-surface-color);
+  --popover-border-color: var(--ifm-color-emphasis-300);
+  --popover-shadow: 0 8px 24px rgba(0,0,0,0.3);
+}
+
+.geoTagContainer:hover .popover {
+  opacity: 1;
+  visibility: visible;
+  top: calc(100% + 5px);
+}
+
+.popover::before {
+  content: '';
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 7px;
+  border-style: solid;
+  border-color: transparent transparent var(--popover-background) transparent;
+}
+
+.popoverHeader {
+  --popover-header-border-color: #f0f0f0;
+
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 1rem;
+  border-bottom: 1px solid var(--popover-header-border-color);
+}
+
+:global([data-theme='dark']) .popoverHeader {
+  --popover-header-border-color: var(--ifm-color-emphasis-200);
+}
+
+.popoverHeader h4 {
+  --popover-header-h4-color: #333;
+
+  margin: 0;
+  font-size: 1.1em;
+  font-weight: 600;
+  color: var(--popover-header-h4-color);
+}
+
+:global([data-theme='dark']) .popoverHeader h4 {
+  --popover-header-h4-color: var(--ifm-font-color-base);
+}
+
+.popoverContent {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.popoverSection {
+  font-size: 0.95em;
+}
+
+.popoverSection strong {
+  --popover-section-strong-color: #555;
+
+  display: block;
+  margin-bottom: 0.4rem;
+  color: var(--popover-section-strong-color);
+  font-weight: 600;
+}
+
+:global([data-theme='dark']) .popoverSection strong {
+  --popover-section-strong-color: var(--ifm-font-color-base);
+}
+
+.popoverSection p {
+  --popover-section-p-color: #666;
+
+  margin: 0;
+  color: var(--popover-section-p-color);
+}
+
+:global([data-theme='dark']) .popoverSection p {
+  --popover-section-p-color: var(--ifm-font-color-secondary);
+}
+
+.popoverSection ul {
+  --popover-section-ul-color: #666;
+
+  margin: 0;
+  padding-left: 1.2rem;
+  color: var(--popover-section-ul-color);
+}
+
+:global([data-theme='dark']) .popoverSection ul {
+  --popover-section-ul-color: var(--ifm-font-color-secondary);
+}
+
+.showMoreButton {
+  background: none;
+  border: none;
+  color: var(--ifm-color-primary);
+  cursor: pointer;
+  padding: 0;
+  margin-left: 5px;
+  font-size: 0.9em;
+  display: inline-block;
+}
+
+.showMoreButton:hover {
+  text-decoration: underline;
+}
+
+.filter {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.5rem;
+    gap: 0.5rem;
+    max-width: 500px;
+}
+
+.filter label {
+    font-weight: 600;
+    font-size: 1.1em;
+}
+
+.filterContainer {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+
+.exchangesList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.exchangeItem {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  transition: box-shadow 0.3s ease;
+  background-color: #fff;
+}
+
+:global([data-theme='dark']) .exchangeItem {
+  background-color: var(--ifm-background-surface-color);
+  border-color: var(--ifm-color-emphasis-300);
+}
+
+.exchangeItem:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.summary {
+  padding: 1rem;
+  cursor: pointer;
+  display: grid;
+  grid-template-columns: 50px 1fr 1fr 1fr;
+  align-items: center;
+  gap: 1rem;
+}
+
+.details {
+  padding: 1rem;
+  border-top: 1px solid #e0e0e0;
+  background-color: #f9f9f9;
+}
+
+:global([data-theme='dark']) .details {
+  background-color: var(--ifm-background-color);
+  border-top-color: var(--ifm-color-emphasis-300);
+}

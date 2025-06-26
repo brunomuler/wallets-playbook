@@ -1,0 +1,140 @@
+---
+sidebar_label: 'Sponsor Classic Wallets'
+sidebar_position: 2
+---
+
+
+# Sponsor Classic Wallets
+
+This section assumes the reader has a basic understanding of [Lumens](https://developers.stellar.org/docs/learn/fundamentals/lumens) (XLM), the native token of the Stellar Network. Sponsorship is mainly focused only applications offering non-custodial wallets. 
+
+
+
+## Classic Wallets
+
+Before looking into sponsorship, it's important to first understand reserves and fees on the Stellar Network for Classic Wallets and why they exist. 
+
+
+[Skip ahead if you're already familiar with this section.](#how-sponsorship-works)
+
+
+### Base Reserves
+
+The base reserve is an amount of Lumens (currently set to 0.5 XLM), used as a multiplier to calculate the minimum balance. The minimum balance is the amount of XLM necessary to create a wallet or to change a wallet options that require saving data to the network. Think about it as a way to pay for storing data on the network and to avoid spam.
+
+Even if an application's features only use assets other than XLM, having a minimum balance of XLM is still required to operate it. [Learn more](https://developers.stellar.org/docs/learn/fundamentals/stellar-data-structures/accounts#base-reserves-and-subentries). 
+
+:::note
+The most common base reserves used by accounts are:
+
+* Account creation: 2 base reserves (1 XLM) - [learn more about account creation](https://developers.stellar.org/docs/build/guides/basics/create-account)
+* Adding trustlines to accept assets  (1x base reserve = 0.5 XLM per asset trustline)
+
+[Check a full list of account subentries](https://developers.stellar.org/docs/learn/fundamentals/stellar-data-structures/accounts#subentries).
+:::
+
+
+Base reserves are temporarily locked on the account. If the data is removed or if the account is deleted (merged into another account), the minimum balance will be unlocked and available for use. More about recovering the reserves is covered later on.
+
+#### Example: Funding base reserves **without sponsorship**
+
+Given an account "A" with a balance of 5 XLM willing to fund a Stellar address "B" (not funded).
+
+To fund it, account "A" sends 1XLM to address B (the used operation is Create Account, not Payment).
+
+After completing the transaction, account B is now funded with 1 XLM. Given the requirement of two base reserves, this account has 0 XLM available to use, so it can't add any additional reserves or submit transactions (pay for fees) in its current state.
+
+Without sponsorship, the lumens were actually transferred from account A to account B, so account B has control over them.
+
+![Base Reserve Example 1](/img/docs/sponsor-diagram1a.png)
+![Base Reserve Example 2](/img/docs/sponsor-diagram1b.png)
+
+
+> **Note**: This section covers reserves for Classic wallets. Smart wallets work in a different way. To learn more about Smart wallets, see TBD
+
+### Fees
+
+When a Stellar account submits a transaction to the network, it will need to pay a fee to be processed. This is also called "gas" in some networks. This fee in the Stellar Network, although small, helps avoid spam on the network and can be used to prioritize transactions, especially if there's a network [surge](https://developers.stellar.org/docs/learn/fundamentals/fees-resource-limits-metering#surge-and-dynamic-pricing). The minimum fee on the Network is set to 100 stroops (stoop is the minimum fraction of lumens: 0.0000001 XLM) or 0.00001 XLM.
+
+Applications built on Stellar can define the maximum fee amount they are willing to pay on each transaction to ensure that the submitted transactions will be processed by the network ([learn more about fee strategies](https://developers.stellar.org/docs/learn/fundamentals/fees-resource-limits-metering#inclusion-fee-pricing-strategies)). The set value is used as a limit, the effective fee paid will depend on the network state at the time of submission. If there's no surge, the fee paid will still be the minimum even though the maximum fee amount was higher.
+
+By default, the fee cost in XLM is deducted from the account submitting the transaction; not having enough Lumens in that account will result in a submission failure. Fee sponsoring ([Fee-Bump Transactions](https://developers.stellar.org/docs/encyclopedia/fee-bump-transactions)) can change this, allowing an wallet developer to pay for fees on behalf of the user, so they don't need to keep an XLM balance in their accounts.
+
+As an example, without using fee sponsoring, sending 1 XLM from an account A to account B deducts 1.00001 XLM from account A since it pays for the minimum fee of 0.00001 XLM + 1XLM sent.
+
+
+
+## How sponsorship works {#how-sponsorship-works}
+
+:::note
+This guide covers both base reserve and fee sponsorship (fee bump). These are independent features - you can implement either one or both, depending on your application's needs.
+:::
+
+### Sponsoring base reserves
+
+When sponsoring base reserves, the application will elect to lock Lumens on behalf of the users, so they don't need to worry about it. To do this, the application will format a transaction that includes an operation that defines that all the following operations in that same transaction that require reserves will be sponsored by its own account. Then, after defining all the necessary operations, it needs to define another operation that closes the sponsorship. This allows the application to say which operations it wants to sponsor explicitly, and the need to stop sponsoring in the same transaction guarantees that no additional sponsor reserves can be created without the sponsor's consent. If the user decides to change their own account in ways that require additional reserves, these won't be locked on the sponsor's account.
+
+This transaction that starts with the intent of sponsoring, includes operations and ends with closing sponsorship is called a sandwich transaction, and it may look like this:
+
+![Sandwich Transaction](/img/docs/sponsor-diagram2a.png)
+
+After building the sponsoring transaction, it will need the signature of both the sponsor's and the account being sponsored (or any account with enough signing power to do so) before being submitted to the network. This is a requirement so that both parties approve what's being submitted.
+
+![Transaction Signing](/img/docs/sponsor-diagram2b.png)
+
+An account that sponsors two external accounts may look like this:
+
+![Sponsorship Example](/img/docs/sponsor-diagram3a.png)
+
+Note that the users' accounts don't need to hold any Lumens and that all the reserves were added to the sponsor account. Lumens never left the sponsor account. The sponsor account in the example has 5 locked lumens from:
+
+* Its own account creation (2x base reserve = 1 XLM)
+* Creating 2 additional accounts (4x base reserve = 2 XLM)
+* Sponsoring 2 trustlines for two accounts (4x base reserve = 2 XLM)
+
+Learn more about transactions and operations. (TBD)
+
+[Check the sponsored reserves documentation](https://developers.stellar.org/docs/encyclopedia/sponsored-reserves)
+
+### Cancelling or removing sponsorship
+
+To remove sponsorship, the account being sponsored must perform operations that release reserves (e.g., removing trustlines or merging accounts). The sponsor can explicitly revoke sponsorship in a transaction approved by both parties.
+
+### Sponsoring base reserves FAQ
+
+**Once sponsoring begins, must future operations be reserved by the sponsor?**  
+No, sponsorship only covers explicitly defined operations within the sandwich transaction.
+
+**Who holds the sponsorship funds?**  
+Lumens remain locked within the sponsor's account and are never transferred to sponsored accounts.
+
+**Can sponsorship be removed from active accounts?**  
+Yes, but only after sponsored accounts clear sponsored reserves or through mutual consent to end sponsorship.
+
+### Sponsoring transaction fees (gas)
+
+Transaction fees sponsorship uses "fee bump transactions," allowing sponsors to pay transaction fees on behalf of user accounts. Fee bumps wrap user transactions in a higher-fee transaction paid by the sponsor.
+{/* TBD change this sdescription  */}
+
+[Check the fee bump transactions documentation](https://developers.stellar.org/docs/encyclopedia/fee-bump-transactions).
+
+
+## Calculating sponsorship costs
+
+There are costs related to sponsoring the user's base reserves or transaction fees. The cost is calculated in Lumens, so the price in any currency, such as USD, will vary. This section will suggest a simple model that you can use to calculate these costs.
+
+:::tip[Estimate costs]
+[Estimate the average cost of sponsoring for Classic Wallets](./estimate)
+:::
+
+## Creating a sponsorship infrastructure
+
+(TBD)
+
+### Adding funds to the sponsorship account
+
+To fund accounts, you can acquire XLM from a variety of sources, central exchanges are a good option.
+
+:::info[Exchanges]
+[Check a list of exchanges](https://stellar.org/developers/guides/on-ramps/exchanges-list)
+:::
