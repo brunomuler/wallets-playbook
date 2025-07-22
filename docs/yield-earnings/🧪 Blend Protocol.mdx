@@ -5,4 +5,42 @@ sidebar_position: 3
 
 # Blend Protocol
 
-Placeholder content for Blend Protocol. 
+## Introduction
+
+Blend is a multi-asset lending and borrowing protocol built on the Stellar smart contract platform. The protocol enables users to supply assets as collateral, borrow against that collateral, and earn rewards through the emissions system.
+
+As wallets look to expand their functionality and attract users seeking DeFi features, integrating Blend presents a compelling opportunity. With Blend, wallets can offer their users effortless access to yield-generating opportunities without ever leaving their familiar wallet environment.
+
+- [🧪 Blend Website](https://blend.capital/)
+- [📖 Blend Documentation](https://docs.blend.capital/)
+- [📄 Blend Whitepaper](https://docs.blend.capital/blend-whitepaper)
+- [💬 Blend FAQ](https://docs.blend.capital/users/general-faq?q=swap)
+
+## Why Integrate with Blend
+
+Integrating Blend brings several strategic benefits to wallet providers:
+
+- **Yield Opportunities:** Allowing users to lend tokens into Blend pools can generate yields and rewards.
+- **Increased User Engagement:** Users using Blend pools as yield-generating accounts showed higher retention rates, with an increase of 60% in some cohorts.
+- **Transparency:** Built on Stellar, Blend transactions settle quickly and transparently with minimal fees, reinforcing trust among your users.
+
+## How to Integrate Blend into Your Wallet for Yield Generation
+
+1. **Define which pool or pools your users will be able to interact with:**
+   - Pools will allow lending and borrowing different assets, at different APY and reward rates. It's important to look into the available pools and select one or more that makes sense for your product and end users. 
+   - To view a list of pools, visit: [Blend Pools Dashboard](https://blend.xlm.sh/dashboard/?poolId=CCCCIQSDILITHMM7PBSLVDT5MISSY7R26MNZXCX4H7J5JQ5FPIYOGYFS)
+
+2. **Define the yield strategy:**
+   - You can let users interact directly with Blend pools or use intermediary contracts to manage yield distribution and strategies. Contracts like the **[Blend Fee Vault](https://docs.blend.capital/tech-docs/integrations/fee-vault)** and **[DeFindex](https://www.defindex.io/)** allow wallets to define different strategies, including setting monetization models for wallets.
+
+   📖 [Learn more about the Blend Fee Vault](https://docs.blend.capital/tech-docs/integrations/fee-vault)   
+   📖 [Learn more about Defindex](https://www.defindex.io/)
+
+3. **Define the user experience:**
+   - Interacting with pools can involve many technical terms and concepts that your users may not be familiar with. You may choose to simplify this to users by only exposing information relevant for this use.
+   - A wallet may elect to display the lending balance as a separate balance for a specific asset, USDC for example, together with the current yield rate. The definition of the yield strategy is crucial to define the end user experience.
+
+4. **Understand the technical requirements:**
+   - Even being a Smart Contract protocol, classic Stellar wallets (starting with G) can also interact with Blend.
+   - Applications using Horizon will need to use an [RPC](https://developers.stellar.org/docs/data/apis/rpc) to submit Soroban transactions.
+   - For a more complete technical guide, check [Blend's integration guide](https://docs.blend.capital/tech-docs/integrations/integrate-pool).
