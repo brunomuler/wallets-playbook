@@ -5,7 +5,6 @@
 // See: https://docusaurus.io/docs/api/docusaurus-config
 
 import {themes as prismThemes} from 'prism-react-renderer';
-const path = require('path');
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
@@ -45,20 +44,6 @@ const config = {
         disableInDev: false,
       },
     ],
-    function myWebpackAliasPlugin() {
-      return {
-        name: 'custom-webpack-alias',
-        configureWebpack() {
-          return {
-            resolve: {
-              alias: {
-                '@site': require('path').resolve(__dirname),
-              },
-            },
-          };
-        },
-      };
-    },
   ],
 
   presets: [

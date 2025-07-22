@@ -2,7 +2,13 @@ import React, { useState, useMemo } from 'react';
 import Select from 'react-select';
 import exchangesData from '@site/src/data/exchanges.json';
 import styles from './styles.module.css';
-import countryCodeMapping from '@site/src/data/country-code-mapping.json';
+// import countryCodeMapping from '@site/src/data/country-code-mapping.json';
+let countryCodeMapping = {};
+
+// Fetch the mapping at runtime
+fetch('/data/country-code-mapping.json')
+  .then(res => res.json())
+  .then(data => { countryCodeMapping = data; });
 
 const GEOGRAPHY_VISIBILITY_THRESHOLD = 10;
 
