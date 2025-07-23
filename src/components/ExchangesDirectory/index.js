@@ -206,7 +206,7 @@ const ExchangesDirectory = () => {
                         <div key={exchange.id} className={styles.exchangeCard}>
                             <div className={styles.exchangeHeader}>
                                 <div className={styles.exchangeIdentity}>
-                                    {exchange.logo && <img src={exchange.logo} alt={`${exchange.name} logo`} className={styles.exchangeLogo} />}
+                                    {exchange.logo && <img src={`/img/logos/${exchange.logo}`} alt={`${exchange.name} logo`} className={styles.exchangeLogo} />}
                                     <span className={styles.exchangeName}>{exchange.name}</span>
                                 </div>
                                 {exchange.website && (

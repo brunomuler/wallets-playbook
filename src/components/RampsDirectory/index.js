@@ -35,7 +35,7 @@ const Flag = ({ code, country }) => {
 
 const AssetChip = ({ asset }) => (
     <span className={styles.assetTag}>
-        {asset.logo && <img src={asset.logo} alt={`${asset.name} logo`} className={styles.assetLogo} />}
+        {asset.logo && <img src={`/img/logos/${asset.logo}`} alt={`${asset.name} logo`} className={styles.assetLogo} />}
         <span>{asset.name}</span>
     </span>
 );
@@ -237,7 +237,7 @@ const RampsDirectory = () => {
                         <div key={ramp.id} className={styles.rampCard}>
                             <div className={styles.rampHeader}>
                                 <div className={styles.rampIdentity}>
-                                    {ramp.logo && <img src={ramp.logo} alt={`${ramp.name} logo`} className={styles.rampLogo} />}
+                                    {ramp.logo && <img src={`/img/logos/${ramp.logo}`} alt={`${ramp.name} logo`} className={styles.rampLogo} />}
                                     <span className={styles.rampName}>{ramp.name}</span>
                                 </div>
                                 {ramp.website && (
@@ -279,7 +279,7 @@ const RampsDirectory = () => {
                                                                 <div className={styles.paymentMethodsContainer}>
                                                                     {geo.payment_methods.map(pm => (
                                                                         <span key={pm.name} className={styles.paymentMethod}>
-                                                                            {pm.logo && <img src={pm.logo} alt="" />}
+                                                                            {pm.logo && <img src={`/img/logos/${pm.logo}`} alt="" />}
                                                                             {pm.name}
                                                                         </span>
                                                                     ))}
