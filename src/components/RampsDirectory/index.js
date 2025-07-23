@@ -1,7 +1,10 @@
 import React, { useState, useMemo } from 'react';
 import Select from 'react-select';
-import rampsData from '@site/src/data/ramps.json';
+import rampsDataRaw from '@site/src/data/ramps.json';
 import styles from './styles.module.css';
+
+// Handle both wrapper format { data: [...] } and direct array format
+const rampsData = (rampsDataRaw.data || rampsDataRaw) || [];
 // import countryCodeMapping from '@site/src/data/country-code-mapping.json';
 let countryCodeMapping = {};
 
@@ -85,6 +88,15 @@ const customSelectStyles = {
 };
 
 const RampsDirectory = () => {
+    // Handle empty or malformed data
+    if (!Array.isArray(rampsData) || rampsData.length === 0) {
+        return (
+            <div>
+                <p>No ramps data available.</p>
+            </div>
+        );
+    }
+    
     const [selectedGeos, setSelectedGeos] = useState([]);
     const [expandedRamps, setExpandedRamps] = useState({}); // { [rampId: string]: boolean }
 

@@ -1,8 +1,20 @@
 import React from 'react';
-import assets from '@site/src/data/assets.json';
+import assetsData from '@site/src/data/assets.json';
 import styles from './styles.module.css';
 
 export default function AssetsDirectory() {
+  // Handle both wrapper format { data: [...] } and direct array format
+  const assets = (assetsData.data || assetsData) || [];
+  
+  // Handle empty or malformed data
+  if (!Array.isArray(assets) || assets.length === 0) {
+    return (
+      <div className={styles.gridContainer}>
+        <p>No assets data available.</p>
+      </div>
+    );
+  }
+  
   return (
     <div className={styles.gridContainer}>
       {assets.map(asset => (

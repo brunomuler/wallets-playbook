@@ -1,15 +1,27 @@
 import React, { useState, useMemo } from 'react';
 import { FaGlobe, FaGithub, FaChartBar } from 'react-icons/fa';
-import defiData from '@site/src/data/defi.json';
+import defiDataRaw from '@site/src/data/defi.json';
 import styles from './styles.module.css';
 
 const DefiDirectory = () => {
+  // Handle both wrapper format { data: [...] } and direct array format
+  const defiData = (defiDataRaw.data || defiDataRaw) || [];
+  
+  // Handle empty or malformed data
+  if (!Array.isArray(defiData) || defiData.length === 0) {
+    return (
+      <div>
+        <p>No DeFi data available.</p>
+      </div>
+    );
+  }
+  
   const [selectedType, setSelectedType] = useState('All');
 
   const uniqueTypes = useMemo(() => {
     const allTypes = defiData.map(d => d.type);
     return ['All', ...[...new Set(allTypes)]];
-  }, []);
+  }, [defiData]);
 
   const filteredData = useMemo(() => {
     if (selectedType === 'All') {

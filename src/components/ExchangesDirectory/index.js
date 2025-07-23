@@ -1,7 +1,10 @@
 import React, { useState, useMemo } from 'react';
 import Select from 'react-select';
-import exchangesData from '@site/src/data/exchanges.json';
+import exchangesDataRaw from '@site/src/data/exchanges.json';
 import styles from './styles.module.css';
+
+// Handle both wrapper format { data: [...] } and direct array format
+const exchangesData = (exchangesDataRaw.data || exchangesDataRaw) || [];
 // import countryCodeMapping from '@site/src/data/country-code-mapping.json';
 let countryCodeMapping = {};
 
@@ -73,6 +76,15 @@ const customSelectStyles = {
 };
 
 const ExchangesDirectory = () => {
+    // Handle empty or malformed data
+    if (!Array.isArray(exchangesData) || exchangesData.length === 0) {
+        return (
+            <div>
+                <p>No exchanges data available.</p>
+            </div>
+        );
+    }
+    
     const [selectedGeos, setSelectedGeos] = useState([]);
     const [expandedExchanges, setExpandedExchanges] = useState({}); // { [exchangeId: string]: boolean }
 
