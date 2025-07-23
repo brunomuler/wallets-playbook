@@ -169,6 +169,13 @@
       "analytics": "https://github.com/stellar-broker"
     },
     {
+      "id": "recIb6aeDlxM6a6Pq",
+      "title": "StellarTerm",
+      "website": "https://galactictalk.org/d/2212-stellarterm-advanced-trading-client-for-the-stellar-network",
+      "description": "advanced trading client for the Stellar network\n",
+      "type": "DEX"
+    },
+    {
       "id": "rec0PFBISvyvj4zHx",
       "title": "Untangled",
       "website": "https://www.untangled.finance/",
@@ -195,8 +202,8 @@
     }
   ],
   "metadata": {
-    "generatedAt": "2025-07-23T20:41:30.172Z",
-    "count": 23,
+    "generatedAt": "2025-07-23T22:32:26.687Z",
+    "count": 24,
     "source": "airtable"
   }
 }
