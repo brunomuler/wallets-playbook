@@ -46,9 +46,12 @@
     {
       "id": "rec6JDIWeRUcjCDNU",
       "name": "BENJI",
+      "logo": "partners/franklin-templeton.png",
+      "issuer_logo": "partners/franklin-templeton.png",
       "issuers": [
         {
-          "name": "Franklin Templeton"
+          "name": "Franklin Templeton",
+          "logo": "partners/franklin-templeton.png"
         }
       ],
       "yield_bearing": true,
@@ -117,10 +120,13 @@
     {
       "id": "recQkS3my48RoIKkz",
       "name": "EURC",
+      "logo": "partners/circle.png",
+      "issuer_logo": "partners/circle.png",
       "issuers": [
         {
           "name": "Circle",
-          "website": "https://www.circle.com/multi-chain-usdc/stellar"
+          "website": "https://www.circle.com/multi-chain-usdc/stellar",
+          "logo": "partners/circle.png"
         }
       ],
       "yield_bearing": false,
@@ -146,9 +152,12 @@
     {
       "id": "recAcXxpP5wntgVIs",
       "name": "gBENJI",
+      "logo": "partners/franklin-templeton.png",
+      "issuer_logo": "partners/franklin-templeton.png",
       "issuers": [
         {
-          "name": "Franklin Templeton"
+          "name": "Franklin Templeton",
+          "logo": "partners/franklin-templeton.png"
         }
       ],
       "yield_bearing": true,
@@ -266,10 +275,12 @@
       "id": "recST8DGhgX8wjlGw",
       "name": "USDC",
       "logo": "assets/usdc.png",
+      "issuer_logo": "partners/circle.png",
       "issuers": [
         {
           "name": "Circle",
-          "website": "https://www.circle.com/multi-chain-usdc/stellar"
+          "website": "https://www.circle.com/multi-chain-usdc/stellar",
+          "logo": "partners/circle.png"
         }
       ],
       "yield_bearing": false,
@@ -374,7 +385,7 @@
     }
   ],
   "metadata": {
-    "generatedAt": "2025-07-23T22:32:26.505Z",
+    "generatedAt": "2025-07-23T22:57:12.658Z",
     "count": 27,
     "source": "airtable"
   }
