@@ -6,7 +6,7 @@
       "issuers": [
         {
           "name": "Anclap",
-          "website": "https://anclap.com/"
+          "website": "https://home.anclap.com/"
         }
       ],
       "yield_bearing": false,
@@ -53,6 +53,7 @@
       ],
       "yield_bearing": true,
       "permissibility": "Permissioned",
+      "fiat_asset": "FOBXX",
       "home_domain": "franklintempleton.com",
       "website": "franklintempleton.com",
       "issuer_address": "GBHNGLLIE3KWGKCHIKMHJ5HVZHYIK7WTBE4QF5PLAKL4CJGSEU7HZIW5"
@@ -90,7 +91,7 @@
       "issuers": [
         {
           "name": "Anclap",
-          "website": "https://anclap.com/"
+          "website": "https://home.anclap.com/"
         }
       ],
       "yield_bearing": false,
@@ -123,7 +124,7 @@
         }
       ],
       "yield_bearing": false,
-      "fiat_asset": "EURO",
+      "fiat_asset": "EUR",
       "home_domain": "circle.com",
       "website": "circle.com",
       "issuer_address": "GDHU6WRG4IEQXM5NZ4BMPKOXHW76MZM4Y2IEMFDVXBSDP6SJY4ITNPP2"
@@ -150,7 +151,9 @@
           "name": "Franklin Templeton"
         }
       ],
-      "yield_bearing": true
+      "yield_bearing": true,
+      "fiat_asset": "USD",
+      "issuer_address": "GD5J73EKK5IYL5XS3FBTHHX7CZIYRP7QXDL57XFWGC2WVYWT326OBXRP"
     },
     {
       "id": "rec4h6vVjtKNXJ4vk",
@@ -198,7 +201,7 @@
       "issuers": [
         {
           "name": "Anclap",
-          "website": "https://anclap.com/"
+          "website": "https://home.anclap.com/"
         }
       ],
       "yield_bearing": false,
@@ -379,7 +382,7 @@
     }
   ],
   "metadata": {
-    "generatedAt": "2025-07-23T06:02:01.064Z",
+    "generatedAt": "2025-07-23T20:41:30.055Z",
     "count": 28,
     "source": "airtable"
   }

@@ -969,6 +969,13 @@
       ]
     },
     {
+      "id": "recqywIopi5ZrD867",
+      "name": "Allbridge",
+      "website": "https://allbridge.io/",
+      "type": "Issuer",
+      "geo_rollout": []
+    },
+    {
       "id": "recpurFwlctboy84V",
       "name": "Amero Exchange",
       "type": "Exchange",
@@ -1385,6 +1392,14 @@
     {
       "id": "recMqfL59jnLhUnsf",
       "name": "Anclap",
+      "website": "https://home.anclap.com/",
+      "type": "Issuer",
+      "geo_rollout": []
+    },
+    {
+      "id": "recQ4bKA3Z7OJpH4p",
+      "name": "Aquarius",
+      "website": "https://aqua.network/",
       "type": "Issuer",
       "geo_rollout": []
     },
@@ -1614,6 +1629,13 @@
       ]
     },
     {
+      "id": "recOgonnzKK1HphMU",
+      "name": "Bitbond",
+      "website": "https://www.bitbond.com/",
+      "type": "Issuer",
+      "geo_rollout": []
+    },
+    {
       "id": "rec6TeYpcVgzAK4TP",
       "name": "Bitfinex",
       "type": "Exchange",
@@ -1792,6 +1814,13 @@
           "assets": []
         }
       ]
+    },
+    {
+      "id": "rechm4lCmLBOKrzr8",
+      "name": "Brale",
+      "website": "https://brale.xyz/",
+      "type": "Issuer",
+      "geo_rollout": []
     },
     {
       "id": "recoKMyw1Q1MNxEOT",
@@ -2056,6 +2085,13 @@
           "assets": []
         }
       ]
+    },
+    {
+      "id": "recOoo0qXJDsa9ISi",
+      "name": "ClickPesa",
+      "website": "https://clickpesa.com/",
+      "type": "Issuer",
+      "geo_rollout": []
     },
     {
       "id": "recxEdkMkqnpQR0b5",
@@ -10114,8 +10150,8 @@
     }
   ],
   "metadata": {
-    "generatedAt": "2025-07-23T06:02:01.131Z",
-    "count": 85,
+    "generatedAt": "2025-07-23T20:41:30.123Z",
+    "count": 90,
     "source": "airtable"
   }
 }
