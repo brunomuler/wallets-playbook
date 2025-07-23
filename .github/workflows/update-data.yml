@@ -1,0 +1,66 @@
+name: Update Data Files
+
+on:
+  schedule:
+    # Run daily at 2 AM UTC
+    - cron: '0 2 * * *'
+  workflow_dispatch: # Allow manual triggers
+
+jobs:
+  update-data:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout public repo
+        uses: actions/checkout@v4
+        with:
+          repository: YOUR_USERNAME/wallets-playbook
+          token: ${{ secrets.PUBLIC_REPO_TOKEN }}
+          path: public-repo
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+      
+      - name: Install dependencies
+        run: |
+          cd public-repo
+          npm install
+      
+      - name: Fetch data from Airtable
+        run: |
+          cd public-repo
+          npm run fetch-airtable
+        env:
+          AIRTABLE_API_KEY: ${{ secrets.AIRTABLE_API_KEY }}
+          AIRTABLE_PARTNERS_BASE_ID: ${{ secrets.AIRTABLE_PARTNERS_BASE_ID }}
+          AIRTABLE_DEFI_BASE_ID: ${{ secrets.AIRTABLE_DEFI_BASE_ID }}
+      
+      - name: Build data files
+        run: |
+          cd public-repo
+          npm run build-all-data
+      
+      - name: Check for changes
+        id: check-changes
+        run: |
+          cd public-repo
+          git add -A
+          git diff --staged --quiet || echo "has-changes=true" >> $GITHUB_OUTPUT
+      
+      - name: Commit and push changes
+        if: steps.check-changes.outputs.has-changes == 'true'
+        run: |
+          cd public-repo
+          git config user.name "Data Pipeline Bot"
+          git config user.email "data-pipeline@example.com"
+          git commit -m "🤖 Auto-update data files from Airtable
+
+          - Updated assets.json
+          - Updated ramps.json  
+          - Updated exchanges.json
+          - Updated defi.json
+          
+          Generated at: $(date -u)"
+          git push 
