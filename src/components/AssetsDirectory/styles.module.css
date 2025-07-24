@@ -42,6 +42,11 @@
   height: 48px;
   margin-right: 16px;
   border-radius: 50%;
+  border: 1px solid #d1d5db;
+}
+
+:global([data-theme='dark']) .logo {
+  border-color: var(--ifm-color-emphasis-300);
 }
 
 .assetName {
@@ -150,6 +155,18 @@
 }
 
 .detailsLink:hover {
+  color: var(--ifm-color-primary-dark);
+  text-decoration: underline;
+}
+
+.websiteLink {
+  color: var(--ifm-color-primary);
+  text-decoration: none;
+  transition: color 0.2s ease;
+  word-break: break-all;
+}
+
+.websiteLink:hover {
   color: var(--ifm-color-primary-dark);
   text-decoration: underline;
 }

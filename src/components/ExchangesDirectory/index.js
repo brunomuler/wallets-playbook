@@ -1,6 +1,7 @@
 import React, { useState, useMemo } from 'react';
 import Select from 'react-select';
 import exchangesDataRaw from '@site/src/data/exchanges.json';
+import ContributeNotice from '../ContributeNotice';
 import styles from './styles.module.css';
 
 // Handle both wrapper format { data: [...] } and direct array format
@@ -145,6 +146,7 @@ const ExchangesDirectory = () => {
 
     return (
         <div>
+            <ContributeNotice />
             <div className={styles.filter}>
                 <label htmlFor="geoFilter">Filter by Geography:</label>
                 <Select

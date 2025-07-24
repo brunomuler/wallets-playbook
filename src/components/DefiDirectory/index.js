@@ -1,6 +1,7 @@
 import React, { useState, useMemo } from 'react';
 import { FaGlobe, FaGithub, FaChartBar } from 'react-icons/fa';
 import defiDataRaw from '@site/src/data/defi.json';
+import ContributeNotice from '../ContributeNotice';
 import styles from './styles.module.css';
 
 const DefiDirectory = () => {
@@ -32,6 +33,7 @@ const DefiDirectory = () => {
 
   return (
     <div>
+      <ContributeNotice />
       <div className={styles.filterContainer}>
         <div className={styles.filterOptions}>
           {uniqueTypes.map(type => (

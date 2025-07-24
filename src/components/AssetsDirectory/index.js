@@ -1,5 +1,6 @@
 import React from 'react';
 import assetsData from '@site/src/data/assets.json';
+import ContributeNotice from '../ContributeNotice';
 import styles from './styles.module.css';
 
 export default function AssetsDirectory() {
@@ -29,8 +30,10 @@ export default function AssetsDirectory() {
   };
   
   return (
-    <div className={styles.gridContainer}>
-      {assets.map(asset => {
+    <div>
+      <ContributeNotice />
+      <div className={styles.gridContainer}>
+        {assets.map(asset => {
         const assetLogo = getAssetLogo(asset);
         
         return (
@@ -83,7 +86,20 @@ export default function AssetsDirectory() {
               )}
               {asset.fiat_asset && (
                 <div className={styles.infoRow}>
-                  <strong>Fiat Asset:</strong> {asset.fiat_asset}
+                  <strong>Anchored to:</strong> {asset.fiat_asset}
+                </div>
+              )}
+              {asset.website && (
+                <div className={styles.infoRow}>
+                  <strong>Website:</strong>{' '}
+                  <a
+                    href={`https://${asset.website}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={styles.websiteLink}
+                  >
+                    {asset.website}
+                  </a>
                 </div>
               )}
             </div>
@@ -101,7 +117,8 @@ export default function AssetsDirectory() {
             )}
           </div>
         );
-      })}
+        })}
+      </div>
     </div>
   );
 } 

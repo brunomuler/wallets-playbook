@@ -1,6 +1,7 @@
 import React, { useState, useMemo } from 'react';
 import Select from 'react-select';
 import rampsDataRaw from '@site/src/data/ramps.json';
+import ContributeNotice from '../ContributeNotice';
 import styles from './styles.module.css';
 
 // Handle both wrapper format { data: [...] } and direct array format
@@ -157,6 +158,7 @@ const RampsDirectory = () => {
 
     return (
         <div>
+            <ContributeNotice />
             <div className={styles.filter}>
                 <label htmlFor="geoFilter">Filter by Geography:</label>
                 <Select
