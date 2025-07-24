@@ -1851,6 +1851,10 @@
             {
               "name": "ACH",
               "description": ""
+            },
+            {
+              "name": "Bank Transfer",
+              "description": ""
             }
           ],
           "assets": [
@@ -9091,7 +9095,7 @@
     }
   ],
   "metadata": {
-    "generatedAt": "2025-07-24T05:03:27.799Z",
+    "generatedAt": "2025-07-24T18:40:05.289Z",
     "count": 44,
     "source": "airtable"
   }
