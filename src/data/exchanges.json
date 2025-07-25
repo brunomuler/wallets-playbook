@@ -3,12 +3,15 @@
     {
       "id": "recpurFwlctboy84V",
       "name": "Amero Exchange",
+      "website": "https://www.amero.exchange/",
       "type": "Exchange",
       "geo_rollout": []
     },
     {
       "id": "recNuCld1cjByiAHz",
       "name": "Binance",
+      "logo": "partners/binance.png",
+      "website": "https://www.binance.com",
       "type": "Exchange",
       "geo_rollout": [
         {
@@ -28,6 +31,7 @@
     {
       "id": "rec6TeYpcVgzAK4TP",
       "name": "Bitfinex",
+      "website": "https://www.bitfinex.com",
       "type": "Exchange",
       "geo_rollout": [
         {
@@ -48,18 +52,22 @@
     {
       "id": "recd230ya3PpRlF39",
       "name": "Bithumb",
+      "website": "https://bithumbcorp.com/en/",
       "type": "Exchange",
       "geo_rollout": []
     },
     {
       "id": "recVzdtix7rBqVokp",
       "name": "Bitmama",
+      "website": "https://www.bitmama.io",
       "type": "Exchange",
       "geo_rollout": []
     },
     {
       "id": "recl1kRSzSc5kAvJv",
       "name": "Bitso",
+      "logo": "partners/bitso.png",
+      "website": "https://www.bitso.com",
       "type": "Exchange",
       "geo_rollout": [
         {
@@ -145,44 +153,28 @@
     {
       "id": "recs3fiwaknzxaisu",
       "name": "Bitstamp",
+      "website": "https://www.bitstamp.net",
       "type": "Exchange",
       "geo_rollout": []
     },
     {
-      "id": "recbSAI4CejEeTULh",
-      "name": "Bittrex",
-      "type": "Exchange",
-      "geo_rollout": [
-        {
-          "country": "UNITED STATES",
-          "country_code": "USA",
-          "currency": "USD",
-          "ramp_options": [],
-          "payment_methods": [
-            {
-              "name": "Bank Transfer",
-              "description": ""
-            }
-          ],
-          "assets": []
-        }
-      ]
-    },
-    {
       "id": "recrOHYykxzIcNjOC",
       "name": "Buenbit",
+      "website": "https://buenbit.com",
       "type": "Exchange",
       "geo_rollout": []
     },
     {
       "id": "rechzvzVY6TRskWff",
       "name": "Busha",
+      "website": "https://www.busha.co",
       "type": "Exchange",
       "geo_rollout": []
     },
     {
       "id": "rec4hzEdDZf9JDyJB",
       "name": "Bybit",
+      "website": "https://www.bybit.com",
       "type": "Exchange",
       "geo_rollout": [
         {
@@ -202,6 +194,8 @@
     {
       "id": "recO9BWKep2jHJotS",
       "name": "CEX.io",
+      "logo": "partners/cex.io.png",
+      "website": "https://cex.io",
       "type": "Exchange",
       "geo_rollout": [
         {
@@ -221,6 +215,8 @@
     {
       "id": "recxEdkMkqnpQR0b5",
       "name": "Coinbase",
+      "logo": "partners/coinbase.png",
+      "website": "https://www.coinbase.com",
       "type": "Exchange",
       "geo_rollout": [
         {
@@ -308,6 +304,7 @@
     {
       "id": "recDavuiiOlS969C9",
       "name": "Coincheck",
+      "website": "https://coincheck.com",
       "type": "Exchange",
       "geo_rollout": [
         {
@@ -328,12 +325,14 @@
     {
       "id": "recRXWLQlBOp0i9Ph",
       "name": "CoinMENA",
+      "website": "https://www.coinmena.com/",
       "type": "Exchange",
       "geo_rollout": []
     },
     {
       "id": "recMmiUd7KE3ZJH2y",
       "name": "Coinone",
+      "website": "https://coinone.co.kr",
       "type": "Exchange",
       "geo_rollout": [
         {
@@ -354,12 +353,14 @@
     {
       "id": "recLKdnrnwl1p2d6j",
       "name": "Coins.ph",
+      "website": "https://coins.ph",
       "type": "Exchange",
       "geo_rollout": []
     },
     {
       "id": "recJQtxF7iytLuKGO",
       "name": "Crypto.com",
+      "website": "https://crypto.com",
       "type": "Exchange",
       "geo_rollout": [
         {
@@ -379,18 +380,21 @@
     {
       "id": "recg7oikubbzm8NAm",
       "name": "Dollarize",
+      "website": "https://dollarize.me/en/index.aspx",
       "type": "Exchange",
       "geo_rollout": []
     },
     {
       "id": "recXtJViZnDPebQmN",
       "name": "EarnBit",
+      "website": "https://earnbit.com/",
       "type": "Exchange",
       "geo_rollout": []
     },
     {
       "id": "recufYfFaMdNCLwbg",
       "name": "Gate.io",
+      "website": "https://www.gate.io",
       "type": "Exchange",
       "geo_rollout": [
         {
@@ -410,6 +414,7 @@
     {
       "id": "recyDCPrX7LI2HLCu",
       "name": "Huobi",
+      "website": "https://www.huobi.com",
       "type": "Exchange",
       "geo_rollout": [
         {
@@ -429,6 +434,8 @@
     {
       "id": "rec1JjBZlIFnmtd6O",
       "name": "Kraken",
+      "logo": "partners/kraken.png",
+      "website": "https://www.kraken.com",
       "type": "Exchange",
       "geo_rollout": [
         {
@@ -448,6 +455,7 @@
     {
       "id": "recEPlGFUmMG87oDH",
       "name": "KuCoin",
+      "website": "https://www.kucoin.com",
       "type": "Exchange",
       "geo_rollout": [
         {
@@ -467,12 +475,15 @@
     {
       "id": "recx4k4e38ylc7RQv",
       "name": "Liquid",
+      "logo": "partners/liquid.png",
+      "website": "https://liquid.com",
       "type": "Exchange",
       "geo_rollout": []
     },
     {
       "id": "recfPrQdg4MoHlAWL",
       "name": "Mercado Bitcoin",
+      "website": "https://www.mercadobitcoin.com.br/",
       "type": "Exchange",
       "geo_rollout": [
         {
@@ -506,6 +517,8 @@
     {
       "id": "recXz2esiqlQslOmW",
       "name": "Newton",
+      "logo": "partners/newton.png",
+      "website": "https://www.newton.co",
       "type": "Exchange",
       "geo_rollout": [
         {
@@ -525,38 +538,22 @@
     },
     {
       "id": "recRSi1hTE3UErfPn",
-      "name": "OK Group",
+      "name": "OKX",
+      "website": "https://www.okx.com/en-us",
       "type": "Exchange",
       "geo_rollout": []
     },
     {
-      "id": "recriJN5TFSF008Pw",
-      "name": "OkCoin",
-      "type": "Exchange",
-      "geo_rollout": [
-        {
-          "country": "INTERNATIONAL (NON USA)",
-          "currency": "#N/A",
-          "ramp_options": [],
-          "payment_methods": [
-            {
-              "name": "Bank Transfer",
-              "description": ""
-            }
-          ],
-          "assets": []
-        }
-      ]
-    },
-    {
       "id": "recGOGIhKBXxkIEvH",
       "name": "PDAX",
+      "website": "https://pdax.ph",
       "type": "Exchange",
       "geo_rollout": []
     },
     {
       "id": "recG8CWXMRYYTH4Vt",
       "name": "Ripio",
+      "website": "https://www.ripio.com",
       "type": "Exchange",
       "geo_rollout": [
         {
@@ -1332,6 +1329,7 @@
     {
       "id": "recUrcJ94ICgEdRns",
       "name": "Upbit",
+      "website": "https://upbit.com",
       "type": "Exchange",
       "geo_rollout": [
         {
@@ -1352,6 +1350,7 @@
     {
       "id": "reczjP9wTUari0ybK",
       "name": "WhiteBit",
+      "website": "https://whitebit.com",
       "type": "Exchange",
       "geo_rollout": [
         {
@@ -1374,13 +1373,14 @@
     {
       "id": "recrH9cFy166GbwoD",
       "name": "Wirex",
+      "website": "https://wirexapp.com",
       "type": "Exchange",
       "geo_rollout": []
     }
   ],
   "metadata": {
-    "generatedAt": "2025-07-24T18:40:05.289Z",
-    "count": 34,
+    "generatedAt": "2025-07-25T06:02:11.993Z",
+    "count": 32,
     "source": "airtable"
   }
 }
