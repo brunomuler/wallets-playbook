@@ -52,7 +52,7 @@
 
 .rampName {
   font-weight: 600;
-  font-size: 1.5em;
+  font-size: 1.3em;
 }
 
 .websiteLink {
@@ -107,7 +107,7 @@
   display: block;
   margin-bottom: 0.5rem;
   color: var(--detail-item-strong-color);
-  font-size: 1.1em;
+  font-size: 1em;
 }
 
 :global([data-theme='dark']) .detailItem strong {
@@ -141,14 +141,14 @@
   --geo-tag-border-color: #e0e0e0;
 
   background-color: var(--geo-tag-background);
-  padding: 4px 8px;
-  border-radius: 6px;
+  padding: 2px 6px;
+  border-radius: 4px;
   cursor: pointer;
   display: inline-flex;
   align-items: center;
-  gap: 6px;
+  gap: 4px;
   border: 1px solid var(--geo-tag-border-color);
-  font-size: 0.95em;
+  font-size: 0.8em;
 }
 
 :global([data-theme='dark']) .geoTag {

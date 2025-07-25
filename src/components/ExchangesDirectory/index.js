@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
 import Select from 'react-select';
 import exchangesDataRaw from '@site/src/data/exchanges.json';
 import ContributeNotice from '../ContributeNotice';
@@ -6,14 +6,6 @@ import styles from './styles.module.css';
 
 // Handle both wrapper format { data: [...] } and direct array format
 const exchangesData = (exchangesDataRaw.data || exchangesDataRaw) || [];
-// import countryCodeMapping from '@site/src/data/country-code-mapping.json';
-let countryCodeMapping = {};
-
-if (typeof window !== 'undefined') {
-  fetch('/data/country-code-mapping.json')
-    .then(res => res.json())
-    .then(data => { countryCodeMapping = data; });
-}
 
 const GEOGRAPHY_VISIBILITY_THRESHOLD = 10;
 
@@ -88,6 +80,16 @@ const ExchangesDirectory = () => {
     
     const [selectedGeos, setSelectedGeos] = useState([]);
     const [expandedExchanges, setExpandedExchanges] = useState({}); // { [exchangeId: string]: boolean }
+    const [countryCodeMapping, setCountryCodeMapping] = useState({});
+
+    useEffect(() => {
+        if (typeof window !== 'undefined') {
+            fetch('/data/country-code-mapping.json')
+                .then(res => res.json())
+                .then(data => setCountryCodeMapping(data))
+                .catch(err => console.error('Failed to load country code mapping:', err));
+        }
+    }, []);
 
     const toggleExchangeExpansion = (exchangeId) => {
         setExpandedExchanges(prev => ({
@@ -213,7 +215,21 @@ const ExchangesDirectory = () => {
                                 </div>
                                 {exchange.website && (
                                     <a href={exchange.website} target="_blank" rel="noopener noreferrer" className={styles.websiteLink}>
-                                        Website ↗️
+                                        Visit Website
+                                        <svg
+                                            className={styles.externalIcon}
+                                            fill="none"
+                                            stroke="currentColor"
+                                            viewBox="0 0 24 24"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                        >
+                                            <path
+                                                strokeLinecap="round"
+                                                strokeLinejoin="round"
+                                                strokeWidth={2}
+                                                d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                                            />
+                                        </svg>
                                     </a>
                                 )}
                             </div>
@@ -266,12 +282,9 @@ const ExchangesDirectory = () => {
                                         )}
                                     </div>
                                 </div>
+
                                 <div className={styles.detailItem}>
-                                    <strong>All Exchange Options</strong>
-                                    <p>{allExchangeOptions.length > 0 ? allExchangeOptions.join(', ') : 'N/A'}</p>
-                                </div>
-                                <div className={styles.detailItem}>
-                                    <strong>All Payment Methods</strong>
+                                    <strong>Payment Methods</strong>
                                     <p>{allPaymentMethods.length > 0 ? allPaymentMethods.join(', ') : 'N/A'}</p>
                                 </div>
                             </div>

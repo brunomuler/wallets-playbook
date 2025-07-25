@@ -17,6 +17,8 @@
   transition: box-shadow 0.3s ease;
   margin-bottom: 20px;
   padding: 0;
+  display: flex;
+  flex-direction: column;
 }
 
 :global([data-theme='dark']) .exchangeCard {
@@ -52,17 +54,37 @@
 
 .exchangeName {
   font-weight: 600;
-  font-size: 1.5em;
+  font-size: 1.3em;
 }
 
 .websiteLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  background-color: var(--ifm-color-primary);
+  color: white;
   text-decoration: none;
+  border-radius: 8px;
   font-weight: 500;
-  color: var(--ifm-color-primary);
+  font-size: 0.875rem;
+  transition: all 0.2s ease;
+  border: none;
+  cursor: pointer;
 }
 
 .websiteLink:hover {
-  text-decoration: underline;
+  background-color: var(--ifm-color-primary-dark);
+  color: white;
+  text-decoration: none;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.externalIcon {
+  width: 16px;
+  height: 16px;
+  stroke-width: 2;
 }
 
 .exchangeDetails {
@@ -70,13 +92,14 @@
   --ramp-details-border-color: #e0e0e0;
 
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-columns: 2fr 1fr;
   gap: 1.5rem;
   padding: 1.5rem;
   border-top: 1px solid var(--ramp-details-border-color);
   background-color: var(--ramp-details-background);
   border-bottom-left-radius: 8px;
   border-bottom-right-radius: 8px;
+  flex-grow: 1;
 }
 
 :global([data-theme='dark']) .exchangeDetails {
@@ -100,7 +123,7 @@
   display: block;
   margin-bottom: 0.5rem;
   color: var(--detail-item-strong-color);
-  font-size: 1.1em;
+  font-size: 1em;
 }
 
 :global([data-theme='dark']) .detailItem strong {
@@ -134,14 +157,14 @@
   --geo-tag-border-color: #e0e0e0;
 
   background-color: var(--geo-tag-background);
-  padding: 4px 8px;
-  border-radius: 6px;
+  padding: 2px 6px;
+  border-radius: 4px;
   cursor: pointer;
   display: inline-flex;
   align-items: center;
-  gap: 6px;
+  gap: 4px;
   border: 1px solid var(--geo-tag-border-color);
-  font-size: 0.95em;
+  font-size: 0.8em;
 }
 
 :global([data-theme='dark']) .geoTag {
@@ -319,9 +342,15 @@
 
 
 .exchangesList {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   gap: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .exchangesList {
+    grid-template-columns: 1fr;
+  }
 }
 
 .exchangeItem {

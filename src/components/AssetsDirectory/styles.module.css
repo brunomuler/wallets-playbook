@@ -51,7 +51,7 @@
 
 .assetName {
   margin: 0;
-  font-size: 1.75rem;
+  font-size: 1.5rem;
   font-weight: 600;
   color: #111827;
 }
@@ -118,11 +118,11 @@
 
 .tag {
   display: inline-block;
-  padding: 4px 12px;
+  padding: 2px 8px;
   background-color: #dcfce7; /* A light green */
   color: #166534; /* A dark green */
   border-radius: 9999px; /* Pill shape */
-  font-size: 0.875rem;
+  font-size: 0.75rem;
   font-weight: 500;
 }
 
@@ -139,13 +139,10 @@
 
 .cardFooter {
   padding-top: 20px;
-  border-top: 1px solid #e5e7eb;
   margin-top: 20px;
 }
 
-:global([data-theme='dark']) .cardFooter {
-  border-top-color: var(--ifm-color-emphasis-300);
-}
+
 
 .detailsLink {
   color: var(--ifm-color-primary);
@@ -169,4 +166,63 @@
 .websiteLink:hover {
   color: var(--ifm-color-primary-dark);
   text-decoration: underline;
+}
+
+.websiteButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  padding: 10px 16px;
+  background-color: var(--ifm-color-primary);
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 0.875rem;
+  transition: all 0.2s ease;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 12px;
+}
+
+.websiteButton:hover {
+  background-color: var(--ifm-color-primary-dark);
+  color: white;
+  text-decoration: none;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.externalIcon {
+  width: 16px;
+  height: 16px;
+  stroke-width: 2;
+}
+
+.detailsButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  padding: 10px 16px;
+  background-color: transparent;
+  color: var(--ifm-color-primary);
+  text-decoration: none;
+  border: 2px solid var(--ifm-color-primary);
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 0.875rem;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.detailsButton:hover {
+  background-color: var(--ifm-color-primary);
+  color: white;
+  text-decoration: none;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
