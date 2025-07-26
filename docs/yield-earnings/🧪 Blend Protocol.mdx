@@ -26,21 +26,24 @@ Integrating Blend brings several strategic benefits to wallet providers:
 
 ## How to Integrate Blend into Your Wallet for Yield Generation
 
-1. **Define which pool or pools your users will be able to interact with:**
-   - Pools will allow lending and borrowing different assets, at different APY and reward rates. It's important to look into the available pools and select one or more that makes sense for your product and end users. 
-   - To view a list of pools, visit: [Blend Pools Dashboard](https://blend.xlm.sh/dashboard/?poolId=CCCCIQSDILITHMM7PBSLVDT5MISSY7R26MNZXCX4H7J5JQ5FPIYOGYFS)
+1. **Choose Your Integration Framework:**  
+   Decide how you want to integrate Blend. You can interact directly with Blend for maximum control, leverage the [Blend Fee Vault](https://docs.blend.capital/tech-docs/integrations/fee-vault) for flexible revenue sharing with a single pool, or use [DeFindex](https://docs.defindex.io/wallet-developer/introduction) to access multiple pools at the same time and enable revenue sharing.
 
-2. **Define the yield strategy:**
-   - You can let users interact directly with Blend pools or use intermediary contracts to manage yield distribution and strategies. Contracts like the **[Blend Fee Vault](https://docs.blend.capital/tech-docs/integrations/fee-vault)** and **[DeFindex](https://www.defindex.io/)** allow wallets to define different strategies, including setting monetization models for wallets.
+2. **Select Pools for Your Users:**  
+   Blend offers various pools for lending and borrowing different assets, each with unique APY and reward rates. Review the available options and choose pools that align with your users’ needs.  
+   - Explore pools: [Blend Pools Dashboard](https://blend.xlm.sh/dashboard/?poolId=CCCCIQSDILITHMM7PBSLVDT5MISSY7R26MNZXCX4H7J5JQ5FPIYOGYFS)  
+   - With DeFindex, you can integrate multiple pools and dynamically switch to the best-performing ones without additional user signatures. See available strategies in the [Deploy Vault App](https://app.defindex.io).
 
-   📖 [Learn more about the Blend Fee Vault](https://docs.blend.capital/tech-docs/integrations/fee-vault)   
-   📖 [Learn more about Defindex](https://www.defindex.io/)
+3. **Define Your Revenue Model:**  
+   Decide whether to pass 100% of the yield to users or use intermediary contracts to manage and monetize yield distribution. Both the [Blend Fee Vault](https://docs.blend.capital/tech-docs/integrations/fee-vault) and [DeFindex](https://docs.defindex.io/wallet-developer/introduction) support flexible monetization models.
 
-3. **Define the user experience:**
-   - Interacting with pools can involve many technical terms and concepts that your users may not be familiar with. You may choose to simplify this to users by only exposing information relevant for this use.
-   - A wallet may elect to display the lending balance as a separate balance for a specific asset, USDC for example, together with the current yield rate. The definition of the yield strategy is crucial to define the end user experience.
+   📖 [Learn more about the Blend Fee Vault](https://docs.blend.capital/tech-docs/integrations/fee-vault)  
+   📖 [Learn more about DeFindex](https://docs.defindex.io/wallet-developer/introduction)
 
-4. **Understand the technical requirements:**
-   - Even being a Smart Contract protocol, classic Stellar wallets (starting with G) can also interact with Blend.
-   - Applications using Horizon will need to use an [RPC](https://developers.stellar.org/docs/data/apis/rpc) to submit Soroban transactions.
-   - For a more complete technical guide, check [Blend's integration guide](https://docs.blend.capital/tech-docs/integrations/integrate-pool).
+4. **Design the User Experience:**  
+   Lending protocols can be complex. Consider simplifying the interface by showing only relevant information, such as a separate lending balance for each asset (e.g., USDC) and the current yield rate. Both Blend and DeFindex provide tools to display up-to-date yield information.
+
+5. **Review Technical Requirements:**  
+   - Classic Stellar wallets (starting with G) can interact with Blend, even though it’s a smart contract protocol.
+   - If your app uses Horizon, you’ll need to use an [RPC](https://developers.stellar.org/docs/data/apis/rpc) to submit Soroban transactions.
+   - For detailed technical steps, see the [Blend Integration Guide](https://docs.blend.capital/tech-docs/integrations/integrate-pool) or the [DeFindex Wallet Developer Section](https://docs.defindex.io/wallet-developer/introduction).
