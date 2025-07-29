@@ -7,7 +7,7 @@ sidebar_position: 3
 
 ## Introduction
 
-Blend is a multi-asset lending and borrowing protocol built on the Stellar smart contract platform. The protocol enables users to supply assets as collateral, borrow against that collateral, and earn rewards through the emissions system.
+Blend helps users, DAOs, and institutions deploy multi-asset lending and borrowing pools on the Stellar smart contract platform. The protocol enables users to supply assets as collateral, borrow against that collateral, and earn rewards through the emissions system.
 
 As wallets look to expand their functionality and attract users seeking DeFi features, integrating Blend presents a compelling opportunity. With Blend, wallets can offer their users effortless access to yield-generating opportunities without ever leaving their familiar wallet environment.
 
@@ -30,9 +30,11 @@ Integrating Blend brings several strategic benefits to wallet providers:
    Decide how you want to integrate Blend. You can interact directly with Blend for maximum control, leverage the [Blend Fee Vault](https://docs.blend.capital/tech-docs/integrations/fee-vault) for flexible revenue sharing with a single pool, or use [DeFindex](https://docs.defindex.io/wallet-developer/introduction) to access multiple pools at the same time and enable revenue sharing.
 
 2. **Select Pools for Your Users:**  
-   Blend offers various pools for lending and borrowing different assets, each with unique APY and reward rates. Review the available options and choose pools that align with your users’ needs.  
-   - Explore pools: [Blend Pools Dashboard](https://blend.xlm.sh/dashboard/?poolId=CCCCIQSDILITHMM7PBSLVDT5MISSY7R26MNZXCX4H7J5JQ5FPIYOGYFS)  
+   There are various Blend pools for lending and borrowing different assets, each with unique APY and reward rates. Review the available options and choose pools that align with your users’ needs.  
+   - Explore pools: [Blend Pools Dashboard](https://mainnet.blend.capital/)
    - With DeFindex, you can integrate multiple pools and dynamically switch to the best-performing ones without additional user signatures. See available strategies in the [Deploy Vault App](https://app.defindex.io).
+
+   📖 [Learn more about how to select a Blend pool](https://docs.blend.capital/users/choosing-pools)
 
 3. **Define Your Revenue Model:**  
    Decide whether to pass 100% of the yield to users or use intermediary contracts to manage and monetize yield distribution. Both the [Blend Fee Vault](https://docs.blend.capital/tech-docs/integrations/fee-vault) and [DeFindex](https://docs.defindex.io/wallet-developer/introduction) support flexible monetization models.
@@ -42,6 +44,8 @@ Integrating Blend brings several strategic benefits to wallet providers:
 
 4. **Design the User Experience:**  
    Lending protocols can be complex. Consider simplifying the interface by showing only relevant information, such as a separate lending balance for each asset (e.g., USDC) and the current yield rate. Both Blend and DeFindex provide tools to display up-to-date yield information.
+
+   📖 [Learn more about displaying Blend pool data](https://docs.blend.capital/tech-docs/integrations/integrate-pool#step-3-display-blend-pool-data)  
 
 5. **Review Technical Requirements:**  
    - Classic Stellar wallets (starting with G) can interact with Blend, even though it’s a smart contract protocol.
