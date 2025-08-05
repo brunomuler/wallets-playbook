@@ -3,6 +3,20 @@ sidebar_label: 'Virtual Bank Accounts'
 sidebar_position: 2
 ---
 
+import VirtualAccountsDirectory from '@site/src/components/VirtualAccountsDirectory';
+
 # Virtual Bank Accounts
 
-Placeholder content for Virtual Bank Accounts. 
+Virtual bank accounts (VBAs) let you give customers unique bank account identifiers that can automatic transfer funds into their Stellar wallets.
+
+### What Are Virtual Bank Accounts?
+
+A virtual bank account provided by third parties is not a real on-chain account. Instead, it’s a reference or identifier tied to your customer's Stellar account in the third party's system. All transactions flow through one **treasury account** and assets are sent to the customer's Stellar account.
+
+### Why Use Virtual Bank Accounts?
+
+Virtual bank accounts are a great way to give your customers a seamless experience when receiving traditional payments. They can provide traditional bank account numbers, and the funds will be automatically transferred to their Stellar wallet as an asset.
+
+### Virtual Bank Account Providers
+
+<VirtualAccountsDirectory />

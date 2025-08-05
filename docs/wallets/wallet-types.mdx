@@ -3,112 +3,95 @@ sidebar_label: 'Stellar Wallet Types'
 sidebar_position: 1
 description: Learn about the two main types of wallets on Stellar—Classic Wallets and Smart Wallets—and how they differ in structure, capabilities, and implementation.
 ---
-
 # Stellar Wallet Types
 
-Stellar supports two primary types of wallets: **Classic Wallets** and **Smart Wallets**. Both are compatible with the Stellar network but differ in how they store state, authorize transactions, and interact with smart contracts.
+Stellar supports two primary types of wallets: **Classic Wallets** and **Smart Wallets**. Both types are fully compatible with the Stellar network but differ significantly in state storage, transaction authorization, and their ability to interact with smart contracts.
 
-Choosing between them depends on your wallet’s intended use case, UX goals, and the level of programmability required.
-
----
+Your choice between wallet types will depend on your specific use case, desired user experience, and the degree of programmability you require.
 
 ## Classic Wallets
 
-A **Classic Wallet** is built using Stellar's original account model. It relies entirely on features built into the core Stellar protocol and does not use Soroban smart contracts.
+**Classic Wallets** utilize Stellar’s traditional account model, relying entirely on features native to the Stellar protocol. They do not leverage Soroban smart contracts.
 
 ### Structure
-- Backed by a **Classic Stellar Account** (G... address)
-- Uses **Ed25519** public/private keypairs for signing
-- Account data (balances, thresholds, signers) is stored in **Stellar Core**
 
-### Features
-- Send/receive XLM or issued assets
-- Manage trustlines
-- Add/remove signers
-- Participate in the Stellar DEX
-- Sponsor other accounts or trustlines
-- Store key-value data with `ManageData`
+Classic Wallets:
 
-### Use Cases
-- Lightweight mobile wallets
-- Custodial wallets with backend key management
-- Low-fee, high-throughput applications
-- Wallets that don’t need smart contract logic
+* Are backed by **Classic Stellar Accounts** (addresses beginning with G...)
+* Employ **Ed25519 public/private keypairs** for transaction signing
+* Store account data (balances, thresholds, signers) directly within **Stellar Core**
 
-### Technical Considerations
-- All transactions must be signed directly or via multi-signature rules
-- Application logic must be enforced off-chain or via signer setup
-- No on-chain logic beyond what is built into the protocol
+### Key Features
 
-Learn more:  
-[Accounts and Classic Operations – Stellar Docs](https://developers.stellar.org/docs/fundamentals/accounts/)  
-[List of Operations – Stellar Docs](https://developers.stellar.org/docs/fundamentals/list-of-operations/)
+Classic wallets natively support:
 
----
+* Sending and receiving XLM and other issued assets
+* Trustline management
+* Signer management (adding/removing signers)
+* Trading via the Stellar Decentralized Exchange (DEX)
+* Account or trustline sponsorship
+* Data storage using the `ManageData` operation
+
+### Ideal Use Cases
+
+Classic wallets are suitable for:
+
+* Lightweight mobile and web wallets
+* High-throughput, low-fee transactional applications
+* Applications without complex on-chain logic requirements
+
+
 
 ## Smart Wallets
 
-A **Smart Wallet** is powered by a **Soroban smart contract account**. These wallets use a contract as their controlling entity and enable fully programmable authorization and storage logic on-chain.
+**Smart Wallets** leverage Soroban smart contracts, using programmable contract logic for transaction authorization and state management. This allows fully customizable on-chain functionality.
 
 ### Structure
-- Backed by a **Soroban Contract** account
-- Controlled by contract logic, not by a single public key
-- May be created and initialized by an external app or user
 
-### Features
-- Custom account behavior (e.g., social recovery, fee splitting, delegation)
-- Programmable authorization using Soroban's `require_auth` and address types
-- Can interact with other contracts (e.g., AMMs, bridges, disbursement contracts)
-- May use custom key schemes (e.g., secp256r1, passkeys)
+Smart Wallets:
 
-### Use Cases
-- Smart contract wallets with fine-grained permissions
-- Wallets integrated into on-chain DeFi protocols
-- Delegated signing with external identity systems
-- Complex business logic on-chain
+* Are backed by **Soroban Contract Accounts**
+* Utilize contract logic for authorization rather than individual keys
+* Can be created and initialized via external apps or directly by users
 
-### Technical Considerations
-- Requires contract deployment and initialization (typically via your app)
-- Fees must be covered by the wallet or a sponsor
-- Must use the Soroban SDK to invoke contracts and submit transactions
-- Cannot be interacted with via Classic-only APIs
+### Key Features
 
-Learn more:  
-[Smart Wallets on Stellar](https://developers.stellar.org/docs/learn/creating-and-using-a-smart-wallet/)  
-[Soroban Authorization Overview](https://soroban.stellar.org/docs/learn/programs/authentication-and-authorization)
+Smart wallets offer advanced functionality, including:
 
----
+* Customizable wallet behavior (social recovery, fee-splitting, delegation)
+* Programmable transaction authorization with Soroban’s `require_auth`
+* Interaction capabilities with other smart contracts (e.g., AMMs, bridges, payment distribution contracts)
+* Support for alternative key schemes (e.g., secp256r1, passkeys)
+
+### Ideal Use Cases
+
+Smart wallets are ideal for:
+
+* Wallets requiring advanced access controls (e.g., social recovery, custom permissions)
+* Wallets integrated directly with DeFi and on-chain financial applications
+* Delegated signing mechanisms using external identity providers
+* Applications needing robust on-chain business logic
+
+
+### Learn More
+
+* [Smart Wallets on Stellar](https://developers.stellar.org/docs/build/apps/smart-wallets/)
 
 ## Classic vs Smart Wallet Comparison
 
-| Feature                        | Classic Wallet       | Smart Wallet                  |
-|-------------------------------|----------------------|--------------------------------|
-| Backed By                     | Stellar Core Account | Soroban Contract Account       |
-| Authorization                 | Keypair / Signers    | `require_auth` contract logic |
-| On-Chain Logic                | No                   | Yes                            |
-| Custom Recovery Mechanisms    | Off-chain only       | Fully programmable             |
-| Compatibility                 | Fully supported      | Soroban-only features required |
-| Use in DeFi                   | Limited (via DEX)    | Full on-chain DeFi support     |
-| Fee Management                | Native               | Requires sponsor or logic      |
+| Feature                    | Classic Wallet            | Smart Wallet                   |
+| -------------------------- | ------------------------- | ------------------------------ |
+| Backed By                  | Stellar Core Account      | Soroban Contract Account       |
+| Authorization              | Keypair & multi-signature | Programmable via Soroban logic |
+| On-Chain Logic             | No                        | Yes                            |
 
----
 
 ## Choosing the Right Wallet Type
 
-| Use Case                                      | Recommended Wallet Type |
-|-----------------------------------------------|--------------------------|
-| Simple wallet for sending/receiving XLM       | Classic Wallet           |
-| Wallet with social recovery and smart auth    | Smart Wallet             |
-| DEX trading and token swaps                   | Classic Wallet (via DEX) |
-| Interacting with Soroban smart contracts      | Smart Wallet             |
-| Low-cost onboarding with sponsorship          | Both supported           |
-
----
-
-## Developer Notes
-
-You can support **both wallet types** in the same application if you abstract transaction signing and account handling appropriately. Many builders start with Classic Wallets and progressively add Smart Wallet functionality as their needs evolve.
-
-
-
-{/* Add links to the data, sponsorship, and txn submission sections */}
+| Use Case                                  | Recommended Wallet Type |
+| ----------------------------------------- | ----------------------- |
+| Simple wallet for XLM and asset transfers | Classic Wallet          |
+| Social recovery and advanced permissions  | Smart Wallet            |
+| Trading via Stellar DEX                   | Classic Wallet          |
+| Integration with Soroban smart contracts  | Both supported in different levels            |
+| Low-cost user onboarding with sponsorship | Both supported          |

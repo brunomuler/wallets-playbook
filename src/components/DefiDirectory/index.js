@@ -78,6 +78,15 @@ const DefiDirectory = () => {
 
           return (
             <div key={item.id} className={styles.card}>
+              <div className={styles.thumbnailContainer}>
+                {item.thumbnail && (
+                  <img
+                    src={`/img/thumbnails/${item.thumbnail}`}
+                    alt={`${item.title} thumbnail`}
+                    className={styles.thumbnail}
+                  />
+                )}
+              </div>
               <div className={styles.cardHeader}>
                 <h3>{item.title}</h3>
                 <span className={styles.cardType}>{item.type}</span>

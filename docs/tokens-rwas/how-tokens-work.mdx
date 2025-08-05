@@ -1,0 +1,80 @@
+---
+title: How Tokens Work on Stellar
+sidebar_position: 1
+---
+
+# How Tokens Work on Stellar
+
+Tokens on Stellar can represent real-world value digitally, enabling efficient payments, exchanges, and interactions. They are issued by a variety of institutions, called **Issuers**.
+
+## Token Types on Stellar
+
+On the technical side, Stellar supports two primary types of tokens:
+
+1. **Tokens Issued by Stellar Accounts** (`G...` addresses)
+
+   * **Classic Tokens**
+   * Tokens using the built-in [Stellar Asset Contract (SAC)](https://developers.stellar.org/docs/tokens/stellar-asset-contract) implementation
+
+2. **[Contract Tokens](https://developers.stellar.org/docs/tokens#contract-tokens)** issued by deployed WASM contracts (`C...` addresses)
+
+
+
+## Stellar-Issued Tokens
+
+### Classic Tokens
+
+Stellar is inherently optimized for payments, incorporating key payment functionalities directly into its core. Classic Tokens can leverage the following native features:
+
+* **[Trustlines](https://developers.stellar.org/docs/learn/fundamentals/stellar-data-structures/accounts#trustlines)**: Users must explicitly establish trust with token issuers to hold their tokens, except for Stellar's native Lumens (XLM).
+* **[Authorization Required](https://developers.stellar.org/docs/tokens/control-asset-access#authorization-required-0x1)** *(Auth Required)*: Issuers must explicitly authorize who can hold their assets.
+* **[Authorization Revocable](https://developers.stellar.org/docs/tokens/control-asset-access#authorization-revocable-0x2)** *(Auth Revocable)*: Allows issuers to revoke authorization, preventing further holding or use of the asset by specific accounts.
+* **[Clawback](https://developers.stellar.org/docs/tokens/control-asset-access#authorization-revocable-0x2)**: Enables issuers to reclaim assets under defined conditions—particularly useful for regulated assets or compromised scenarios.
+* **[Regulated Assets](https://github.com/stellar/stellar-protocol/blob/master/ecosystem/sep-0008.md)**: Supports compliance with regulatory requirements through combined authorization and clawback functionalities.
+* **Immutable Asset Flags**: Issuers can lock certain asset flags permanently, ensuring transparency and consistent asset characteristics, crucial for regulatory compliance.
+
+Classic Tokens always have:
+
+* An **issuing account** (`G...` address).
+* A unique **[asset code](https://developers.stellar.org/docs/tokens/control-asset-access#naming-an-asset)**. Note: Different tokens can share the same code, but the combination of asset code and issuer will always be unique.
+
+To interact with Classic Tokens, an account must first establish a trustline to the tokens—an operation required before usage. Establishing a trustline incurs a base reserve fee of **0.5 XLM**, detailed further in the [Sponsor Classic Wallets section](../wallets/sponsor/sponsor-classic#base-reserves).
+
+
+### Stellar Asset Contract (SAC)
+
+The introduction of Smart Contracts on Stellar also introduced **Stellar Asset Contracts (SAC)**, designed to facilitate seamless interoperability between smart contracts (like Smart Wallets) and Classic Tokens. Each Classic Token can have an associated SAC instance.
+
+**Balances** work differently between Classic Tokens and their SAC counterparts. Classic Token balances are always stored directly on user accounts, while SAC balances for native tokens are stored within contract data entries. Even though they are separate, transfer between Classic Tokens and their SAC counterparts is seamless - Stellar automatically debits the sender's account balance and credits the corresponding contract balance.
+
+When transferring tokens between a Classic Token and its SAC instance, Stellar automatically debits the sender's account balance and credits the corresponding contract balance.
+
+For more details, refer to the [Stellar Asset Contract documentation](https://developers.stellar.org/docs/tokens/stellar-asset-contract).
+
+
+
+## Contract Tokens
+
+**Contract Tokens** are programmable assets issued and governed entirely by custom WASM smart contracts on Stellar. Unlike Classic Tokens and SAC tokens, contract tokens provide builders and developers with full control over token behavior and logic, enabling advanced tokenomics and bespoke use cases.
+
+### Benefits for Wallet Builders
+
+Contract Tokens are ideal for builders who need:
+
+* **Customized Token Logic**: Easily implement features like supply control, minting/burning, and vesting schedules directly in the token contract.
+* **Interoperability**: Contract tokens adhere to the standardized [SEP-41 Token Interface](https://developers.stellar.org/docs/tokens/token-interface), ensuring seamless compatibility with existing wallets, explorers, and dApps.
+* **Enhanced Control**: Define precise token behaviors beyond what native Stellar features can provide.
+
+### Key Implementation Details
+
+Contract tokens must implement the [SEP-41 Token Interface](https://developers.stellar.org/docs/tokens/token-interface), which includes methods such as:
+
+* `balance(from)`: Check token balances.
+* `transfer(from, to, amount)`: Manage transfers between accounts.
+* `approve(spender, amount)`: Approve tokens for spending by other accounts or contracts.
+
+Additionally, contract tokens emit standardized events (e.g., `Transfer`, `Approval`) allowing wallets and other tools to monitor and handle token activity consistently.
+
+For additional details, please refer to the [Token Interface documentation](https://developers.stellar.org/docs/tokens/token-interface).
+
+{/* Add more details on how to interact with assets */}

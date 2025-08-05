@@ -1,0 +1,26 @@
+---
+sidebar_label: 'Order Books and AMMs'
+sidebar_position: 3
+---
+
+# Order Books and AMMs
+
+## Order Books
+
+Order books are the traditional trading model where buyers and sellers post offers specifying price and quantity. A matching engine pairs compatible orders, providing transparent price discovery and supporting advanced order types like limits and markets. This approach works best when liquidity is high, but it relies on active market makers to keep spreads tight. Illiquid markets often suffer from poor execution and price volatility.
+
+Stellar natively supports order books through the Stellar Decentralized Exchange (SDEX), a built-in feature of the protocol. SDEX allows anyone to list assets and trade without a central intermediary, offering transparent and secure access to global markets.
+
+
+## Automated Market Makers (AMMs)
+
+AMMs replace the order-matching process with liquidity pools governed by an algorithm. Users trade directly against a pool, and prices are determined by a mathematical formula (e.g., `x * y = k`). Anyone can supply liquidity and earn a share of transaction fees. AMMs guarantee instant execution and create liquidity even for thinly traded assets, but trades can experience slippage, and liquidity providers face risks like impermanent loss.
+
+On Stellar, AMMs are supported both natively at the **protocol level**, ensuring they integrate directly with the ledger and pathfinding system, and **smart contract protocols** can implement custom AMM logic, enabling advanced features beyond the built-in constant product pools.
+
+
+
+**References:**
+
+* [Liquidity on Stellar: SDEX & Liquidity Pools
+](https://developers.stellar.org/docs/learn/encyclopedia/sdex/liquidity-on-stellar-sdex-liquidity-pools)

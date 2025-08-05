@@ -20,7 +20,11 @@
     }
   ],
   "metadata": {
+<<<<<<< Updated upstream
     "generatedAt": "2025-08-04T06:04:47.520Z",
+=======
+    "generatedAt": "2025-08-05T05:18:17.025Z",
+>>>>>>> Stashed changes
     "count": 2,
     "source": "airtable"
   }
