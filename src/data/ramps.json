@@ -8460,6 +8460,8 @@
     {
       "id": "recUaoxI6yBldKWY2",
       "name": "TransNetwork",
+      "logo": "partners/transnetwork.png",
+      "website": "https://www.transnetwork.com",
       "type": "Ramp",
       "geo_rollout": []
     },
@@ -8496,7 +8498,7 @@
     }
   ],
   "metadata": {
-    "generatedAt": "2025-08-05T22:45:54.973Z",
+    "generatedAt": "2025-08-06T04:28:11.695Z",
     "count": 42,
     "source": "airtable"
   }
