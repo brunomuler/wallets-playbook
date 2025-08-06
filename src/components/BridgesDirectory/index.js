@@ -24,12 +24,14 @@ export default function BridgesDirectory() {
         {bridges.map(bridge => (
           <div key={bridge.id} className={styles.card}>
             <div className={styles.cardHeader}>
-              {bridge.logo && (
+              {bridge.logo ? (
                 <img
                   src={`/img/logos/${bridge.logo}`}
                   alt={`${bridge.name} logo`}
                   className={styles.logo}
                 />
+              ) : (
+                <div className={styles.logoPlaceholder}></div>
               )}
               <h3 className={styles.cardName}>{bridge.name}</h3>
             </div>

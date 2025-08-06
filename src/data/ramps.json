@@ -3,6 +3,7 @@
     {
       "id": "recD4iWYass5YzvG7",
       "name": "AlchemyPay",
+      "logo": "partners/alchemypay.png",
       "website": "https://alchemypay.org/",
       "type": "Ramp",
       "geo_rollout": [
@@ -677,6 +678,7 @@
     {
       "id": "recBHpg7OFt2WoWaa",
       "name": "AlfredPay",
+      "logo": "partners/alfredpay.png",
       "website": "https://www.alfredpay.io/",
       "type": "Ramp",
       "geo_rollout": [
@@ -973,6 +975,7 @@
     {
       "id": "recEC7nFfhGOTJCvc",
       "name": "Anclap",
+      "logo": "partners/anclap.png",
       "website": "https://anclap.com/",
       "type": "Ramp",
       "geo_rollout": [
@@ -1588,6 +1591,7 @@
     {
       "id": "recV7x9USk8VolebG",
       "name": "Bitnovo",
+      "logo": "partners/bitnovo.png",
       "website": "https://www.bitnovo.com/en/",
       "type": "Ramp",
       "geo_rollout": [
@@ -1626,6 +1630,7 @@
     {
       "id": "recgebgv2tSICKdvK",
       "name": "ChipperCash",
+      "logo": "partners/chippercash.png",
       "website": "https://www.chippercash.com/",
       "type": "Ramp",
       "geo_rollout": [
@@ -1664,6 +1669,7 @@
     {
       "id": "recLfeg28EB6L1q5O",
       "name": "ClickPesa",
+      "logo": "partners/clickpesa.png",
       "website": "https://clickpesa.com/",
       "type": "Ramp",
       "geo_rollout": [
@@ -1880,6 +1886,7 @@
     {
       "id": "rec4fRAdRwCRC25pb",
       "name": "Coinme",
+      "logo": "partners/coinme.png",
       "website": "https://www.coinme.com",
       "type": "Ramp",
       "geo_rollout": []
@@ -1887,6 +1894,7 @@
     {
       "id": "recfscIYZj4Bk1fht",
       "name": "CoinMENA",
+      "logo": "partners/coinmena.png",
       "website": "https://www.coinmena.com",
       "type": "Ramp",
       "geo_rollout": []
@@ -1894,6 +1902,7 @@
     {
       "id": "recrW9w9vOgkUvCm0",
       "name": "Conduit",
+      "logo": "partners/conduit.png",
       "website": "https://conduitpay.com/",
       "type": "Ramp",
       "geo_rollout": []
@@ -1901,6 +1910,7 @@
     {
       "id": "rectVEZZUiJXemfOp",
       "name": "Cowrie",
+      "logo": "partners/cowrie.png",
       "website": "https://cowrie.co.in/",
       "type": "Ramp",
       "geo_rollout": []
@@ -1908,6 +1918,7 @@
     {
       "id": "recrTFJfi9Wyi8u02",
       "name": "DigiBank ",
+      "logo": "partners/digibank.png",
       "website": "https://www.dbs.com/digibank/in/default.page",
       "type": "Ramp",
       "geo_rollout": []
@@ -1915,6 +1926,7 @@
     {
       "id": "recRVUjMOmKjbvWCR",
       "name": "Ghazanfar Bank",
+      "logo": "partners/ghazanfar-bank.png",
       "website": "https://www.ghazanfarbank.com/",
       "type": "Ramp",
       "geo_rollout": []
@@ -1922,6 +1934,7 @@
     {
       "id": "recUUNfgAWW1cTelr",
       "name": "ImpalaPay",
+      "logo": "partners/impalapay.png",
       "website": "https://impalapay.com/",
       "type": "Ramp",
       "geo_rollout": [
@@ -1943,6 +1956,7 @@
     {
       "id": "recKTnpZhgme7hVny",
       "name": "Kado",
+      "logo": "partners/kado.png",
       "website": "https://www.kado.money/",
       "type": "Ramp",
       "geo_rollout": [
@@ -1981,6 +1995,7 @@
     {
       "id": "recizTznZ7H4Ri3VO",
       "name": "KotaniPay",
+      "logo": "partners/kotanipay.png",
       "website": "https://kotanipay.com/",
       "type": "Ramp",
       "geo_rollout": []
@@ -1988,6 +2003,7 @@
     {
       "id": "recEFkMIonUP4TQ5D",
       "name": "Kredete",
+      "logo": "partners/kredete.png",
       "website": "https://www.kredete.io/",
       "type": "Ramp",
       "geo_rollout": []
@@ -1995,6 +2011,7 @@
     {
       "id": "recimTMA1dRUM5qQG",
       "name": "Latamex/ Settle",
+      "logo": "partners/latamex-settle.png",
       "website": "https://www.latamex.com/",
       "type": "Ramp",
       "geo_rollout": [
@@ -2035,6 +2052,7 @@
     {
       "id": "recnY4ddJbsiRDs1c",
       "name": "Lightnet",
+      "logo": "partners/lightnet.png",
       "website": "https://lightnet.io",
       "type": "Ramp",
       "geo_rollout": []
@@ -2042,6 +2060,7 @@
     {
       "id": "rec9pcdiqM4K914xf",
       "name": "Link Ramp",
+      "logo": "partners/link-ramp.png",
       "type": "Ramp",
       "geo_rollout": []
     },
@@ -6730,6 +6749,7 @@
     {
       "id": "recYxj6yluxwJmg0q",
       "name": "MyKobo",
+      "logo": "partners/mykobo.png",
       "website": "https://www.mykobo.co/",
       "type": "Ramp",
       "geo_rollout": []
@@ -6737,6 +6757,7 @@
     {
       "id": "recnYBy6xOnYphgzv",
       "name": "Novatti",
+      "logo": "partners/novatti.png",
       "website": "https://www.novatti.com",
       "type": "Ramp",
       "geo_rollout": []
@@ -6744,6 +6765,7 @@
     {
       "id": "recz7UrPl4o059vib",
       "name": "nTokens",
+      "logo": "partners/ntokens.png",
       "website": "https://ntokens.com",
       "type": "Ramp",
       "geo_rollout": [
@@ -6782,6 +6804,7 @@
     {
       "id": "recuqwhVLmf1XZNS7",
       "name": "Owlting",
+      "logo": "partners/owlting.png",
       "website": "https://owlting.com",
       "type": "Ramp",
       "geo_rollout": []
@@ -6789,6 +6812,7 @@
     {
       "id": "recA8MbOFYIeRyDy8",
       "name": "Paychant",
+      "logo": "partners/paychant.png",
       "website": "https://paychant.com",
       "type": "Ramp",
       "geo_rollout": [
@@ -6861,6 +6885,7 @@
     {
       "id": "rec65LBMeiio54LiW",
       "name": "PDAX",
+      "logo": "partners/pdax.png",
       "website": "https://pdax.ph",
       "type": "Ramp",
       "geo_rollout": [
@@ -6914,7 +6939,8 @@
     {
       "id": "recdBVfEw1KkRaroL",
       "name": "PeraHub",
-      "website": "https://perahub.pera.cx/",
+      "logo": "partners/perahub.png",
+      "website": "The official website for PeraHub is not found or cannot be confirmed as official based on the available information.",
       "type": "Ramp",
       "geo_rollout": [
         {
@@ -6935,6 +6961,7 @@
     {
       "id": "recVd9n4fEIh1xVcC",
       "name": "PMI Americas",
+      "logo": "partners/pmi-americas.png",
       "type": "Ramp",
       "geo_rollout": [
         {
@@ -7122,20 +7149,15 @@
     {
       "id": "recGPsZsNDPndqYd7",
       "name": "Pockyt",
+      "logo": "partners/pockyt.png",
       "website": "https://www.pockyt.io/",
-      "type": "Ramp",
-      "geo_rollout": []
-    },
-    {
-      "id": "recWIAUc2HC7PeCY1",
-      "name": "Puntored",
-      "website": "https://www.puntored.com",
       "type": "Ramp",
       "geo_rollout": []
     },
     {
       "id": "recQDUKisk9NvipND",
       "name": "Revolut LTD - USDC + L&E",
+      "logo": "partners/revolut-ltd-usdc-l-e.png",
       "website": "https://www.revolut.com",
       "type": "Ramp",
       "geo_rollout": []
@@ -7362,6 +7384,7 @@
     {
       "id": "recYdS8GolGk7J1uz",
       "name": "Stably",
+      "logo": "partners/stably.png",
       "website": "https://www.stably.io/",
       "type": "Ramp",
       "geo_rollout": []
@@ -7369,6 +7392,7 @@
     {
       "id": "recpvTgpThjrsUHAQ",
       "name": "Tempo/ ArmenoTech",
+      "logo": "partners/tempo-armenotech.png",
       "website": "https://armenotech.com/",
       "type": "Ramp",
       "geo_rollout": [
@@ -8428,6 +8452,7 @@
     {
       "id": "rec59YAm4Sef1aFPf",
       "name": "Transfi",
+      "logo": "partners/transfi.png",
       "website": "https://www.transfi.com/",
       "type": "Ramp",
       "geo_rollout": []
@@ -8441,6 +8466,7 @@
     {
       "id": "reccp8VGHZRCGgchq",
       "name": "Triple-A",
+      "logo": "partners/triple-a.png",
       "website": "https://www.triple-a.io/",
       "type": "Ramp",
       "geo_rollout": [
@@ -8463,14 +8489,15 @@
     {
       "id": "rechxBci1Ol90G01W",
       "name": "ZeePay",
+      "logo": "partners/zeepay.png",
       "website": "https://myzeepay.com/",
       "type": "Ramp",
       "geo_rollout": []
     }
   ],
   "metadata": {
-    "generatedAt": "2025-08-05T05:18:16.822Z",
-    "count": 43,
+    "generatedAt": "2025-08-05T22:45:54.973Z",
+    "count": 42,
     "source": "airtable"
   }
 }

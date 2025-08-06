@@ -50,19 +50,47 @@
   border-radius: 8px;
 }
 
+.rampLogoPlaceholder {
+  width: 70px;
+  height: 70px;
+  border-radius: 8px;
+  background-color: var(--ifm-color-emphasis-200);
+  border: 1px solid var(--ifm-color-emphasis-300);
+}
+
 .rampName {
   font-weight: 600;
   font-size: 1.3em;
 }
 
 .websiteLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  background-color: var(--ifm-color-primary);
+  color: white;
   text-decoration: none;
+  border-radius: 8px;
   font-weight: 500;
-  color: var(--ifm-color-primary);
+  font-size: 0.875rem;
+  transition: all 0.2s ease;
+  border: none;
+  cursor: pointer;
 }
 
 .websiteLink:hover {
-  text-decoration: underline;
+  background-color: var(--ifm-color-primary-dark);
+  color: white;
+  text-decoration: none;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.externalIcon {
+  width: 16px;
+  height: 16px;
+  stroke-width: 2;
 }
 
 .rampDetails {

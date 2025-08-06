@@ -50,6 +50,15 @@
   border-color: var(--ifm-color-emphasis-300);
 }
 
+.logoPlaceholder {
+  width: 80px;
+  height: 80px;
+  margin-right: 16px;
+  border-radius: 8px;
+  background-color: var(--ifm-color-emphasis-200);
+  border: 1px solid var(--ifm-color-emphasis-300);
+}
+
 .cardName {
   margin: 0;
   font-size: 1.3rem;

@@ -44,12 +44,14 @@ export default function AssetsDirectory() {
               </div>
             )}
             <div className={styles.cardHeader}>
-              {assetLogo && (
+              {assetLogo ? (
                 <img
                   src={`/img/logos/${assetLogo}`}
                   alt={`${asset.name} logo`}
                   className={styles.logo}
                 />
+              ) : (
+                <div className={styles.logoPlaceholder}></div>
               )}
               <h3 className={styles.assetName}>{asset.name}</h3>
             </div>

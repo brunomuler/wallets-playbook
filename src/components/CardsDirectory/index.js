@@ -24,12 +24,14 @@ export default function CardsDirectory() {
         {cards.map(card => (
           <div key={card.id} className={styles.card}>
             <div className={styles.cardHeader}>
-              {card.logo && (
+              {card.logo ? (
                 <img
                   src={`/img/logos/${card.logo}`}
                   alt={`${card.name} logo`}
                   className={styles.logo}
                 />
+              ) : (
+                <div className={styles.logoPlaceholder}></div>
               )}
               <h3 className={styles.cardName}>{card.name}</h3>
             </div>

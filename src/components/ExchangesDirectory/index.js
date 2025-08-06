@@ -149,7 +149,8 @@ const ExchangesDirectory = () => {
     return (
         <div>
             <ContributeNotice />
-            <div className={styles.filter}>
+            {/* Geography filter temporarily hidden */}
+            {/* <div className={styles.filter}>
                 <label htmlFor="geoFilter">Filter by Geography:</label>
                 <Select
                     id="geoFilter"
@@ -162,7 +163,7 @@ const ExchangesDirectory = () => {
                     className={styles.geoSelect}
                     styles={customSelectStyles}
                 />
-            </div>
+            </div> */}
             <div className={styles.exchangesList}>
                 {filteredExchanges.map(exchange => {
                     const allExchangeOptions = Array.from(new Set(exchange.geo_rollout.flatMap(g => g.ramp_options))).sort();
@@ -210,7 +211,11 @@ const ExchangesDirectory = () => {
                         <div key={exchange.id} className={styles.exchangeCard}>
                             <div className={styles.exchangeHeader}>
                                 <div className={styles.exchangeIdentity}>
-                                    {exchange.logo && <img src={`/img/logos/${exchange.logo}`} alt={`${exchange.name} logo`} className={styles.exchangeLogo} />}
+                                    {exchange.logo ? (
+                                        <img src={`/img/logos/${exchange.logo}`} alt={`${exchange.name} logo`} className={styles.exchangeLogo} />
+                                    ) : (
+                                        <div className={styles.exchangeLogoPlaceholder}></div>
+                                    )}
                                     <span className={styles.exchangeName}>{exchange.name}</span>
                                 </div>
                                 {exchange.website && (
@@ -233,7 +238,8 @@ const ExchangesDirectory = () => {
                                     </a>
                                 )}
                             </div>
-                            <div className={styles.exchangeDetails}>
+                            {/* Exchange details temporarily hidden */}
+                            {/* <div className={styles.exchangeDetails}>
                                 <div className={styles.detailItem}>
                                     <strong>Geographies</strong>
                                     <div className={styles.geographiesList}>
@@ -287,7 +293,7 @@ const ExchangesDirectory = () => {
                                     <strong>Payment Methods</strong>
                                     <p>{allPaymentMethods.length > 0 ? allPaymentMethods.join(', ') : 'N/A'}</p>
                                 </div>
-                            </div>
+                            </div> */}
                         </div>
                     );
                 })}

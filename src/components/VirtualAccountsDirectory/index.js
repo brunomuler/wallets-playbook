@@ -24,12 +24,14 @@ export default function VirtualAccountsDirectory() {
         {virtualAccounts.map(account => (
           <div key={account.id} className={styles.card}>
             <div className={styles.cardHeader}>
-              {account.logo && (
+              {account.logo ? (
                 <img
                   src={`/img/logos/${account.logo}`}
                   alt={`${account.name} logo`}
                   className={styles.logo}
                 />
+              ) : (
+                <div className={styles.logoPlaceholder}></div>
               )}
               <h3 className={styles.cardName}>{account.name}</h3>
             </div>
