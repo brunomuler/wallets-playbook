@@ -21,7 +21,7 @@ const Flag = ({ code, country }) => {
     const [error, setError] = useState(false);
 
     if (error || !code) {
-        return null;
+        return <span className={styles.flagSpacer}></span>;
     }
 
     return (
@@ -60,7 +60,9 @@ const customSelectStyles = {
     }),
     menu: (provided) => ({
         ...provided,
-        backgroundColor: 'var(--ifm-background-color)',
+        backgroundColor: 'var(--ifm-background-surface-color)',
+        border: '1px solid var(--ifm-color-emphasis-300)',
+        boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)',
     }),
     option: (provided, state) => ({
         ...provided,
@@ -340,12 +342,12 @@ const RampsDirectory = () => {
                                             )) : <p>N/A</p>}
                                         </div>
                                     </div>
-                                    <div className={styles.detailItem}>
+                                    <div className={`${styles.detailItem} ${uniqueAssets.length === 0 ? styles.hiddenContent : ''}`}>
                                         <strong>Assets</strong>
                                         <div className={styles.assetsList}>
                                             {uniqueAssets.length > 0 ? uniqueAssets.map(asset => (
                                                 <AssetChip key={asset.name} asset={asset} />
-                                            )) : <p>N/A</p>}
+                                            )) : null}
                                         </div>
                                     </div>
                                 </div>

@@ -44,15 +44,20 @@
 }
 
 .rampLogo {
-  width: 70px;
-  height: 70px;
+  width: 90px;
+  height: 90px;
   object-fit: contain;
   border-radius: 8px;
+  border: 1px solid #d1d5db;
+}
+
+:global([data-theme='dark']) .rampLogo {
+  border-color: var(--ifm-color-emphasis-300);
 }
 
 .rampLogoPlaceholder {
-  width: 70px;
-  height: 70px;
+  width: 90px;
+  height: 90px;
   border-radius: 8px;
   background-color: var(--ifm-color-emphasis-200);
   border: 1px solid var(--ifm-color-emphasis-300);
@@ -69,7 +74,7 @@
   gap: 8px;
   padding: 10px 16px;
   background-color: var(--ifm-color-primary);
-  color: white;
+  color: #ffffff;
   text-decoration: none;
   border-radius: 8px;
   font-weight: 500;
@@ -77,14 +82,15 @@
   transition: all 0.2s ease;
   border: none;
   cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .websiteLink:hover {
   background-color: var(--ifm-color-primary-dark);
-  color: white;
+  color: #ffffff;
   text-decoration: none;
   transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
 .externalIcon {
@@ -160,8 +166,9 @@
 
 .geoTagContainer {
   position: relative;
-  display: inline-block;
+  display: inline-flex;
   margin: 2px;
+  vertical-align: baseline;
 }
 
 .geoTag {
@@ -177,6 +184,8 @@
   gap: 4px;
   border: 1px solid var(--geo-tag-border-color);
   font-size: 0.8em;
+  vertical-align: baseline;
+  min-height: 16px;
 }
 
 :global([data-theme='dark']) .geoTag {
@@ -195,6 +204,12 @@
 
 :global([data-theme='dark']) .flagIcon {
   --flag-icon-border-color: var(--ifm-color-emphasis-300);
+}
+
+.flagSpacer {
+  width: 4px;
+  height: 14px;
+  display: inline-block;
 }
 
 .popover {
@@ -332,6 +347,30 @@
   text-decoration: underline;
 }
 
+.expandButton {
+  background-color: var(--ifm-color-emphasis-200);
+  border: 1px solid var(--ifm-color-emphasis-300);
+  color: var(--ifm-font-color-base);
+  cursor: pointer;
+  padding: 2px 6px;
+  margin: 2px;
+  font-size: 0.8em;
+  font-weight: 500;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  display: inline-flex;
+  align-items: center;
+  vertical-align: baseline;
+}
+
+.expandButton:hover {
+  background-color: var(--ifm-color-emphasis-300);
+  color: var(--ifm-font-color-base);
+  transform: translateY(-1px);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
 .filter {
     display: flex;
     flex-direction: column;
@@ -377,4 +416,9 @@
 :global([data-theme='dark']) .assetTag {
     background-color: var(--ifm-color-emphasis-100);
     border-color: var(--ifm-color-emphasis-200);
+}
+
+.hiddenContent strong,
+.hiddenContent .assetsList {
+    visibility: hidden;
 }
