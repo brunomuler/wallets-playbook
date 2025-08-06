@@ -46,15 +46,20 @@
 }
 
 .exchangeLogo {
-  width: 70px;
-  height: 70px;
+  width: 90px;
+  height: 90px;
   object-fit: contain;
   border-radius: 8px;
+  border: 1px solid #d1d5db;
+}
+
+:global([data-theme='dark']) .exchangeLogo {
+  border-color: var(--ifm-color-emphasis-300);
 }
 
 .exchangeLogoPlaceholder {
-  width: 70px;
-  height: 70px;
+  width: 90px;
+  height: 90px;
   border-radius: 8px;
   background-color: var(--ifm-color-emphasis-200);
   border: 1px solid var(--ifm-color-emphasis-300);
