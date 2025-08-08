@@ -94,6 +94,7 @@
         }
       ],
       "yield_bearing": true,
+      "permissibility": "Permissionless",
       "home_domain": "etherfuse.com",
       "website": "etherfuse.com",
       "issuer_address": "GCRYUGD5NVARGXT56XEZI5CIFCQETYHAPQQTHO2O3IQZTHDH4LATMYWC"
@@ -187,19 +188,6 @@
       "home_domain": "stablecoin.z.com",
       "website": "https://stablecoin.z.com/gyen/",
       "issuer_address": "GDF6VOEGRWLOZ64PQQGKD2IYWA22RLT37GJKS2EJXZHT2VLAGWLC5TOB"
-    },
-    {
-      "id": "recnZ88dwNPnsPZgK",
-      "name": "MXNe",
-      "issuers": [
-        {
-          "name": "Etherfuse"
-        }
-      ],
-      "yield_bearing": false,
-      "permissibility": "Permissionless",
-      "fiat_asset": "MXN",
-      "website": "etherfuse.com"
     },
     {
       "id": "recf1FX1JV3nMFe4H",
@@ -342,6 +330,7 @@
         }
       ],
       "yield_bearing": true,
+      "permissibility": "Permissionless",
       "home_domain": "etherfuse.com",
       "website": "etherfuse.com",
       "issuer_address": "GCRYUGD5NVARGXT56XEZI5CIFCQETYHAPQQTHO2O3IQZTHDH4LATMYWC"
@@ -389,8 +378,8 @@
     }
   ],
   "metadata": {
-    "generatedAt": "2025-08-07T06:02:47.912Z",
-    "count": 28,
+    "generatedAt": "2025-08-08T06:03:25.329Z",
+    "count": 27,
     "source": "airtable"
   }
 }
