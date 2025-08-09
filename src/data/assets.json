@@ -1,12 +1,111 @@
 {
   "data": [
     {
+      "id": "rec0ci5eW6nHFQbXa",
+      "name": "acCELO",
+      "logo": "partners/allbridge.png",
+      "issuer_logo": "partners/allbridge.png",
+      "issuers": [
+        {
+          "name": "Allbridge",
+          "website": "https://allbridge.io/",
+          "logo": "partners/allbridge.png"
+        }
+      ],
+      "yield_bearing": false,
+      "website": "https://allbridge.io/",
+      "issuer_address": "GALLBRBQHAPW5FOVXXHYWR6J4ZDAQ35BMSNADYGBW25VOUHUYRZM4XIL"
+    },
+    {
+      "id": "rechyi8FCrYiA0c1H",
+      "name": "acUSD",
+      "logo": "partners/allbridge.png",
+      "issuer_logo": "partners/allbridge.png",
+      "issuers": [
+        {
+          "name": "Allbridge",
+          "website": "https://allbridge.io/",
+          "logo": "partners/allbridge.png"
+        }
+      ],
+      "yield_bearing": false,
+      "website": "https://allbridge.io/",
+      "issuer_address": "GALLBRBQHAPW5FOVXXHYWR6J4ZDAQ35BMSNADYGBW25VOUHUYRZM4XIL"
+    },
+    {
+      "id": "recULf7OcAq2TTgny",
+      "name": "aeETH",
+      "logo": "partners/allbridge.png",
+      "issuer_logo": "partners/allbridge.png",
+      "issuers": [
+        {
+          "name": "Allbridge",
+          "website": "https://allbridge.io/",
+          "logo": "partners/allbridge.png"
+        }
+      ],
+      "yield_bearing": false,
+      "website": "https://allbridge.io/",
+      "issuer_address": "GALLBRBQHAPW5FOVXXHYWR6J4ZDAQ35BMSNADYGBW25VOUHUYRZM4XIL"
+    },
+    {
+      "id": "recsM3XECwvTD30GQ",
+      "name": "aeUSDC",
+      "logo": "partners/allbridge.png",
+      "issuer_logo": "partners/allbridge.png",
+      "issuers": [
+        {
+          "name": "Allbridge",
+          "website": "https://allbridge.io/",
+          "logo": "partners/allbridge.png"
+        }
+      ],
+      "yield_bearing": false,
+      "website": "https://allbridge.io/",
+      "issuer_address": "GALLBRBQHAPW5FOVXXHYWR6J4ZDAQ35BMSNADYGBW25VOUHUYRZM4XIL"
+    },
+    {
+      "id": "recaV94nhY8XYuyRV",
+      "name": "apMATIC",
+      "logo": "partners/allbridge.png",
+      "issuer_logo": "partners/allbridge.png",
+      "issuers": [
+        {
+          "name": "Allbridge",
+          "website": "https://allbridge.io/",
+          "logo": "partners/allbridge.png"
+        }
+      ],
+      "yield_bearing": false,
+      "website": "https://allbridge.io/",
+      "issuer_address": "GALLBRBQHAPW5FOVXXHYWR6J4ZDAQ35BMSNADYGBW25VOUHUYRZM4XIL"
+    },
+    {
+      "id": "recdQENvrQj3rQia8",
+      "name": "apUSDC",
+      "logo": "partners/allbridge.png",
+      "issuer_logo": "partners/allbridge.png",
+      "issuers": [
+        {
+          "name": "Allbridge",
+          "website": "https://allbridge.io/",
+          "logo": "partners/allbridge.png"
+        }
+      ],
+      "yield_bearing": false,
+      "website": "https://allbridge.io/",
+      "issuer_address": "GALLBRBQHAPW5FOVXXHYWR6J4ZDAQ35BMSNADYGBW25VOUHUYRZM4XIL"
+    },
+    {
       "id": "recyb7xdB8L7GM4H6",
       "name": "AQUA",
+      "logo": "partners/aquarius.png",
+      "issuer_logo": "partners/aquarius.png",
       "issuers": [
         {
           "name": "Aquarius",
-          "website": "https://aqua.network/"
+          "website": "https://aqua.network/",
+          "logo": "partners/aquarius.png"
         }
       ],
       "yield_bearing": false,
@@ -16,10 +115,13 @@
     {
       "id": "reciuE6aswEnHJzmQ",
       "name": "ARS",
+      "logo": "partners/anclap.png",
+      "issuer_logo": "partners/anclap.png",
       "issuers": [
         {
           "name": "Anclap",
-          "website": "https://home.anclap.com/"
+          "website": "https://home.anclap.com/",
+          "logo": "partners/anclap.png"
         }
       ],
       "yield_bearing": false,
@@ -31,28 +133,98 @@
     {
       "id": "reczAO3ddwU0mTnSu",
       "name": "ARST",
+      "logo": "partners/latamex.png",
+      "issuer_logo": "partners/latamex.png",
       "issuers": [
         {
-          "name": "Latamex"
+          "name": "Latamex",
+          "website": "https://www.latamex.com/en",
+          "logo": "partners/latamex.png"
         }
       ],
       "yield_bearing": false,
       "fiat_asset": "ARS",
       "home_domain": "pubnet-sep.latamex.com",
+      "website": "https://www.latamex.com/en",
       "issuer_address": "GCSAZVWXZKWS4XS223M5F54H2B6XPIIXZZGP7KEAIU6YSL5HDRGCI3DG"
+    },
+    {
+      "id": "recc4ynzxIhMRReRg",
+      "name": "ARSX",
+      "issuers": [
+        {
+          "name": "Chronos"
+        }
+      ],
+      "yield_bearing": false,
+      "issuer_address": "GA6NRRSBXCKZSCG56ODM5B6S5GUBLUEQSII4GUVQ7DFPEDJUGES7XVF7"
+    },
+    {
+      "id": "recYo4R0vKvK17rTX",
+      "name": "asSOL",
+      "logo": "partners/allbridge.png",
+      "issuer_logo": "partners/allbridge.png",
+      "issuers": [
+        {
+          "name": "Allbridge",
+          "website": "https://allbridge.io/",
+          "logo": "partners/allbridge.png"
+        }
+      ],
+      "yield_bearing": false,
+      "website": "https://allbridge.io/",
+      "issuer_address": "GALLBRBQHAPW5FOVXXHYWR6J4ZDAQ35BMSNADYGBW25VOUHUYRZM4XIL"
+    },
+    {
+      "id": "recpEes0WoJXBSWsz",
+      "name": "asUSDC",
+      "logo": "partners/allbridge.png",
+      "issuer_logo": "partners/allbridge.png",
+      "issuers": [
+        {
+          "name": "Allbridge",
+          "website": "https://allbridge.io/",
+          "logo": "partners/allbridge.png"
+        }
+      ],
+      "yield_bearing": false,
+      "website": "https://allbridge.io/",
+      "issuer_address": "GALLBRBQHAPW5FOVXXHYWR6J4ZDAQ35BMSNADYGBW25VOUHUYRZM4XIL"
     },
     {
       "id": "recufJCOwQk8vFc7k",
       "name": "AUDD",
+      "logo": "partners/novatti.png",
+      "issuer_logo": "partners/novatti.png",
       "issuers": [
         {
-          "name": "Novatti"
+          "name": "Novatti",
+          "website": "https://www.novatti.com",
+          "logo": "partners/novatti.png"
         }
       ],
       "yield_bearing": false,
       "fiat_asset": "AUD",
       "home_domain": "audd.digital",
+      "website": "https://www.novatti.com",
       "issuer_address": "GDC7X2MXTYSAKUUGAIQ7J7RPEIM7GXSAIWFYWWH4GLNFECQVJJLB2EEU"
+    },
+    {
+      "id": "reclXSWv7IfLAf5l7",
+      "name": "BB1",
+      "logo": "partners/bitbond.png",
+      "issuer_logo": "partners/bitbond.png",
+      "issuers": [
+        {
+          "name": "Bitbond",
+          "website": "https://www.bitbond.com/",
+          "logo": "partners/bitbond.png"
+        }
+      ],
+      "yield_bearing": false,
+      "fiat_asset": "EUR",
+      "website": "https://www.bitbond.com/",
+      "issuer_address": "GD5J6HLF5666X4AZLTFTXLY46J5SW7EXRKBLEYPJP33S33MXZGV6CWFN"
     },
     {
       "id": "rec6JDIWeRUcjCDNU",
@@ -62,6 +234,7 @@
       "issuers": [
         {
           "name": "Franklin Templeton",
+          "website": "https://www.franklintempleton.com/",
           "logo": "partners/franklin-templeton.png"
         }
       ],
@@ -75,22 +248,31 @@
     {
       "id": "recIkmDZDxYBE3ioj",
       "name": "BRLT",
+      "logo": "partners/latamex.png",
+      "issuer_logo": "partners/latamex.png",
       "issuers": [
         {
-          "name": "Latamex"
+          "name": "Latamex",
+          "website": "https://www.latamex.com/en",
+          "logo": "partners/latamex.png"
         }
       ],
       "yield_bearing": false,
       "fiat_asset": "BRL",
       "home_domain": "sep.stablex.cloud",
+      "website": "https://www.latamex.com/en",
       "issuer_address": "GCHQ3F2BF5P74DMDNOOGHT5DUCKC773AW5DTOFINC26W4KGYFPYDPRSO"
     },
     {
       "id": "recg7S1GaSb0BqrJM",
       "name": "CETES",
+      "logo": "partners/etherfuse.png",
+      "issuer_logo": "partners/etherfuse.png",
       "issuers": [
         {
-          "name": "Etherfuse"
+          "name": "Etherfuse",
+          "website": "https://www.etherfuse.com/",
+          "logo": "partners/etherfuse.png"
         }
       ],
       "yield_bearing": true,
@@ -100,12 +282,44 @@
       "issuer_address": "GCRYUGD5NVARGXT56XEZI5CIFCQETYHAPQQTHO2O3IQZTHDH4LATMYWC"
     },
     {
+      "id": "recihNPgDYITBTL0A",
+      "name": "CETESZ",
+      "logo": "partners/etherfuse.png",
+      "issuer_logo": "partners/etherfuse.png",
+      "issuers": [
+        {
+          "name": "Etherfuse",
+          "website": "https://www.etherfuse.com/",
+          "logo": "partners/etherfuse.png"
+        }
+      ],
+      "yield_bearing": false,
+      "permissibility": "Permissionless",
+      "home_domain": "etherfuse.com",
+      "website": "https://www.etherfuse.com/",
+      "issuer_address": "GCRYUGD5NVARGXT56XEZI5CIFCQETYHAPQQTHO2O3IQZTHDH4LATMYWC"
+    },
+    {
+      "id": "recVaKyG3Y4wlAJEe",
+      "name": "CLPX",
+      "issuers": [
+        {
+          "name": "CLPX, S.A."
+        }
+      ],
+      "yield_bearing": false,
+      "issuer_address": "GDYSPBVZHPQTYMGSYNOHRZQNLB3ZWFVQ2F7EP7YBOLRGD42XIC3QUX5G"
+    },
+    {
       "id": "recwGkZLYxdODYLWS",
       "name": "COP",
+      "logo": "partners/anclap.png",
+      "issuer_logo": "partners/anclap.png",
       "issuers": [
         {
           "name": "Anclap",
-          "website": "https://home.anclap.com/"
+          "website": "https://home.anclap.com/",
+          "logo": "partners/anclap.png"
         }
       ],
       "yield_bearing": false,
@@ -115,16 +329,72 @@
       "issuer_address": "GC6HPU43M657FWNQVWA5DZXNOOIA7A33OF67K4SOBOF3PAO6PHALUCOP"
     },
     {
-      "id": "recCfYXT2YiEoxEIY",
-      "name": "EURC",
+      "id": "rect4OyPOPomDkz20",
+      "name": "deJAAA",
+      "logo": "partners/centrifuge.png",
+      "issuer_logo": "partners/centrifuge.png",
       "issuers": [
         {
-          "name": "MyKobo"
+          "name": "Centrifuge",
+          "website": "https://centrifuge.io/",
+          "logo": "partners/centrifuge.png"
+        }
+      ],
+      "yield_bearing": false,
+      "permissibility": "Permissionless",
+      "home_domain": "https://centrifuge.io/",
+      "website": "https://centrifuge.io/"
+    },
+    {
+      "id": "rec6egUiLYUQW7aa5",
+      "name": "deJTRSY",
+      "logo": "partners/centrifuge.png",
+      "issuer_logo": "partners/centrifuge.png",
+      "issuers": [
+        {
+          "name": "Centrifuge",
+          "website": "https://centrifuge.io/",
+          "logo": "partners/centrifuge.png"
+        }
+      ],
+      "yield_bearing": false,
+      "permissibility": "Permissionless",
+      "home_domain": "https://centrifuge.io/",
+      "website": "https://centrifuge.io/"
+    },
+    {
+      "id": "recXS3lhhOGtYb12p",
+      "name": "EQTY",
+      "logo": "partners/wisdomtree.png",
+      "issuer_logo": "partners/wisdomtree.png",
+      "issuers": [
+        {
+          "name": "WisdomTree",
+          "website": "https://www.wisdomtree.com/",
+          "logo": "partners/wisdomtree.png"
+        }
+      ],
+      "yield_bearing": false,
+      "fiat_asset": "EQTYX",
+      "website": "https://www.wisdomtree.com/investments/digital-funds/asset-allocation/eqtyx#sector-breakdown",
+      "issuer_address": "GAKODZFS4MV36JGDTULJACWJKBJCO33CJTVTWSQFSUV7XLZJNXTDH6D6"
+    },
+    {
+      "id": "recCfYXT2YiEoxEIY",
+      "name": "EURC",
+      "logo": "partners/mykobo.png",
+      "issuer_logo": "partners/mykobo.png",
+      "issuers": [
+        {
+          "name": "MyKobo",
+          "website": "https://www.mykobo.co/",
+          "logo": "partners/mykobo.png"
         }
       ],
       "yield_bearing": false,
       "fiat_asset": "EUR",
       "home_domain": "mykobo.co",
+      "website": "https://www.mykobo.co/",
       "issuer_address": "GAQRF3UGHBT6JYQZ7YSUYCIYWAF4T2SAA5237Q5LIQYJOHHFAWDXZ7NM"
     },
     {
@@ -146,17 +416,49 @@
       "issuer_address": "GDHU6WRG4IEQXM5NZ4BMPKOXHW76MZM4Y2IEMFDVXBSDP6SJY4ITNPP2"
     },
     {
-      "id": "recEK03Xqt1HHOC2Z",
-      "name": "EURT",
+      "id": "recYq7823qFCLT9eu",
+      "name": "EURS",
       "issuers": [
         {
-          "name": "Tempo"
+          "name": "Statis"
+        }
+      ],
+      "yield_bearing": false,
+      "fiat_asset": "EUR",
+      "issuer_address": "GC5FGCDEOGOGSNWCCNKS3OMEVDHTE3Q5A5FEQWQKV3AXA7N6KDQ2CUZJ"
+    },
+    {
+      "id": "recEK03Xqt1HHOC2Z",
+      "name": "EURT",
+      "logo": "partners/tempo.png",
+      "issuer_logo": "partners/tempo.png",
+      "issuers": [
+        {
+          "name": "Tempo",
+          "logo": "partners/tempo.png"
         }
       ],
       "yield_bearing": false,
       "fiat_asset": "EUR",
       "home_domain": "eurt.exchange",
       "issuer_address": "GAP5LETOV6YIE62YAM56STDANPRDO7ZFDBGSNHJQIYGGKSMOZAHOOS2S"
+    },
+    {
+      "id": "recAHTD3yfIawfiyV",
+      "name": "FLTT",
+      "logo": "partners/wisdomtree.png",
+      "issuer_logo": "partners/wisdomtree.png",
+      "issuers": [
+        {
+          "name": "WisdomTree",
+          "website": "https://www.wisdomtree.com/",
+          "logo": "partners/wisdomtree.png"
+        }
+      ],
+      "yield_bearing": false,
+      "fiat_asset": "FLTTX",
+      "website": "https://www.wisdomtree.com/",
+      "issuer_address": "GBTZKH3RNKW46XEZNCGZEBAGJISKDZKQXKSQ2N5G5SFX36TLWKKR6QJ6"
     },
     {
       "id": "recAcXxpP5wntgVIs",
@@ -166,6 +468,7 @@
       "issuers": [
         {
           "name": "Franklin Templeton",
+          "website": "https://www.franklintempleton.com/",
           "logo": "partners/franklin-templeton.png"
         }
       ],
@@ -175,12 +478,32 @@
       "issuer_address": "GD5J73EKK5IYL5XS3FBTHHX7CZIYRP7QXDL57XFWGC2WVYWT326OBXRP"
     },
     {
+      "id": "rec1dIOK2rP5L9RKh",
+      "name": "GOLD",
+      "logo": "partners/wisdomtree.png",
+      "issuer_logo": "partners/wisdomtree.png",
+      "issuers": [
+        {
+          "name": "WisdomTree",
+          "website": "https://www.wisdomtree.com/",
+          "logo": "partners/wisdomtree.png"
+        }
+      ],
+      "yield_bearing": false,
+      "fiat_asset": "Gold price",
+      "website": "https://www.wisdomtree.com/",
+      "issuer_address": "GCK75CK3VX5L4ZLSD7HHNVA4L3LKGIAYWLCZO2IBNGOFTBV3HJBE2MPJ"
+    },
+    {
       "id": "rec4h6vVjtKNXJ4vk",
       "name": "GYEN",
       "logo": "assets/gyen.png",
+      "issuer_logo": "partners/gmo-trust.png",
       "issuers": [
         {
-          "name": "GMO Trust"
+          "name": "GMO Trust",
+          "website": "https://stablecoin.z.com/",
+          "logo": "partners/gmo-trust.png"
         }
       ],
       "yield_bearing": false,
@@ -190,25 +513,167 @@
       "issuer_address": "GDF6VOEGRWLOZ64PQQGKD2IYWA22RLT37GJKS2EJXZHT2VLAGWLC5TOB"
     },
     {
-      "id": "recf1FX1JV3nMFe4H",
-      "name": "NGNC",
+      "id": "reclLfVcoSIOh89yk",
+      "name": "JAAA",
+      "logo": "partners/centrifuge.png",
+      "issuer_logo": "partners/centrifuge.png",
       "issuers": [
         {
-          "name": "Link"
+          "name": "Centrifuge",
+          "website": "https://centrifuge.io/",
+          "logo": "partners/centrifuge.png"
+        }
+      ],
+      "yield_bearing": false,
+      "permissibility": "Permissioned",
+      "home_domain": "https://centrifuge.io/",
+      "website": "https://centrifuge.io/"
+    },
+    {
+      "id": "rec6i8emHAo1abMwa",
+      "name": "JTRSY",
+      "logo": "partners/centrifuge.png",
+      "issuer_logo": "partners/centrifuge.png",
+      "issuers": [
+        {
+          "name": "Centrifuge",
+          "website": "https://centrifuge.io/",
+          "logo": "partners/centrifuge.png"
+        }
+      ],
+      "yield_bearing": false,
+      "permissibility": "Permissioned",
+      "home_domain": "https://centrifuge.io/",
+      "website": "https://centrifuge.io/"
+    },
+    {
+      "id": "recIiCWf9wJHraM5z",
+      "name": "KES",
+      "logo": "partners/clickpesa.png",
+      "issuer_logo": "partners/clickpesa.png",
+      "issuers": [
+        {
+          "name": "ClickPesa",
+          "website": "https://clickpesa.com/",
+          "logo": "partners/clickpesa.png"
+        }
+      ],
+      "yield_bearing": false,
+      "website": "https://clickpesa.com/",
+      "issuer_address": "GA2MSSZKJOU6RNL3EJKH3S5TB5CDYTFQFWRYFGUJVIN5I6AOIRTLUHTO"
+    },
+    {
+      "id": "recjPe7uUs4LEvgs5",
+      "name": "LNGV",
+      "logo": "partners/wisdomtree.png",
+      "issuer_logo": "partners/wisdomtree.png",
+      "issuers": [
+        {
+          "name": "WisdomTree",
+          "website": "https://www.wisdomtree.com/",
+          "logo": "partners/wisdomtree.png"
+        }
+      ],
+      "yield_bearing": false,
+      "fiat_asset": "LNGVX",
+      "website": "https://www.wisdomtree.com/",
+      "issuer_address": "GAHOGWBAWNIKESGNNW7Y7JU5KL54HIEHJGY6Y5QLY6YR3J7WZIDHLC6D"
+    },
+    {
+      "id": "recU1fKa5g39El9ca",
+      "name": "LSP",
+      "logo": "partners/lumenswap.png",
+      "issuer_logo": "partners/lumenswap.png",
+      "issuers": [
+        {
+          "name": "LumenSwap",
+          "website": "https://lumenswap.io/",
+          "logo": "partners/lumenswap.png"
+        }
+      ],
+      "yield_bearing": false,
+      "website": "https://lumenswap.io/",
+      "issuer_address": "GAB7STHVD5BDH3EEYXPI3OM7PCS4V443PYB5FNT6CFGJVPDLMKDM24WK"
+    },
+    {
+      "id": "recUoKsoyimhqKWwK",
+      "name": "MBRL",
+      "logo": "partners/mercado-bitcoin.png",
+      "issuer_logo": "partners/mercado-bitcoin.png",
+      "issuers": [
+        {
+          "name": "Mercado Bitcoin",
+          "website": "https://mercadobitcoin.com.br/",
+          "logo": "partners/mercado-bitcoin.png"
+        }
+      ],
+      "yield_bearing": false,
+      "fiat_asset": "BRL",
+      "website": "https://mercadobitcoin.com.br/",
+      "issuer_address": "GDLS4RCNECY46KKA4OGU2MMJILUK3I372CUFISWM4HKCV7265RY2NJ4Z"
+    },
+    {
+      "id": "recRmgXBEpqXvCurP",
+      "name": "MODR",
+      "logo": "partners/wisdomtree.png",
+      "issuer_logo": "partners/wisdomtree.png",
+      "issuers": [
+        {
+          "name": "WisdomTree",
+          "website": "https://www.wisdomtree.com/",
+          "logo": "partners/wisdomtree.png"
+        }
+      ],
+      "yield_bearing": false,
+      "fiat_asset": "MODRX",
+      "website": "https://www.wisdomtree.com/investments/digital-funds/asset-allocation/modrx",
+      "issuer_address": "GANULT25TFO6V6BFWSEG4VSCR4QXBNHV5T344R2AFZEPE6B324LVLOOJ"
+    },
+    {
+      "id": "reca6Do5qqvwYtL8k",
+      "name": "MXNe",
+      "logo": "partners/brale.png",
+      "issuer_logo": "partners/brale.png",
+      "issuers": [
+        {
+          "name": "Brale",
+          "website": "https://brale.xyz/",
+          "logo": "partners/brale.png"
+        }
+      ],
+      "yield_bearing": false,
+      "fiat_asset": "MXN",
+      "website": "https://brale.xyz/",
+      "issuer_address": "GCQCNWT22JDLENQAVIE6DRJGHWAQ6EX2H5ABGPV55EJUPPZM5UA7KHZR"
+    },
+    {
+      "id": "recf1FX1JV3nMFe4H",
+      "name": "NGNC",
+      "logo": "partners/link.png",
+      "issuer_logo": "partners/link.png",
+      "issuers": [
+        {
+          "name": "Link",
+          "website": "https://www.linkio.world/ngnc",
+          "logo": "partners/link.png"
         }
       ],
       "yield_bearing": false,
       "fiat_asset": "NGN",
       "home_domain": "ngnc.online",
+      "website": "https://www.linkio.world/ngnc",
       "issuer_address": "GASBV6W7GGED66MXEVC7YZHTWWYMSVYEY35USF2HJZBLABLYIFQGXZY6"
     },
     {
       "id": "recSiKI5lysrJsVEV",
       "name": "PEN",
+      "logo": "partners/anclap.png",
+      "issuer_logo": "partners/anclap.png",
       "issuers": [
         {
           "name": "Anclap",
-          "website": "https://home.anclap.com/"
+          "website": "https://home.anclap.com/",
+          "logo": "partners/anclap.png"
         }
       ],
       "yield_bearing": false,
@@ -220,24 +685,82 @@
     {
       "id": "recxdJsWIcFsu4CjI",
       "name": "PYUSD",
+      "logo": "partners/paypal.png",
+      "issuer_logo": "partners/paypal.png",
       "issuers": [
         {
-          "name": "PayPal (PYUSD)"
+          "name": "PayPal",
+          "website": "https://www.paypal.com/",
+          "logo": "partners/paypal.png"
         }
       ],
-      "yield_bearing": false
+      "yield_bearing": false,
+      "website": "https://www.paypal.com/",
+      "issuer_address": "GDQE7IXJ4HUHV6RQHIUPRJSEZE4DRS5WY577O2FY6YQ5LVWZ7JZTU2V5"
     },
     {
       "id": "recFbiRwBYBk5EQzg",
       "name": "QCAD",
+      "logo": "partners/stablecorp.png",
+      "issuer_logo": "partners/stablecorp.png",
       "issuers": [
         {
-          "name": "Stablecorp"
+          "name": "Stablecorp",
+          "logo": "partners/stablecorp.png"
         }
       ],
       "yield_bearing": false,
       "home_domain": "stablecorp.ca",
       "issuer_address": "GBRSN6AURJN4R7RT5EDLO3SPFEZBS5FWE3W2R7RTMCYDIJH3ISSF5MKJ"
+    },
+    {
+      "id": "recc5SFKb4fJOLwZ5",
+      "name": "RWF",
+      "logo": "partners/clickpesa.png",
+      "issuer_logo": "partners/clickpesa.png",
+      "issuers": [
+        {
+          "name": "ClickPesa",
+          "website": "https://clickpesa.com/",
+          "logo": "partners/clickpesa.png"
+        }
+      ],
+      "yield_bearing": false,
+      "website": "https://clickpesa.com/",
+      "issuer_address": "GA2MSSZKJOU6RNL3EJKH3S5TB5CDYTFQFWRYFGUJVIN5I6AOIRTLUHTO"
+    },
+    {
+      "id": "rechD24cDHUAASKyZ",
+      "name": "SBC",
+      "logo": "partners/brale.png",
+      "issuer_logo": "partners/brale.png",
+      "issuers": [
+        {
+          "name": "Brale",
+          "website": "https://brale.xyz/",
+          "logo": "partners/brale.png"
+        }
+      ],
+      "yield_bearing": false,
+      "fiat_asset": "USD",
+      "website": "https://brale.xyz/",
+      "issuer_address": "GCQCNWT22JDLENQAVIE6DRJGHWAQ6EX2H5ABGPV55EJUPPZM5UA7KHZR"
+    },
+    {
+      "id": "reckWsZrEZMroHqOH",
+      "name": "SCOP",
+      "logo": "partners/scopuly.png",
+      "issuer_logo": "partners/scopuly.png",
+      "issuers": [
+        {
+          "name": "Scopuly",
+          "website": "https://scopuly.com/",
+          "logo": "partners/scopuly.png"
+        }
+      ],
+      "yield_bearing": false,
+      "website": "https://scopuly.com/",
+      "issuer_address": "GC6OYQJIZF3HFXCYPFCBXYXNGIBQ4TNSFUBUXQJOZWIP6F3YZK4QH3VQ"
     },
     {
       "id": "recwLRmpsZGcf1tqN",
@@ -253,11 +776,121 @@
       "issuer_address": "GDO3PDT3IKVL2PJI5MMQDHLFYBVQI46YQW6P5TEMGOJA7LWGELWDMZNY"
     },
     {
+      "id": "recsIIdmK0nu9QRzy",
+      "name": "SolvBTC",
+      "issuers": [
+        {
+          "name": "Solv Finance"
+        }
+      ],
+      "yield_bearing": true,
+      "home_domain": "https://solv.finance/",
+      "website": "https://solv.finance/"
+    },
+    {
+      "id": "recJE4PJW8T9aQLYt",
+      "name": "SPXU",
+      "logo": "partners/wisdomtree.png",
+      "issuer_logo": "partners/wisdomtree.png",
+      "issuers": [
+        {
+          "name": "WisdomTree",
+          "website": "https://www.wisdomtree.com/",
+          "logo": "partners/wisdomtree.png"
+        }
+      ],
+      "yield_bearing": false,
+      "fiat_asset": "SPXUX",
+      "website": "https://www.wisdomtree.com/",
+      "issuer_address": "GDJBVX3QA5HJPBSAU5VIX2W6MC37NU4UFXPKEGK42SJCYN6AEQ4Z6COM"
+    },
+    {
+      "id": "recO5gHTVF1haNO09",
+      "name": "SVED",
+      "issuers": [
+        {
+          "name": "StableCop"
+        }
+      ],
+      "yield_bearing": false,
+      "fiat_asset": "VED",
+      "home_domain": "anchor.stablecop.com",
+      "issuer_address": "GBXBRGVWY6A7QQP2J5DKZGMH6YBPYFGZL4C6TSYRVYQONTUOYYMDTNGR"
+    },
+    {
+      "id": "rec8JJ9fPGuX7nHuo",
+      "name": "TECH",
+      "logo": "partners/wisdomtree.png",
+      "issuer_logo": "partners/wisdomtree.png",
+      "issuers": [
+        {
+          "name": "WisdomTree",
+          "website": "https://www.wisdomtree.com/",
+          "logo": "partners/wisdomtree.png"
+        }
+      ],
+      "yield_bearing": false,
+      "fiat_asset": "TECHX",
+      "website": "https://www.wisdomtree.com/",
+      "issuer_address": "GDSAW27GPR7EWKPTFDPGN2WWZYUHBFKVDBLOUUEKSNKHID4ZWUVOBF5R"
+    },
+    {
+      "id": "recmdDA9Ztj3kZikR",
+      "name": "TESOURO",
+      "logo": "partners/etherfuse.png",
+      "issuer_logo": "partners/etherfuse.png",
+      "issuers": [
+        {
+          "name": "Etherfuse",
+          "website": "https://www.etherfuse.com/",
+          "logo": "partners/etherfuse.png"
+        }
+      ],
+      "yield_bearing": true,
+      "permissibility": "Permissionless",
+      "home_domain": "etherfuse.com",
+      "website": "https://www.etherfuse.com/",
+      "issuer_address": "GCRYUGD5NVARGXT56XEZI5CIFCQETYHAPQQTHO2O3IQZTHDH4LATMYWC"
+    },
+    {
+      "id": "recfiG8g0jkAR6qz9",
+      "name": "TIPS",
+      "logo": "partners/wisdomtree.png",
+      "issuer_logo": "partners/wisdomtree.png",
+      "issuers": [
+        {
+          "name": "WisdomTree",
+          "website": "https://www.wisdomtree.com/",
+          "logo": "partners/wisdomtree.png"
+        }
+      ],
+      "yield_bearing": false,
+      "fiat_asset": "TIPSX",
+      "website": "https://www.wisdomtree.com/",
+      "issuer_address": "GAJ4KSYLVBJKQ4UBPKJJXPYWVIRZWVTIYRMHBXTHGCDS4XJXXYEUALVD"
+    },
+    {
+      "id": "recK0XKs8FyZ57dWJ",
+      "name": "TZS",
+      "logo": "partners/clickpesa.png",
+      "issuer_logo": "partners/clickpesa.png",
+      "issuers": [
+        {
+          "name": "ClickPesa",
+          "website": "https://clickpesa.com/",
+          "logo": "partners/clickpesa.png"
+        }
+      ],
+      "yield_bearing": false,
+      "website": "https://clickpesa.com/",
+      "issuer_address": "GA2MSSZKJOU6RNL3EJKH3S5TB5CDYTFQFWRYFGUJVIN5I6AOIRTLUHTO"
+    },
+    {
       "id": "rectGIfFaNZeqC3ZN",
       "name": "UAH",
       "issuers": [
         {
-          "name": "DCM (UAH)"
+          "name": "DCM"
         }
       ],
       "yield_bearing": false,
@@ -265,6 +898,22 @@
       "home_domain": "dcm.systems",
       "website": "dcm.systems",
       "issuer_address": "GCJI3CP2NL6NWSCHM36XBQYCBHOTVVZWEXZALWON34KAYUGF6GEVNRTS"
+    },
+    {
+      "id": "recT8CiXKqTlaaxtz",
+      "name": "USD",
+      "logo": "partners/wisdomtree.png",
+      "issuer_logo": "partners/wisdomtree.png",
+      "issuers": [
+        {
+          "name": "WisdomTree",
+          "website": "https://www.wisdomtree.com/",
+          "logo": "partners/wisdomtree.png"
+        }
+      ],
+      "yield_bearing": false,
+      "website": "https://www.wisdomtree.com/",
+      "issuer_address": "GC2ATEL4K2O5BJO7Z76MYSV6TKHCROKV5GXEOU7NO2TUEOOMFDDIPWID"
     },
     {
       "id": "recST8DGhgX8wjlGw",
@@ -286,47 +935,83 @@
       "issuer_address": "GA5ZSEJYB37JRC5AVCIA5MOP4RHTM335X2KGX3IHOJAPP5RE34K4KZVN"
     },
     {
-      "id": "reculoupeMbv6xF05",
-      "name": "USDL",
+      "id": "rec9hle6OrxeitDeh",
+      "name": "USDGLO",
+      "logo": "partners/brale.png",
+      "issuer_logo": "partners/brale.png",
       "issuers": [
         {
-          "name": "Paxos"
+          "name": "Brale",
+          "website": "https://brale.xyz/",
+          "logo": "partners/brale.png"
+        }
+      ],
+      "yield_bearing": false,
+      "fiat_asset": "USD",
+      "website": "https://brale.xyz/",
+      "issuer_address": "GBBS25EGYQPGEZCGCFBKG4OAGFXU6DSOQBGTHELLJT3HZXZJ34HWS6XV"
+    },
+    {
+      "id": "reculoupeMbv6xF05",
+      "name": "USDL",
+      "logo": "partners/paxos.png",
+      "issuer_logo": "partners/paxos.png",
+      "issuers": [
+        {
+          "name": "Paxos",
+          "website": "https://www.paxos.com/",
+          "logo": "partners/paxos.png"
         }
       ],
       "yield_bearing": true,
-      "restricted_jurisdictions": "https://support.liftdollar.com/hc/en-us/articles/26058585903892-USDL-Restricted-Access-Jurisdictions"
+      "restricted_jurisdictions": "https://support.liftdollar.com/hc/en-us/articles/26058585903892-USDL-Restricted-Access-Jurisdictions",
+      "website": "https://www.paxos.com/"
     },
     {
       "id": "recOa4hyzSwhOgTKi",
       "name": "USDS",
+      "logo": "partners/stably.png",
+      "issuer_logo": "partners/stably.png",
       "issuers": [
         {
-          "name": "Stably"
+          "name": "Stably",
+          "website": "https://www.stably.io/",
+          "logo": "partners/stably.png"
         }
       ],
       "yield_bearing": false,
       "fiat_asset": "USD",
       "home_domain": "polaris.stably.io",
+      "website": "https://www.stably.io/",
       "issuer_address": "GBK4AYTOYIAYT4UJECSQGMACUWLKYOOM4VCAUUZ3Y3FG5XD2LYK3FGK2"
     },
     {
       "id": "rec4Isduy79y1WHal",
       "name": "USDY",
+      "logo": "partners/ondo.png",
+      "issuer_logo": "partners/ondo.png",
       "issuers": [
         {
-          "name": "Ondo (USDY)"
+          "name": "Ondo",
+          "website": "https://ondo.finance/",
+          "logo": "partners/ondo.png"
         }
       ],
       "yield_bearing": true,
       "permissibility": "Permissionless",
-      "restricted_jurisdictions": "To be eligible to acquire, redeem, or trade USDY, you (or your organization, depending upon who is investing) must NOT be located, organized, or a resident in any of the following locations: The United States (including its possessions and territories), United Kingdom or Canada."
+      "restricted_jurisdictions": "To be eligible to acquire, redeem, or trade USDY, you (or your organization, depending upon who is investing) must NOT be located, organized, or a resident in any of the following locations: The United States (including its possessions and territories), United Kingdom or Canada.",
+      "website": "https://ondo.finance/"
     },
     {
       "id": "recg499ceex97oJar",
       "name": "USTRY",
+      "logo": "partners/etherfuse.png",
+      "issuer_logo": "partners/etherfuse.png",
       "issuers": [
         {
-          "name": "Etherfuse"
+          "name": "Etherfuse",
+          "website": "https://www.etherfuse.com/",
+          "logo": "partners/etherfuse.png"
         }
       ],
       "yield_bearing": true,
@@ -338,36 +1023,177 @@
     {
       "id": "recLEYlI0zyraB1bi",
       "name": "VCHF",
+      "logo": "partners/vnx.png",
+      "issuer_logo": "partners/vnx.png",
       "issuers": [
         {
-          "name": "VNX"
+          "name": "VNX",
+          "website": "https://vnx.li/veur/",
+          "logo": "partners/vnx.png"
         }
       ],
       "yield_bearing": false,
       "fiat_asset": "CHF",
       "home_domain": "vnx.li",
+      "website": "https://vnx.li/veur/",
       "issuer_address": "GDXLSLCOPPHTWOQXLLKSVN4VN3G67WD2ENU7UMVAROEYVJLSPSEWXIZN"
     },
     {
       "id": "reciCMb6Aa2q5vTGq",
       "name": "VEUR",
+      "logo": "partners/vnx.png",
+      "issuer_logo": "partners/vnx.png",
       "issuers": [
         {
-          "name": "VNX"
+          "name": "VNX",
+          "website": "https://vnx.li/veur/",
+          "logo": "partners/vnx.png"
         }
       ],
       "yield_bearing": false,
       "fiat_asset": "EUR",
       "home_domain": "vnx.li",
+      "website": "https://vnx.li/veur/",
       "issuer_address": "GDXLSLCOPPHTWOQXLLKSVN4VN3G67WD2ENU7UMVAROEYVJLSPSEWXIZN"
+    },
+    {
+      "id": "reczHVCGr6djFXoeZ",
+      "name": "WTGX",
+      "logo": "partners/wisdomtree.png",
+      "issuer_logo": "partners/wisdomtree.png",
+      "issuers": [
+        {
+          "name": "WisdomTree",
+          "website": "https://www.wisdomtree.com/",
+          "logo": "partners/wisdomtree.png"
+        }
+      ],
+      "yield_bearing": false,
+      "fiat_asset": "WTGXX",
+      "website": "https://www.wisdomtree.com/investments/digital-funds/money-market/wtgxx",
+      "issuer_address": "GDMBNMFJ3TRFLASJ6UGETFME3PJPNKPU24C7KFDBEBPQFG2CI6UC3JG6"
+    },
+    {
+      "id": "recpdzct4zx0ktcDc",
+      "name": "WTLG",
+      "logo": "partners/wisdomtree.png",
+      "issuer_logo": "partners/wisdomtree.png",
+      "issuers": [
+        {
+          "name": "WisdomTree",
+          "website": "https://www.wisdomtree.com/",
+          "logo": "partners/wisdomtree.png"
+        }
+      ],
+      "yield_bearing": false,
+      "fiat_asset": "WTLGX",
+      "website": "https://www.wisdomtree.com/",
+      "issuer_address": "GAK7PE7DD4ZRJQN3VBCQFBKFV53JGUM2SQATQAKLFK6MVONPGNYK34XH"
+    },
+    {
+      "id": "rec2Zk0M2im5RVnFZ",
+      "name": "WTSI",
+      "logo": "partners/wisdomtree.png",
+      "issuer_logo": "partners/wisdomtree.png",
+      "issuers": [
+        {
+          "name": "WisdomTree",
+          "website": "https://www.wisdomtree.com/",
+          "logo": "partners/wisdomtree.png"
+        }
+      ],
+      "yield_bearing": false,
+      "fiat_asset": "WTSIX",
+      "website": "https://www.wisdomtree.com/",
+      "issuer_address": "GAD22PDBRFEMXAKPFDP4JGDFWKKD6VPXWUWEAXBS6ZYJYFFQDUN7HAFG"
+    },
+    {
+      "id": "recfbyEyWXtvuiwCG",
+      "name": "WTST",
+      "logo": "partners/wisdomtree.png",
+      "issuer_logo": "partners/wisdomtree.png",
+      "issuers": [
+        {
+          "name": "WisdomTree",
+          "website": "https://www.wisdomtree.com/",
+          "logo": "partners/wisdomtree.png"
+        }
+      ],
+      "yield_bearing": false,
+      "fiat_asset": "WTSTX",
+      "website": "https://www.wisdomtree.com/",
+      "issuer_address": "GDEBI5X7J4IDXCSVV3KPFZIHQRCBVF3DAZMS5H7KYOBK45T6XYGDE77P"
+    },
+    {
+      "id": "reczMF2lzRtrNkcRP",
+      "name": "WTSY",
+      "logo": "partners/wisdomtree.png",
+      "issuer_logo": "partners/wisdomtree.png",
+      "issuers": [
+        {
+          "name": "WisdomTree",
+          "website": "https://www.wisdomtree.com/",
+          "logo": "partners/wisdomtree.png"
+        }
+      ],
+      "yield_bearing": false,
+      "fiat_asset": "WTSYX",
+      "website": "https://www.wisdomtree.com/",
+      "issuer_address": "GB3ZUC7FGDEEBXY3BDEJWMPNGBFA66YRI4QQT6PBO3ZT6F33S7RL36VF"
+    },
+    {
+      "id": "recfHq9ZRpNkmpdd8",
+      "name": "WTTS",
+      "logo": "partners/wisdomtree.png",
+      "issuer_logo": "partners/wisdomtree.png",
+      "issuers": [
+        {
+          "name": "WisdomTree",
+          "website": "https://www.wisdomtree.com/",
+          "logo": "partners/wisdomtree.png"
+        }
+      ],
+      "yield_bearing": false,
+      "fiat_asset": "WTTSX",
+      "website": "https://www.wisdomtree.com/",
+      "issuer_address": "GBBV5CF7UPA2PYRPA632URLB55BWML7X4H33ZRCDWMTULOXDGPHJR5VI"
+    },
+    {
+      "id": "rec4tha698eAB6u9P",
+      "name": "yUSDC",
+      "issuers": [
+        {
+          "name": "UltraCapital",
+          "website": "https://ultracapital.xyz/"
+        }
+      ],
+      "yield_bearing": false,
+      "website": "https://ultracapital.xyz/",
+      "issuer_address": "GDGTVWSM4MGS4T7Z6W4RPWOCHE2I6RDFCIFZGS3DOA63LWQTRNZNTTFF"
+    },
+    {
+      "id": "recA2skwJIAa6Nwg1",
+      "name": "yXLM",
+      "issuers": [
+        {
+          "name": "UltraCapital",
+          "website": "https://ultracapital.xyz/"
+        }
+      ],
+      "yield_bearing": false,
+      "website": "https://ultracapital.xyz/",
+      "issuer_address": "GARDNV3Q7YGT4AKSDF25LT32YSCCW4EV22Y2TV3I2PU2MMXJTEDL5T55"
     },
     {
       "id": "rec9ZGmOFaYrMq2SE",
       "name": "ZUSD",
       "logo": "assets/zusd.png",
+      "issuer_logo": "partners/gmo-trust.png",
       "issuers": [
         {
-          "name": "GMO Trust"
+          "name": "GMO Trust",
+          "website": "https://stablecoin.z.com/",
+          "logo": "partners/gmo-trust.png"
         }
       ],
       "yield_bearing": false,
@@ -378,8 +1204,8 @@
     }
   ],
   "metadata": {
-    "generatedAt": "2025-08-08T06:03:25.329Z",
-    "count": 27,
+    "generatedAt": "2025-08-09T06:02:50.214Z",
+    "count": 73,
     "source": "airtable"
   }
 }
