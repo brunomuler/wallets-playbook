@@ -44,7 +44,7 @@ export default function VirtualAccountsDirectory() {
                   rel="noopener noreferrer"
                   className={styles.websiteButton}
                 >
-                  Visit Website
+                  Website
                   <svg
                     className={styles.externalIcon}
                     fill="none"

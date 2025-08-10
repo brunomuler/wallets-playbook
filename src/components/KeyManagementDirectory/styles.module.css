@@ -1,14 +1,14 @@
+/* Grid and card styles */
 .gridContainer {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
   gap: 24px;
 }
 
 .card {
-  position: relative;
   background-color: #fff;
-  border: 1px solid #e5e7eb; /* A bit of gray */
-  border-radius: 12px; /* A bit more rounded */
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
   padding: 24px;
   display: flex;
   flex-direction: column;
@@ -38,11 +38,12 @@
 }
 
 .logo {
-  width: 48px;
-  height: 48px;
+  width: 80px;
+  height: 80px;
   margin-right: 16px;
-  border-radius: 50%;
+  border-radius: 8px;
   border: 1px solid #d1d5db;
+  object-fit: contain;
 }
 
 :global([data-theme='dark']) .logo {
@@ -50,22 +51,22 @@
 }
 
 .logoPlaceholder {
-  width: 48px;
-  height: 48px;
+  width: 80px;
+  height: 80px;
   margin-right: 16px;
-  border-radius: 50%;
+  border-radius: 8px;
   background-color: var(--ifm-color-emphasis-200);
   border: 1px solid var(--ifm-color-emphasis-300);
 }
 
-.assetName {
+.cardName {
   margin: 0;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   font-weight: 600;
   color: #111827;
 }
 
-:global([data-theme='dark']) .assetName {
+:global([data-theme='dark']) .cardName {
   color: var(--ifm-font-color-base);
 }
 
@@ -81,6 +82,8 @@
   color: #374151;
   display: flex;
   align-items: flex-start;
+  flex-direction: column;
+  gap: 4px;
 }
 
 :global([data-theme='dark']) .infoRow {
@@ -89,7 +92,6 @@
 
 .infoRow strong {
   color: #111827;
-  margin-right: 8px;
   white-space: nowrap;
 }
 
@@ -97,92 +99,35 @@
   color: var(--ifm-font-color-base);
 }
 
-.issuersContainer {
-  display: inline-flex;
+.subTypesContainer {
+  display: flex;
   flex-wrap: wrap;
-  align-items: center;
-  gap: 4px;
-}
-
-.issuer {
-  display: inline-flex;
-  align-items: center;
   gap: 6px;
-  white-space: nowrap;
 }
 
-.issuer a {
-  color: var(--ifm-color-primary);
-  text-decoration: none;
-}
-.issuer a:hover {
-  text-decoration: underline;
-}
-
-.tagContainer {
-  position: absolute;
-  top: 16px;
-  right: 16px;
-}
-
-.tag {
+.subTypeTag {
   display: inline-block;
-  padding: 2px 8px;
-  background-color: #dcfce7; /* A light green */
-  color: #166534; /* A dark green */
-  border-radius: 9999px; /* Pill shape */
-  font-size: 0.75rem;
+  padding: 4px 12px;
+  background-color: #dbeafe;
+  color: #1e40af;
+  border-radius: 16px;
+  font-size: 0.875rem;
   font-weight: 500;
 }
 
-:global([data-theme='dark']) .tag {
-  background-color: #166534; /* Dark green */
-  color: #dcfce7; /* Light green */
-}
-
-.issuerLogo {
-  width: 20px;
-  height: 20px;
-  vertical-align: middle;
+:global([data-theme='dark']) .subTypeTag {
+  background-color: #1e40af;
+  color: #dbeafe;
 }
 
 .cardFooter {
-  padding-top: 20px;
-  margin-top: 20px;
-}
-
-
-
-.detailsLink {
-  color: var(--ifm-color-primary);
-  font-weight: 500;
-  text-decoration: none;
-  transition: color 0.2s ease;
-}
-
-.detailsLink:hover {
-  color: var(--ifm-color-primary-dark);
-  text-decoration: underline;
-}
-
-.websiteLink {
-  color: var(--ifm-color-primary);
-  text-decoration: none;
-  transition: color 0.2s ease;
-  word-break: break-all;
-}
-
-.websiteLink:hover {
-  color: var(--ifm-color-primary-dark);
-  text-decoration: underline;
+  margin-top: 24px;
 }
 
 .websiteButton {
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  justify-content: center;
   gap: 8px;
-  width: 100%;
   padding: 10px 16px;
   background-color: var(--ifm-color-primary);
   color: white;
@@ -193,7 +138,6 @@
   transition: all 0.2s ease;
   border: none;
   cursor: pointer;
-  margin-bottom: 12px;
 }
 
 .websiteButton:hover {
@@ -209,29 +153,3 @@
   height: 16px;
   stroke-width: 2;
 }
-
-.detailsButton {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  width: 100%;
-  padding: 10px 16px;
-  background-color: transparent;
-  color: var(--ifm-color-primary);
-  text-decoration: none;
-  border: 2px solid var(--ifm-color-primary);
-  border-radius: 8px;
-  font-weight: 500;
-  font-size: 0.875rem;
-  transition: all 0.2s ease;
-  cursor: pointer;
-}
-
-.detailsButton:hover {
-  background-color: var(--ifm-color-primary);
-  color: white;
-  text-decoration: none;
-  transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-} 

@@ -236,6 +236,9 @@ const RampsDirectory = () => {
                         ? uniqueGeos.slice(0, GEOGRAPHY_VISIBILITY_THRESHOLD)
                         : uniqueGeos;
 
+                    // Check if there's any content to display in the details section
+                    const hasContent = uniqueGeos.length > 0 || allRampOptions.length > 0 || allPaymentMethods.length > 0 || uniqueAssets.length > 0;
+
 
                     return (
                         <div key={ramp.id} className={styles.rampCard}>
@@ -250,7 +253,7 @@ const RampsDirectory = () => {
                                 </div>
                                 {ramp.website && (
                                     <a href={ramp.website} target="_blank" rel="noopener noreferrer" className={styles.websiteLink}>
-                                        Visit Website
+                                        Website
                                         <svg
                                             className={styles.externalIcon}
                                             fill="none"
@@ -268,80 +271,87 @@ const RampsDirectory = () => {
                                     </a>
                                 )}
                             </div>
-                            <div className={styles.rampDetails}>
-                                <div className={styles.detailItem}>
-                                    <strong>Geographies</strong>
-                                    <div className={styles.geographiesList}>
-                                        {visibleGeos.map((geo) => {
-                                            const alpha2Code = countryCodeMapping[geo.country_code_alpha3];
-                                            return (
-                                                <span key={`${ramp.id}-${geo.country}`} className={styles.geoTagContainer}>
-                                                    <span
-                                                        className={styles.geoTag}
-                                                    >
-                                                        <Flag code={alpha2Code} country={geo.country} />
-                                                        {geo.country}
-                                                    </span>
-                                                    <div className={styles.popover}>
-                                                        <div className={styles.popoverHeader}>
+                            {hasContent && (
+                                <div className={styles.rampDetails}>
+                                {uniqueGeos.length > 0 && (
+                                    <div className={styles.detailItem}>
+                                        <strong>Geographies</strong>
+                                        <div className={styles.geographiesList}>
+                                            {visibleGeos.map((geo) => {
+                                                const alpha2Code = countryCodeMapping[geo.country_code_alpha3];
+                                                return (
+                                                    <span key={`${ramp.id}-${geo.country}`} className={styles.geoTagContainer}>
+                                                        <span
+                                                            className={styles.geoTag}
+                                                        >
                                                             <Flag code={alpha2Code} country={geo.country} />
-                                                            <h4>{geo.country}</h4>
-                                                        </div>
-                                                        <div className={styles.popoverContent}>
-                                                            <div className={styles.popoverSection}>
-                                                                <strong>Supported Currencies:</strong>
-                                                                <div>{geo.currencies.join(', ')}</div>
+                                                            {geo.country}
+                                                        </span>
+                                                        <div className={styles.popover}>
+                                                            <div className={styles.popoverHeader}>
+                                                                <Flag code={alpha2Code} country={geo.country} />
+                                                                <h4>{geo.country}</h4>
                                                             </div>
-                                                            <div className={styles.popoverSection}>
-                                                                <strong>On/Off Ramp:</strong>
-                                                                <div>{geo.ramp_options.join(', ')}</div>
-                                                            </div>
-                                                            <div className={styles.popoverSection}>
-                                                                <strong>Payment Methods:</strong>
-                                                                <div className={styles.paymentMethodsContainer}>
-                                                                    {geo.payment_methods.map(pm => (
-                                                                        <span key={pm.name} className={styles.paymentMethod}>
-                                                                            {pm.logo && <img src={`/img/logos/${pm.logo}`} alt="" />}
-                                                                            {pm.name}
-                                                                        </span>
-                                                                    ))}
+                                                            <div className={styles.popoverContent}>
+                                                                <div className={styles.popoverSection}>
+                                                                    <strong>Supported Currencies:</strong>
+                                                                    <div>{geo.currencies.join(', ')}</div>
                                                                 </div>
-                                                            </div>
-                                                            {geo.assets.length > 0 && <div className={styles.popoverSection}>
-                                                                <strong>Assets:</strong>
-                                                                <div className={styles.assetsContainer}>
-                                                                    {geo.assets.map(asset => <AssetChip key={asset.name} asset={asset} />)}
+                                                                <div className={styles.popoverSection}>
+                                                                    <strong>On/Off Ramp:</strong>
+                                                                    <div>{geo.ramp_options.join(', ')}</div>
                                                                 </div>
-                                                            </div>}
+                                                                <div className={styles.popoverSection}>
+                                                                    <strong>Payment Methods:</strong>
+                                                                    <div className={styles.paymentMethodsContainer}>
+                                                                        {geo.payment_methods.map(pm => (
+                                                                            <span key={pm.name} className={styles.paymentMethod}>
+                                                                                {pm.logo && <img src={`/img/logos/${pm.logo}`} alt="" />}
+                                                                                {pm.name}
+                                                                            </span>
+                                                                        ))}
+                                                                    </div>
+                                                                </div>
+                                                                {geo.assets.length > 0 && <div className={styles.popoverSection}>
+                                                                    <strong>Assets:</strong>
+                                                                    <div className={styles.assetsContainer}>
+                                                                        {geo.assets.map(asset => <AssetChip key={asset.name} asset={asset} />)}
+                                                                    </div>
+                                                                </div>}
+                                                            </div>
                                                         </div>
-                                                    </div>
-                                                </span>
-                                            )
-                                        })}
-                                        {hasTooManyGeos && !isExpanded && (
-                                            <button onClick={() => toggleRampExpansion(ramp.id)} className={styles.expandButton}>
-                                                ... and {uniqueGeos.length - GEOGRAPHY_VISIBILITY_THRESHOLD} more
-                                            </button>
-                                        )}
+                                                    </span>
+                                                )
+                                            })}
+                                            {hasTooManyGeos && !isExpanded && (
+                                                <button onClick={() => toggleRampExpansion(ramp.id)} className={styles.expandButton}>
+                                                    ... and {uniqueGeos.length - GEOGRAPHY_VISIBILITY_THRESHOLD} more
+                                                </button>
+                                            )}
+                                        </div>
                                     </div>
-                                </div>
+                                )}
                                 <div className={styles.detailItemContainer}>
-                                    <div className={styles.detailItem}>
-                                        <strong>All Ramp Options</strong>
-                                        <div className={styles.assetsList}>
-                                            {allRampOptions.length > 0 ? allRampOptions.map(option => (
-                                                <Chip key={option} text={option} />
-                                            )) : <p>N/A</p>}
+                                    {allRampOptions.length > 0 && (
+                                        <div className={styles.detailItem}>
+                                            <strong>Ramp Options</strong>
+                                            <div className={styles.assetsList}>
+                                                {allRampOptions.map(option => (
+                                                    <Chip key={option} text={option} />
+                                                ))}
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div className={styles.detailItem}>
-                                        <strong>All Payment Methods</strong>
-                                        <div className={styles.assetsList}>
-                                            {allPaymentMethods.length > 0 ? allPaymentMethods.map(method => (
-                                                <Chip key={method} text={method} />
-                                            )) : <p>N/A</p>}
+                                    )}
+                                    {allPaymentMethods.length > 0 && (
+                                        <div className={styles.detailItem}>
+                                            <strong>Payment Methods</strong>
+                                            <div className={styles.assetsList}>
+                                                {allPaymentMethods.map(method => (
+                                                    <Chip key={method} text={method} />
+                                                ))}
+                                            </div>
                                         </div>
-                                    </div>
+                                    )}
                                     <div className={`${styles.detailItem} ${uniqueAssets.length === 0 ? styles.hiddenContent : ''}`}>
                                         <strong>Assets</strong>
                                         <div className={styles.assetsList}>
@@ -352,6 +362,7 @@ const RampsDirectory = () => {
                                     </div>
                                 </div>
                             </div>
+                            )}
                         </div>
                     );
                 })}

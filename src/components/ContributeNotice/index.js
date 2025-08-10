@@ -19,6 +19,9 @@ const ContributeNotice = () => {
           </a>
         </div>
       </div>
+      <div className={styles.disclaimer}>
+        <em>Note: This is not a comprehensive list and information may be incomplete or outdated.</em>
+      </div>
     </div>
   );
 };

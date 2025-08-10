@@ -220,7 +220,7 @@ const ExchangesDirectory = () => {
                                 </div>
                                 {exchange.website && (
                                     <a href={exchange.website} target="_blank" rel="noopener noreferrer" className={styles.websiteLink}>
-                                        Visit Website
+                                        Website
                                         <svg
                                             className={styles.externalIcon}
                                             fill="none"

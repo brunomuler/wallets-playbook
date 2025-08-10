@@ -1,0 +1,118 @@
+---
+sidebar_label: 'SEP-30 and Social Recovery'
+sidebar_position: 2
+---
+
+# Multi-Party Recovery
+{/* 
+Multi-Party Recovery (MPR) on Stellar allows account owners or application builders to delegate recovery of their account to a set of trusted parties. It is defined in [SEP-30: Account Recovery](https://github.com/stellar/stellar-protocol/blob/master/ecosystem/sep-0030.md), and is especially useful for wallets that want to offer non-custodial accounts with built-in key recovery.
+
+Unlike traditional custodial recovery, where a single service provider can reset a user’s credentials, SEP-30 distributes recovery responsibility across multiple independent parties, reducing the risk of loss or compromise.
+
+### Why Use SEP-30?
+- **Self-custody with safety net**: Users keep control of their private keys, but can still recover access if they lose them.
+- **Decentralized trust**: Multiple recovery signers mean no single entity can take over the account.
+- **Programmable policies**: Define how many recovery signers are needed to approve recovery.
+- **User experience**: Lowers the barrier for mainstream adoption of non-custodial wallets by offering a familiar “reset access” flow.
+
+### How It Works
+
+#### Assign Recovery Signers
+
+The account owner designates one or more recovery signers (guardians).
+
+Guardians can be individuals, organizations, or services that comply with SEP-30.
+
+#### Threshold Policy
+
+The account specifies how many guardians are required to approve recovery (e.g., 2-of-3).
+
+Recovery signers are added as signers to the account with specific weights and a medium-threshold requirement.
+
+## Recovery Flow
+
+The user loses their signing key.
+
+The user (or their wallet) sends a recovery request to the guardians.
+
+Guardians verify the request based on their own KYC or authentication process.
+
+Once enough guardians approve, the account's signer set is updated with the user's new key.
+
+## Security Considerations
+
+Guardians should be independent from each other.
+
+Users should choose entities they trust and that are unlikely to collude.
+
+Recovery policies should balance usability with security.
+
+## SEP-30 Protocol Components
+SEP-30 specifies:
+
+Endpoints for guardians to expose:
+
+- `POST /recoveries` — start recovery.
+
+- `GET /recoveries/{id}` — check recovery status.
+- `PUT /recoveries/{id}` — approve or reject recovery.
+
+Authentication & Authorization mechanisms.
+
+Data models for recovery requests.
+
+Out-of-band verification requirements (e.g., phone verification, document checks).
+
+Compliance with Stellar transaction signing and submission standards.
+
+For the full technical definition, see the SEP-30 specification.
+
+## Example Architecture
+
+```
+User Wallet  →  Recovery Coordinator  →  Guardian Services
+                               ↘
+                         New Key Generated
+                               ↘
+                         Update Account Signers on Stellar
+```
+User Wallet: initiates recovery request, generates new key.
+
+Recovery Coordinator: optional service to orchestrate communication with multiple guardians.
+
+Guardians: independent services that authenticate the request and co-sign the account update.
+
+## Implementing Multi-Party Recovery
+1. Choose Guardians
+Select independent services or organizations that will implement SEP-30 endpoints and act as recovery signers.
+
+2. Configure Account
+Add guardian public keys as signers to the Stellar account.
+
+Set thresholds so that guardians can change signers only when the threshold is met.
+
+3. Build Recovery Flow in the Wallet
+Allow users to start a recovery process directly from the wallet UI.
+
+Implement communication with guardian endpoints.
+
+4. Secure Communication
+All guardian endpoints must use HTTPS.
+
+Requests must be authenticated and signed.
+
+5. Test Failure Scenarios
+Loss of one guardian.
+
+Compromised guardian.
+
+User requesting recovery too soon after account creation (anti-fraud policy).
+
+## Best Practices
+Diversity of Guardians: Choose entities in different jurisdictions and with different infrastructure providers.
+
+User Education: Make clear that guardians cannot spend funds—only help recover keys.
+
+Timeouts and Cool-Offs: Add delays before recovery is finalized to allow detection of fraudulent attempts.
+
+Backup Options: Encourage users to also maintain offline backups for faster recovery. */}
