@@ -1,0 +1,232 @@
+{
+  "data": [
+    {
+      "id": "recmZ8Lt6NFLKnBc9",
+      "title": "Allbridge Core",
+      "website": "https://allbridge.io/",
+      "description": "Allbridge Core enables users to seamlessly access the Stellar ecosystem through native stablecoin swaps.\n",
+      "type": "Bridge",
+      "thumbnail": "defi/allbridge-core.png",
+      "github": "https://github.com/allbridge-io/allbridge-core-soroban-contracts",
+      "analytics": "https://defillama.com/protocol/allbridge-classic"
+    },
+    {
+      "id": "recGO9xeorrfbDjbg",
+      "title": "Aquarius",
+      "website": "https://aqua.network",
+      "description": "Aquarius yield assets: bridging Stellar and Ethereum with Soroban, to offer secure, and decentralized yield opportunities.\n",
+      "type": "DEX",
+      "thumbnail": "defi/aquarius.png",
+      "github": "https://github.com/AquaToken",
+      "analytics": "https://defillama.com/protocol/aquarius-stellar"
+    },
+    {
+      "id": "recLYoLNEXB0SqEWp",
+      "title": "Balanced",
+      "website": "https://balanced.network/",
+      "description": "Balanced is a cross-chain DEX and stablecoin that enables native cross-chain DeFi primitives for any ecosystem.\n",
+      "type": "DEX",
+      "thumbnail": "defi/balanced.png",
+      "github": "https://github.com/balancednetwork/",
+      "analytics": "https://defillama.com/protocol/balanced-exchange"
+    },
+    {
+      "id": "recyIh4s2SMDhxdM6",
+      "title": "Blend",
+      "website": "https://www.blend.capital/",
+      "description": "Blend is a modular liquidity protocol, it allows anyone to deploy lending pools that meet their project's unique requirements and automatically manages the economics and risks associated with those pools\n",
+      "type": "Lending & Borrowing",
+      "thumbnail": "defi/blend.png",
+      "github": "https://github.com/blend-capital",
+      "analytics": "https://defillama.com/protocol/blend#information"
+    },
+    {
+      "id": "recAlRq5JQk146Aui",
+      "title": "BondHive:OnChain Fixed Deposit",
+      "website": "https://bondhive.xyz",
+      "description": "Bond Hive simplifies on-chain savings, offering fixed returns by tokenizing funding fees, making complex futures easy for everyone\n",
+      "type": "Yield",
+      "thumbnail": "defi/bondhive-onchain-fixed-deposit.png",
+      "github": "https://github.com/Bond-Hive"
+    },
+    {
+      "id": "recMBXO70jH3D1HdV",
+      "title": "Comet",
+      "website": "https://github.com/CometDEX",
+      "description": "Comet is a weighted AMM protocol that offers soroban projects a flexible solution set when picking liquidity venues\n",
+      "type": "DEX",
+      "thumbnail": "defi/comet.png",
+      "github": "https://github.com/CometDEX"
+    },
+    {
+      "id": "rec1Zv5wQDtMMHP8l",
+      "title": "DeFindex: DeFi Made Easy",
+      "website": "https://www.defindex.io/",
+      "description": "​DeFindex helps wallet providers to offer savings accounts to their users easily, through a diversified DeFi portfolio. Also, It allows advanced users to manage complex and diverse DeFi Strategies.\n",
+      "type": "OtherFinancialProtocol",
+      "thumbnail": "defi/defindex-defi-made-easy.png",
+      "github": "https://github.com/paltalabs/defindex",
+      "analytics": "https://www.defindex.io/"
+    },
+    {
+      "id": "recChiv9O7kzVHq8y",
+      "title": "Excellar",
+      "website": "https://excellar.finance/",
+      "description": "We are building tokenization and DeFi services for real-world assets. \n",
+      "type": "CDP/Basis trading",
+      "thumbnail": "defi/excellar.png",
+      "analytics": "https://defillama.com/protocol/excellar"
+    },
+    {
+      "id": "rectO6yZj7pywg60v",
+      "title": "FxDAO",
+      "website": "https://fxdao.io",
+      "description": "Debt issuance protocol for the issuance of decentralized stablecoins backed by XLMs\n",
+      "type": "CDP/Basis trading",
+      "thumbnail": "defi/fxdao.png",
+      "github": "https://github.com/FxDAO/",
+      "analytics": "https://defillama.com/protocol/fxdao"
+    },
+    {
+      "id": "recKY4XPcKxRgmMms",
+      "title": "HiYield",
+      "website": "https://hiyield.xyz",
+      "description": "HiYield is building key components of onchain capital markets infrastructure to bolster liquidity. Our initial products include a tokenization protocol and a custom-built lending market ideal for onchain repurchase agreements and fixed-income collateral types.\n",
+      "type": "Yield",
+      "thumbnail": "defi/hiyield.png"
+    },
+    {
+      "id": "recO8vqoARK9NIZGg",
+      "title": "Hoops Finance",
+      "website": "https://hoops.finance",
+      "description": "Analytics and DeFi platform for risk-adjusted investment in Soroban liquidity pools.\n",
+      "type": "Infrastructure & Services",
+      "thumbnail": "defi/hoops-finance.png",
+      "github": "https://github.com/Hoops-Finance"
+    },
+    {
+      "id": "recZbdlGkqTE6O7So",
+      "title": "Huma",
+      "website": "https://huma.finance",
+      "description": "Bring Huma, one of the most sophisticated business lending protocols, to Soroban; projected to drive $1B+ transaction in 12 mos\n",
+      "type": "Lending & Borrowing",
+      "thumbnail": "defi/huma.png",
+      "github": "https://github.com/00labs"
+    },
+    {
+      "id": "recEBNy51YVtJlWF4",
+      "title": "Lumenswap",
+      "website": "https://lumenswap.io",
+      "description": "Web service to swap assets on Stellar network\n",
+      "type": "DEX",
+      "thumbnail": "defi/lumenswap.png"
+    },
+    {
+      "id": "rec0n3nej57vmxPoQ",
+      "title": "OrbitCDP",
+      "website": "https://orbitcdp.finance/",
+      "description": "Harness Stellar's potential; collateralize with ease at OrbitCDP.\n",
+      "type": "CDP/Basis trading",
+      "thumbnail": "defi/orbitcdp.png",
+      "github": "https://github.com/orbit-cdp"
+    },
+    {
+      "id": "rec15yIdgcpdikWmN",
+      "title": "Pelago (Airswift)",
+      "website": "https://pelagotech.com/",
+      "description": "Airswift’s Supply Chain Financing Platform unlocks new lending channels in supply chains via Stellar's new smart contract platform --- Soroban. The solution helps buyers optimize their working capital and provide SMEs with the funds they need prior to payment from the buyer, regardless of whether they have a direct relationship with the buyer.    The platform leverages credit from large buyers through tokenizing their account receivables on Stellar and fractionalizing them into smaller ones representing amounts owed to individual suppliers. Consequently, associated suppliers can obtain factoring services for a given account receivable, based on which they can secure advanced stablecoin loans equal to what will be owed them by the buyer. This process enables up to 10 suppliers associated with an account receivable to obtain credit lines so they can secure working capital. \n",
+      "type": "Lending & Borrowing",
+      "thumbnail": "defi/pelago-airswift.png",
+      "github": "https://github.com/Airswiftio/SCF"
+    },
+    {
+      "id": "recggesMwU0kUTu4s",
+      "title": "Phoenix",
+      "website": "https://www.phoenix-hub.io/",
+      "description": "Phoenix's AMM enables decentralized swaps of crypto assets and is the first of a full suite of synergistic DeFi protocols \n",
+      "type": "DEX",
+      "thumbnail": "defi/phoenix.png",
+      "github": "https://github.com/Phoenix-Protocol-Group",
+      "analytics": "https://defillama.com/protocol/phoenix-defi-hub"
+    },
+    {
+      "id": "recgQkIVUGC9Pb8Dv",
+      "title": "Raum Network",
+      "website": "https://dex.raum.network",
+      "description": "RaumFi DEXempowers seamless token swap through an AMM while offering insights and metrics via uniquely designed dashboard.\n",
+      "type": "DEX",
+      "thumbnail": "defi/raum-network.png",
+      "github": "https://github.com/Raum-Network/Raum-Core",
+      "analytics": "https://raum.network"
+    },
+    {
+      "id": "recZKVAUXuTu1UwgB",
+      "title": "Slender",
+      "website": "https://www.slender.fi/",
+      "description": "A money market for the Soroban ecosystem\n",
+      "type": "Lending & Borrowing",
+      "thumbnail": "defi/slender.png",
+      "github": "https://github.com/eq-lab/slender"
+    },
+    {
+      "id": "recywbrhVz5Bhkrnc",
+      "title": "Soroswap.Finance",
+      "website": "https://soroswap.finance/",
+      "description": "Open-source AMM protocol and AMM Aggregator with Ecosystem Interoperability for providing liquidity and trading Stellar Assets in Soroban.\n",
+      "type": "DEX",
+      "thumbnail": "defi/soroswap.finance.png",
+      "github": "https://github.com/soroswap",
+      "analytics": "https://defillama.com/protocol/soroswap"
+    },
+    {
+      "id": "rechz5WPJ4YETq7cw",
+      "title": "StellarBroker",
+      "website": "https://stellar.broker",
+      "description": "Multi-source liquidity swap router for Stellar, providing access to AMMs like SoroSwap and Aquarius, Stellar DEX, and Stellar Classic AMMs\n",
+      "type": "DEX",
+      "thumbnail": "defi/stellarbroker.png",
+      "github": "https://github.com/stellar-broker",
+      "analytics": "https://github.com/stellar-broker"
+    },
+    {
+      "id": "recIb6aeDlxM6a6Pq",
+      "title": "StellarTerm",
+      "website": "https://galactictalk.org/d/2212-stellarterm-advanced-trading-client-for-the-stellar-network",
+      "description": "advanced trading client for the Stellar network\n",
+      "type": "DEX"
+    },
+    {
+      "id": "rec0PFBISvyvj4zHx",
+      "title": "Untangled",
+      "website": "https://www.untangled.finance/",
+      "description": "Untangled Vault is an automated, non-custodial, data-driven asset management protocol enabling anyone to set and execute strategies to fit investor risk/return appetite. Untangled Vault is powered by Untangled pool, an asset tokenization protocol focusing on RWA private credits and Credio, a risk oracle providing machine learning model inferences and onchain monitoring to RWA.\n",
+      "type": "Yield Aggregator / Managed Pools",
+      "thumbnail": "defi/untangled.png",
+      "github": "https://github.com/untangledfinance",
+      "analytics": "https://app.untangled.finance/"
+    },
+    {
+      "id": "recw9k2bBOs3RQ0xr",
+      "title": "XycLoans",
+      "website": "https://xycloo.com/",
+      "description": "XycLoans is a decentralized flash loans protocol that runs on Soroban. It manages its own liquidity being structured in liquidity pools for each supported token. Borrowers can borrow from these pools any available amount through flash loans and lenders can provide liquidity to earn healthy and risk-free yields (as flash loans never lose liquidity by design). XycLoans is a flash loans-only protocol, making it extremely safe in terms of security and investment opportunities. \n",
+      "type": "Lending & Borrowing",
+      "thumbnail": "defi/xycloans.png",
+      "github": "https://github.com/xycloo/xycloans/"
+    },
+    {
+      "id": "recPc9iXQzuc1pLc6",
+      "title": "zkCrossDEX",
+      "website": "https://zkcross.network/",
+      "description": "zkCrossDEX enables seamless cross-chain liquidity transfers from leading EVM chains to Stellar with a single click.\n",
+      "type": "DEX",
+      "thumbnail": "defi/zkcrossdex.png",
+      "github": "https://github.com/zkCross-Network"
+    }
+  ],
+  "metadata": {
+    "generatedAt": "2025-08-09T06:02:50.344Z",
+    "count": 24,
+    "source": "airtable"
+  }
+}
