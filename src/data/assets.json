@@ -329,40 +329,6 @@
       "issuer_address": "GC6HPU43M657FWNQVWA5DZXNOOIA7A33OF67K4SOBOF3PAO6PHALUCOP"
     },
     {
-      "id": "rect4OyPOPomDkz20",
-      "name": "deJAAA",
-      "logo": "partners/centrifuge.png",
-      "issuer_logo": "partners/centrifuge.png",
-      "issuers": [
-        {
-          "name": "Centrifuge",
-          "website": "https://centrifuge.io/",
-          "logo": "partners/centrifuge.png"
-        }
-      ],
-      "yield_bearing": false,
-      "permissibility": "Permissionless",
-      "home_domain": "https://centrifuge.io/",
-      "website": "https://centrifuge.io/"
-    },
-    {
-      "id": "rec6egUiLYUQW7aa5",
-      "name": "deJTRSY",
-      "logo": "partners/centrifuge.png",
-      "issuer_logo": "partners/centrifuge.png",
-      "issuers": [
-        {
-          "name": "Centrifuge",
-          "website": "https://centrifuge.io/",
-          "logo": "partners/centrifuge.png"
-        }
-      ],
-      "yield_bearing": false,
-      "permissibility": "Permissionless",
-      "home_domain": "https://centrifuge.io/",
-      "website": "https://centrifuge.io/"
-    },
-    {
       "id": "recXS3lhhOGtYb12p",
       "name": "EQTY",
       "logo": "partners/wisdomtree.png",
@@ -513,40 +479,6 @@
       "issuer_address": "GDF6VOEGRWLOZ64PQQGKD2IYWA22RLT37GJKS2EJXZHT2VLAGWLC5TOB"
     },
     {
-      "id": "reclLfVcoSIOh89yk",
-      "name": "JAAA",
-      "logo": "partners/centrifuge.png",
-      "issuer_logo": "partners/centrifuge.png",
-      "issuers": [
-        {
-          "name": "Centrifuge",
-          "website": "https://centrifuge.io/",
-          "logo": "partners/centrifuge.png"
-        }
-      ],
-      "yield_bearing": false,
-      "permissibility": "Permissioned",
-      "home_domain": "https://centrifuge.io/",
-      "website": "https://centrifuge.io/"
-    },
-    {
-      "id": "rec6i8emHAo1abMwa",
-      "name": "JTRSY",
-      "logo": "partners/centrifuge.png",
-      "issuer_logo": "partners/centrifuge.png",
-      "issuers": [
-        {
-          "name": "Centrifuge",
-          "website": "https://centrifuge.io/",
-          "logo": "partners/centrifuge.png"
-        }
-      ],
-      "yield_bearing": false,
-      "permissibility": "Permissioned",
-      "home_domain": "https://centrifuge.io/",
-      "website": "https://centrifuge.io/"
-    },
-    {
       "id": "recIiCWf9wJHraM5z",
       "name": "KES",
       "logo": "partners/clickpesa.png",
@@ -578,22 +510,6 @@
       "fiat_asset": "LNGVX",
       "website": "https://www.wisdomtree.com/",
       "issuer_address": "GAHOGWBAWNIKESGNNW7Y7JU5KL54HIEHJGY6Y5QLY6YR3J7WZIDHLC6D"
-    },
-    {
-      "id": "recU1fKa5g39El9ca",
-      "name": "LSP",
-      "logo": "partners/lumenswap.png",
-      "issuer_logo": "partners/lumenswap.png",
-      "issuers": [
-        {
-          "name": "LumenSwap",
-          "website": "https://lumenswap.io/",
-          "logo": "partners/lumenswap.png"
-        }
-      ],
-      "yield_bearing": false,
-      "website": "https://lumenswap.io/",
-      "issuer_address": "GAB7STHVD5BDH3EEYXPI3OM7PCS4V443PYB5FNT6CFGJVPDLMKDM24WK"
     },
     {
       "id": "recUoKsoyimhqKWwK",
@@ -683,22 +599,6 @@
       "issuer_address": "GA4TDPNUCZPTOHB3TKUYMDCRVATXKEADH7ZEYEBWJKQKE2UBFCYNBPEN"
     },
     {
-      "id": "recxdJsWIcFsu4CjI",
-      "name": "PYUSD",
-      "logo": "partners/paypal.png",
-      "issuer_logo": "partners/paypal.png",
-      "issuers": [
-        {
-          "name": "PayPal",
-          "website": "https://www.paypal.com/",
-          "logo": "partners/paypal.png"
-        }
-      ],
-      "yield_bearing": false,
-      "website": "https://www.paypal.com/",
-      "issuer_address": "GDQE7IXJ4HUHV6RQHIUPRJSEZE4DRS5WY577O2FY6YQ5LVWZ7JZTU2V5"
-    },
-    {
       "id": "recFbiRwBYBk5EQzg",
       "name": "QCAD",
       "logo": "partners/stablecorp.png",
@@ -774,18 +674,6 @@
       "fiat_asset": "COL",
       "home_domain": "anchor.stablecop.com",
       "issuer_address": "GDO3PDT3IKVL2PJI5MMQDHLFYBVQI46YQW6P5TEMGOJA7LWGELWDMZNY"
-    },
-    {
-      "id": "recsIIdmK0nu9QRzy",
-      "name": "SolvBTC",
-      "issuers": [
-        {
-          "name": "Solv Finance"
-        }
-      ],
-      "yield_bearing": true,
-      "home_domain": "https://solv.finance/",
-      "website": "https://solv.finance/"
     },
     {
       "id": "recJE4PJW8T9aQLYt",
@@ -984,23 +872,6 @@
       "home_domain": "polaris.stably.io",
       "website": "https://www.stably.io/",
       "issuer_address": "GBK4AYTOYIAYT4UJECSQGMACUWLKYOOM4VCAUUZ3Y3FG5XD2LYK3FGK2"
-    },
-    {
-      "id": "rec4Isduy79y1WHal",
-      "name": "USDY",
-      "logo": "partners/ondo.png",
-      "issuer_logo": "partners/ondo.png",
-      "issuers": [
-        {
-          "name": "Ondo",
-          "website": "https://ondo.finance/",
-          "logo": "partners/ondo.png"
-        }
-      ],
-      "yield_bearing": true,
-      "permissibility": "Permissionless",
-      "restricted_jurisdictions": "To be eligible to acquire, redeem, or trade USDY, you (or your organization, depending upon who is investing) must NOT be located, organized, or a resident in any of the following locations: The United States (including its possessions and territories), United Kingdom or Canada.",
-      "website": "https://ondo.finance/"
     },
     {
       "id": "recg499ceex97oJar",
@@ -1204,8 +1075,8 @@
     }
   ],
   "metadata": {
-    "generatedAt": "2025-08-13T06:02:44.725Z",
-    "count": 73,
+    "generatedAt": "2025-08-13T23:52:04.695Z",
+    "count": 65,
     "source": "airtable"
   }
 }
