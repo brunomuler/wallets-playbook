@@ -774,20 +774,6 @@
       "issuer_address": "GA2MSSZKJOU6RNL3EJKH3S5TB5CDYTFQFWRYFGUJVIN5I6AOIRTLUHTO"
     },
     {
-      "id": "rectGIfFaNZeqC3ZN",
-      "name": "UAH",
-      "issuers": [
-        {
-          "name": "DCM"
-        }
-      ],
-      "yield_bearing": false,
-      "fiat_asset": "UAH",
-      "home_domain": "dcm.systems",
-      "website": "dcm.systems",
-      "issuer_address": "GCJI3CP2NL6NWSCHM36XBQYCBHOTVVZWEXZALWON34KAYUGF6GEVNRTS"
-    },
-    {
       "id": "recT8CiXKqTlaaxtz",
       "name": "USD",
       "logo": "partners/wisdomtree.png",
@@ -1075,8 +1061,8 @@
     }
   ],
   "metadata": {
-    "generatedAt": "2025-08-18T06:03:21.902Z",
-    "count": 65,
+    "generatedAt": "2025-08-19T06:03:17.598Z",
+    "count": 64,
     "source": "airtable"
   }
 }
