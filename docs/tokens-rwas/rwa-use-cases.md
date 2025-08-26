@@ -11,7 +11,7 @@ Tokenized RWAs â€” such as fiat currencies, government bonds, and commodities â€
 
 ### 1. Onchain Savings & Yield 
 
-By supporting access to yield-bearing RWAs like Etherfuses's Stablebonds, wallets can offer savings opportunities backed by real financial instruments. Many of these are permissionless and compatible with DeFi protocols on Stellar. 
+By supporting access to yield-bearing RWAs like Etherfuse's Stablebonds, wallets can offer savings opportunities backed by real financial instruments. Many of these are permissionless and compatible with DeFi protocols on Stellar. 
 
 ### 2. Consumer Cross-Border Payments 
 

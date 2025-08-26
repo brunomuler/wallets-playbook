@@ -50,7 +50,7 @@ Without sponsorship, the lumens were actually transferred from account A to acco
 ![Base Reserve Example 2](/img/docs/sponsor-diagram1b.png)
 
 
-> **Note**: This section covers reserves for Classic wallets. Smart wallets work in a different way. To learn more about Smart wallets, see TBD
+> **Note**: This section covers reserves for Classic wallets. Smart wallets work in a different way. To learn more about Smart wallets, see [Sponsor Smart Wallets](./sponsor-smart).
 
 ### Fees
 
@@ -107,7 +107,7 @@ Note that the users' accounts don't need to hold any Lumens and that all the res
 * Creating 2 additional accounts (4x base reserve = 2 XLM)
 * Sponsoring 2 trustlines for two accounts (4x base reserve = 2 XLM)
 
-Learn more about transactions and operations. (TBD)
+📖 Learn more about [transactions and operations](https://developers.stellar.org/docs/learn/fundamentals/transactions) in the Stellar documentation.
 
 [Check the sponsored reserves documentation](https://developers.stellar.org/docs/encyclopedia/sponsored-reserves)
 
@@ -250,7 +250,6 @@ Yes, but only after sponsored accounts clear sponsored reserves or through mutua
 ### Sponsoring transaction fees (gas)
 
 Transaction fees sponsorship uses "fee bump transactions," allowing sponsors to pay transaction fees on behalf of user accounts. Fee bumps wrap user transactions in a higher-fee transaction paid by the sponsor.
-{/* TBD change this sdescription  */}
 
 [Check the fee bump transactions documentation](https://developers.stellar.org/docs/encyclopedia/fee-bump-transactions).
 
@@ -276,11 +275,38 @@ There are costs related to sponsoring the user's base reserves or transaction fe
 
 ## Creating a sponsorship infrastructure
 
-(TBD)
+The [stellar/wallet-backend](https://github.com/stellar/wallet-backend) project provides server-side tooling to make creating and using wallets seamless.
+
+### Key Features
+- **Sponsored Account Creation**  
+  Supports creating accounts and paying reserves on behalf of new users.
+- **Fee Sponsorship ("Gasless" UX)**  
+  Uses **fee-bump transactions** so a distribution account pays transaction fees.
+- **Channel Accounts**  
+  Manages sequence numbers and scales throughput by using pre-funded channel accounts.
+- **Secure API**  
+  Exposes endpoints for building, signing, and submitting transactions, secured by JWT-based authentication.
+
+### Typical Flow
+1. **Frontend (Smart Wallet App)**  
+   - User signs an operation according to their wallet’s contract logic (e.g., passkey, policy signer).
+   - App sends the signed payload to the backend.
+
+2. **Backend (wallet-backend)**  
+   - Builds the transaction using a **channel account** for sequence numbers.  
+   - Wraps it in a **fee-bump transaction** so the **distribution account** pays the fee (and any reserve if needed).  
+   - Submits the transaction to Stellar RPC.  
+   - Polls for confirmation and returns the result.
+
+3. **Result**  
+   - User’s wallet action succeeds.  
+   - User never needed to hold XLM for fees or reserves.  
+   - Sponsor absorbs costs and can manage them.
+
 
 ### Adding funds to the sponsorship account
 
-To fund accounts, you can acquire XLM from a variety of sources, central exchanges are a good option.
+To fund accounts, you can acquire XLM from a variety of sources including exchanges.
 
 :::info[Exchanges]
 [Check a list of exchanges](https://stellar.org/developers/guides/on-ramps/exchanges-list)

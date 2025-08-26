@@ -26,18 +26,6 @@ As wallets implement their internal functionality, they may need to access data 
 The Stellar network is open and public, meaning anyone can access the data stored on the network. However, accessing this data can be complex and time-consuming. To make this easier, there are a few tools available to help you get the data you need.
 
 
-### Horizon
-
-Horizon provides a REST API for the Stellar network. It can be used to get account data, transaction history, and more. It has been broadely used by the Stellar ecosystem for years to fetch on-chain data for Classic wallets. With the introduction of Smart Contracts on Stellar, new projects usually adopt RPCs combined with indexers since they provide a more complete solution to interact with smart contracts and fetch the data they need.
-
-📖 Learn more about Horizon in the [Horizon documentation](https://developers.stellar.org/docs/data/apis/horizon).
-
-
-:::warning[Important]
-On August 1, 2024, the publicly accessible SDF-hosted Horizon had its historical data truncated to one year. That update optimized the performance of the publicly accessible Horizon and ensured a streamlined experience for all users. Consider third-party ecosystem providers of Horizon. 
-
-[Check out  Horizon Providers for a list of third-party providers.](https://developers.stellar.org/docs/data/apis/api-providers)
-:::
 
 ### RPC
 
@@ -54,6 +42,18 @@ Indexers on Stellar are specialized services that collect, process, and organize
 
 
 
+### Horizon
+
+Horizon provides a REST API for the Stellar network. It can be used to get account data, transaction history, and more. It has been broadly used by the Stellar ecosystem for years to fetch on-chain data for Classic wallets. With the introduction of Smart Contracts on Stellar, new projects usually adopt RPCs combined with indexers since they provide a more complete solution to interact with smart contracts and fetch the data they need.
+
+📖 Learn more about Horizon in the [Horizon documentation](https://developers.stellar.org/docs/data/apis/horizon).
+
+
+:::warning[Important]
+On August 1, 2024, the publicly accessible SDF-hosted Horizon had its historical data truncated to one year. That update optimized the performance of the publicly accessible Horizon and ensured a streamlined experience for all users. Consider third-party ecosystem providers of Horizon. 
+
+[Check out  Horizon Providers for a list of third-party providers.](https://developers.stellar.org/docs/data/apis/api-providers)
+:::
 
 
 
