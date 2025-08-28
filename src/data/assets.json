@@ -346,24 +346,6 @@
       "issuer_address": "GAKODZFS4MV36JGDTULJACWJKBJCO33CJTVTWSQFSUV7XLZJNXTDH6D6"
     },
     {
-      "id": "recCfYXT2YiEoxEIY",
-      "name": "EURC",
-      "logo": "partners/mykobo.png",
-      "issuer_logo": "partners/mykobo.png",
-      "issuers": [
-        {
-          "name": "MyKobo",
-          "website": "https://www.mykobo.co/",
-          "logo": "partners/mykobo.png"
-        }
-      ],
-      "yield_bearing": false,
-      "fiat_asset": "EUR",
-      "home_domain": "mykobo.co",
-      "website": "https://www.mykobo.co/",
-      "issuer_address": "GAQRF3UGHBT6JYQZ7YSUYCIYWAF4T2SAA5237Q5LIQYJOHHFAWDXZ7NM"
-    },
-    {
       "id": "recQkS3my48RoIKkz",
       "name": "EURC",
       "logo": "partners/circle.png",
@@ -1061,8 +1043,8 @@
     }
   ],
   "metadata": {
-    "generatedAt": "2025-08-26T06:02:50.007Z",
-    "count": 64,
+    "generatedAt": "2025-08-28T06:04:00.173Z",
+    "count": 63,
     "source": "airtable"
   }
 }
