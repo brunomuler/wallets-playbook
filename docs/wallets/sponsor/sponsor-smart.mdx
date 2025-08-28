@@ -8,7 +8,7 @@ sidebar_position: 3
 Smart Wallets use a different structure from Classic Wallets, which also makes the sponsorship process different.
 
 - **Classic Wallets** must hold a reserve of XLM based on account usage (e.g. account creation, adding trustlines). They also pay a small **Inclusion Fee** per transaction.  
-- **Smart Wallets** are contracts. They do not require reserves, but they pay both an [Inclusion Fee](https://developers.stellar.org/docs/learn/fundamentals/fees-resource-limits-metering#inclusion-fee) and a [Resource Fee](https://developers.stellar.org/docs/learn/fundamentals/fees-resource-limits-metering#resource-fee). The Resource Fee is proportional to how much storage, computation, and bandwidth the contract consumes, effectively “rent” for running on the network.
+- **Smart Wallets** are contracts. They do not require reserves, but they pay both an [Inclusion Fee](https://developers.stellar.org/docs/learn/fundamentals/fees-resource-limits-metering#inclusion-fee) and a [Resource Fee](https://developers.stellar.org/docs/learn/fundamentals/fees-resource-limits-metering#resource-fee). The Resource Fee is calculated based on the resource consumption declared in the transaction, including storage, computation, and bandwidth.
 
 📖 Learn more about [Fees, Resource Limits, and Metering](https://developers.stellar.org/docs/learn/fundamentals/fees-resource-limits-metering)
 
@@ -35,17 +35,16 @@ The [stellar/wallet-backend](https://github.com/stellar/wallet-backend) project 
 
 ### Sponsorship Flow
 1. **Frontend (Smart Wallet App)**  
-   - User signs an operation according to their wallet’s contract logic (e.g., passkey, policy signer).
+   - User signs an operation according to their wallet's contract logic (e.g., passkey, policy signer).
    - App sends the signed payload to the backend.
 
 2. **Backend (wallet-backend)**  
    - Builds the transaction using a **channel account** for sequence numbers.  
    - Wraps it in a **fee-bump transaction** so the **distribution account** pays the fee (and any reserve if needed).  
-   - Submits the transaction to Stellar RPC.  
-   - Polls for confirmation and returns the result.
+   - Returns the transaction to the frontend which can then submit it.
 
 3. **Result**  
-   - User’s wallet action succeeds.  
+   - User's wallet action succeeds.  
    - User never needed to hold XLM for fees or reserves.  
    - Sponsor absorbs costs and can manage them.
 
