@@ -69,6 +69,16 @@
       "analytics": "https://www.defindex.io/"
     },
     {
+      "id": "recByNUiIVVL41mxd",
+      "title": "Eascrow",
+      "website": "https://eascrow.xyz/",
+      "description": " Eascrow is a web3 escrow platform powered by Stellar smart contracts, ensuring secure and transparent online transactions. It simplifies cross-border payments and builds trust for freelancers, businesses, and individuals.\n",
+      "type": "Other Application",
+      "thumbnail": "defi/eascrow.png",
+      "github": "https://github.com/Eascrow/Eascrow",
+      "analytics": "https://docs.google.com/document/d/1JVAU-2_a4oTPunxkTygRTD5yZfFR4TAAV6A9DqQYx34/edit?tab=t.0"
+    },
+    {
       "id": "recChiv9O7kzVHq8y",
       "title": "Excellar",
       "website": "https://excellar.finance/",
@@ -225,8 +235,8 @@
     }
   ],
   "metadata": {
-    "generatedAt": "2025-08-28T06:04:00.295Z",
-    "count": 24,
+    "generatedAt": "2025-08-29T06:02:52.002Z",
+    "count": 25,
     "source": "airtable"
   }
 }
