@@ -134,6 +134,13 @@ const config = {
     ({
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
+      algolia: {
+        appId: '6E139FK2DL',
+        apiKey: 'b748663e725287bb84c84276c9ee696c',
+        indexName: 'Wallet Playbook',
+        contextualSearch: true,
+        searchPagePath: 'search',
+      },
       navbar: {
         title: 'Stellar Wallet Playbook',
         logo: {
