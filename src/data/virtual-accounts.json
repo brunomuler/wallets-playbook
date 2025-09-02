@@ -1,0 +1,21 @@
+{
+  "data": [
+    {
+      "id": "recoKMyw1Q1MNxEOT",
+      "name": "Bridge",
+      "logo": "partners/bridge.png",
+      "website": "https://bridge.xyz/",
+      "type": "Application",
+      "sub_type": [
+        "Card Issuer",
+        "Virtual Account Provider"
+      ],
+      "geo_rollout": []
+    }
+  ],
+  "metadata": {
+    "generatedAt": "2025-09-02T20:02:25.990Z",
+    "count": 1,
+    "source": "airtable"
+  }
+}

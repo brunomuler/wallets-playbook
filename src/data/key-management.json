@@ -1,0 +1,53 @@
+{
+  "data": [
+    {
+      "id": "receClQ2okjHtw9RK",
+      "name": "Cubist",
+      "logo": "partners/cubist.png",
+      "website": "https://cubist.dev/",
+      "type": "Wallet Infrastructure",
+      "sub_type": [
+        "Key Management"
+      ],
+      "geo_rollout": []
+    },
+    {
+      "id": "reci9WviPnbO0cLvv",
+      "name": "Dfns",
+      "logo": "partners/dfns.png",
+      "website": "https://www.dfns.co/",
+      "type": "Wallet Infrastructure",
+      "sub_type": [
+        "Key Management"
+      ],
+      "geo_rollout": []
+    },
+    {
+      "id": "rec4UNG7u3cW30LAY",
+      "name": "Privy",
+      "logo": "partners/privy.png",
+      "website": "https://www.privy.io",
+      "type": "Wallet Infrastructure",
+      "sub_type": [
+        "Key Management"
+      ],
+      "geo_rollout": []
+    },
+    {
+      "id": "recBEHgdahYvjXC1j",
+      "name": "Turnkey",
+      "logo": "partners/turnkey.png",
+      "website": "https://www.turnkey.com/",
+      "type": "Wallet Infrastructure",
+      "sub_type": [
+        "Key Management"
+      ],
+      "geo_rollout": []
+    }
+  ],
+  "metadata": {
+    "generatedAt": "2025-09-02T20:02:26.136Z",
+    "count": 4,
+    "source": "airtable"
+  }
+}
