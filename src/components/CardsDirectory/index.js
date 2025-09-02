@@ -1,6 +1,7 @@
 import React from 'react';
-import cardsData from '@site/src/data/cards.json';
+import cardsData from '@site/src/data-remote/cards.json';
 import ContributeNotice from '../ContributeNotice';
+import { getLogoUrl } from '@site/src/utils/imageMapper';
 import styles from './styles.module.css';
 
 export default function CardsDirectory() {
@@ -26,7 +27,7 @@ export default function CardsDirectory() {
             <div className={styles.cardHeader}>
               {card.logo ? (
                 <img
-                  src={`/img/logos/${card.logo}`}
+                  src={getLogoUrl(card.logo)}
                   alt={`${card.name} logo`}
                   className={styles.logo}
                 />

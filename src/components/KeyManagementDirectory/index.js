@@ -1,6 +1,7 @@
 import React from 'react';
-import keyManagementData from '@site/src/data/key-management.json';
+import keyManagementData from '@site/src/data-remote/key-management.json';
 import ContributeNotice from '../ContributeNotice';
+import { getLogoUrl } from '@site/src/utils/imageMapper';
 import styles from './styles.module.css';
 
 export default function KeyManagementDirectory() {
@@ -27,7 +28,7 @@ export default function KeyManagementDirectory() {
             <div className={styles.cardHeader}>
               {entity.logo ? (
                 <img
-                  src={`/img/logos/${entity.logo}`}
+                  src={getLogoUrl(entity.logo)}
                   alt={`${entity.name} logo`}
                   className={styles.logo}
                 />

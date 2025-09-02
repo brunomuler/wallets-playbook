@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import assetsData from '@site/src/data/assets.json';
+import assetsData from '@site/src/data-remote/assets.json';
 import ContributeNotice from '../ContributeNotice';
+import { getLogoUrl } from '@site/src/utils/imageMapper';
 import styles from './styles.module.css';
 
 export default function AssetsDirectory({ yieldBearingOnly = false }) {
@@ -116,7 +117,7 @@ export default function AssetsDirectory({ yieldBearingOnly = false }) {
               <div className={styles.cardHeader}>
                 {issuer.logo ? (
                   <img
-                    src={`/img/logos/${issuer.logo}`}
+                    src={getLogoUrl(issuer.logo)}
                     alt={`${issuer.name} logo`}
                     className={styles.logo}
                   />

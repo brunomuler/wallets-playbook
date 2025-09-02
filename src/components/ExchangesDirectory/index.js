@@ -1,7 +1,8 @@
 import React, { useState, useMemo, useEffect } from 'react';
 import Select from 'react-select';
-import exchangesDataRaw from '@site/src/data/exchanges.json';
+import exchangesDataRaw from '@site/src/data-remote/exchanges.json';
 import ContributeNotice from '../ContributeNotice';
+import { getLogoUrl } from '@site/src/utils/imageMapper';
 import styles from './styles.module.css';
 
 // Handle both wrapper format { data: [...] } and direct array format
@@ -212,7 +213,7 @@ const ExchangesDirectory = () => {
                             <div className={styles.exchangeHeader}>
                                 <div className={styles.exchangeIdentity}>
                                     {exchange.logo ? (
-                                        <img src={`/img/logos/${exchange.logo}`} alt={`${exchange.name} logo`} className={styles.exchangeLogo} />
+                                        <img src={getLogoUrl(exchange.logo)} alt={`${exchange.name} logo`} className={styles.exchangeLogo} />
                                     ) : (
                                         <div className={styles.exchangeLogoPlaceholder}></div>
                                     )}

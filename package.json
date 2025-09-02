@@ -11,10 +11,13 @@
     "clear": "docusaurus clear",
     "serve": "docusaurus serve",
     "write-translations": "docusaurus write-translations",
-    "write-heading-ids": "docusaurus write-heading-ids"
-
+    "write-heading-ids": "docusaurus write-heading-ids",
+    "fetch-data": "node scripts/fetch-remote-data-authenticated.js",
+    "build:with-data": "npm run fetch-data && npm run build"
   },
   "dependencies": {
+    "@aws-sdk/client-s3": "^3.879.0",
+    "@aws-sdk/credential-provider-env": "^3.879.0",
     "@docusaurus/core": "^3.8.1",
     "@docusaurus/plugin-ideal-image": "^3.8.1",
     "@docusaurus/preset-classic": "^3.8.1",

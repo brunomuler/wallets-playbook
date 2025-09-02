@@ -80,6 +80,12 @@ const config = {
         disableInDev: false,
       },
     ],
+    [
+      require.resolve('./plugins/fetch-remote-data-plugin.js'),
+      {
+        // Plugin options can go here
+      },
+    ],
   ],
 
   clientModules: [

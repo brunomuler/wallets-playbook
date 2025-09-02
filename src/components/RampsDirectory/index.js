@@ -1,7 +1,8 @@
 import React, { useState, useMemo } from 'react';
 import Select from 'react-select';
-import rampsDataRaw from '@site/src/data/ramps.json';
+import rampsDataRaw from '@site/src/data-remote/ramps.json';
 import ContributeNotice from '../ContributeNotice';
+import { getLogoUrl } from '@site/src/utils/imageMapper';
 import styles from './styles.module.css';
 
 // Handle both wrapper format { data: [...] } and direct array format
@@ -36,7 +37,7 @@ const Flag = ({ code, country }) => {
 
 const AssetChip = ({ asset }) => (
     <span className={styles.assetTag}>
-        {asset.logo && <img src={`/img/logos/${asset.logo}`} alt={`${asset.name} logo`} className={styles.assetLogo} />}
+        {asset.logo && <img src={getLogoUrl(asset.logo)} alt={`${asset.name} logo`} className={styles.assetLogo} />}
         <span>{asset.name}</span>
     </span>
 );
@@ -245,7 +246,7 @@ const RampsDirectory = () => {
                             <div className={styles.rampHeader}>
                                 <div className={styles.rampIdentity}>
                                     {ramp.logo ? (
-                                        <img src={`/img/logos/${ramp.logo}`} alt={`${ramp.name} logo`} className={styles.rampLogo} />
+                                        <img src={getLogoUrl(ramp.logo)} alt={`${ramp.name} logo`} className={styles.rampLogo} />
                                     ) : (
                                         <div className={styles.rampLogoPlaceholder}></div>
                                     )}
@@ -306,7 +307,7 @@ const RampsDirectory = () => {
                                                                     <div className={styles.paymentMethodsContainer}>
                                                                         {geo.payment_methods.map(pm => (
                                                                             <span key={pm.name} className={styles.paymentMethod}>
-                                                                                {pm.logo && <img src={`/img/logos/${pm.logo}`} alt="" />}
+                                                                                {pm.logo && <img src={getLogoUrl(pm.logo)} alt="" />}
                                                                                 {pm.name}
                                                                             </span>
                                                                         ))}

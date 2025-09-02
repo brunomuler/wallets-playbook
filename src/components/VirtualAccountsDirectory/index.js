@@ -1,6 +1,7 @@
 import React from 'react';
-import virtualAccountsData from '@site/src/data/virtual-accounts.json';
+import virtualAccountsData from '@site/src/data-remote/virtual-accounts.json';
 import ContributeNotice from '../ContributeNotice';
+import { getLogoUrl } from '@site/src/utils/imageMapper';
 import styles from './styles.module.css';
 
 export default function VirtualAccountsDirectory() {
@@ -26,7 +27,7 @@ export default function VirtualAccountsDirectory() {
             <div className={styles.cardHeader}>
               {account.logo ? (
                 <img
-                  src={`/img/logos/${account.logo}`}
+                  src={getLogoUrl(account.logo)}
                   alt={`${account.name} logo`}
                   className={styles.logo}
                 />

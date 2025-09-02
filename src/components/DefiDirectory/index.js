@@ -1,8 +1,9 @@
 import React, { useState, useMemo } from 'react';
 import { FaGlobe, FaGithub, FaChartBar } from 'react-icons/fa';
-import defiDataRaw from '@site/src/data/defi.json';
-import bridgesDataRaw from '@site/src/data/bridges.json';
+import defiDataRaw from '@site/src/data-remote/defi.json';
+import bridgesDataRaw from '@site/src/data-remote/bridges.json';
 import ContributeNotice from '../ContributeNotice';
+import { getLogoUrl, getThumbnailUrl } from '@site/src/utils/imageMapper';
 import styles from './styles.module.css';
 
 const DefiDirectory = ({ 
@@ -111,8 +112,8 @@ const DefiDirectory = ({
 
           // Determine correct image path based on data source
           const imagePath = dataSource === 'bridges' 
-            ? `/img/logos/${item.logo}` 
-            : `/img/thumbnails/${item.logo}`;
+            ? getLogoUrl(item.logo)
+            : getThumbnailUrl(item.logo);
 
           return (
             <div key={item.id} className={styles.card}>
