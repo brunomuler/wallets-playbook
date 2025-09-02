@@ -16,13 +16,6 @@ const config = {
 
   headTags: [
     {
-      tagName: 'meta',
-      attributes: {
-        name: 'algolia-site-verification',
-        content: 'A753B08E4D864E75',
-      },
-    },
-    {
       tagName: 'link',
       attributes: {
         rel: 'icon',
