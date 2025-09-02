@@ -1,46 +1,158 @@
 {
   "data": [
     {
+      "id": "recTBvqxQYDeAIm6o",
+      "name": "Allbridge Core",
+      "category": "Financial Protocols",
+      "website": "https://allbridge.io/",
+      "logo": "Frame 306.png (https://dl.airtable.com/.directUploadAttachment/35a09eaa0e2c0e9a29af51c9620a2b1f/491c4b4e/Frame306.png)"
+    },
+    {
       "id": "reckGk9d8q8hh4fhN",
       "name": "Aquarius",
       "category": "Financial Protocols",
       "website": "https://aqua.network",
-      "logo": "https://v5.airtableusercontent.com/v3/u/44/44/1756375200000/4dSObU6X7l5d5LomaO8Mbw/_Yv6pTqCXx1loydKPbbOYdx9bhgoEYMLih7CivZQZ24n-Nv8ubncwtfiCPm2XvUu00UFgX7T3LcL8ER21ZZXqIkp0nTOX3Df14e_Fd1YCaaHZYXdzBN_M0b8G9P1veNFgX-wK3SgkjdJ1EtEYVPw2ICvkVs1Josq9xtRyZm_TtY/rN4y9Z6Sm469dlwY1WWK5ZBDEQuk16WwsqfnlnXnU3Q"
+      "logo": "dex/aquarius.png"
+    },
+    {
+      "id": "recsmed92RcaXFH4v",
+      "name": "Axelar",
+      "category": "Financial Protocols",
+      "website": "https://www.axelar.network/",
+      "logo": "Frame 295.png (https://dl.airtable.com/.directUploadAttachment/6f630f5fa2343ee77766b622d8b2a122/1e060f0f/Frame295.png)"
     },
     {
       "id": "rec79wOe1clFR9Sq2",
       "name": "Balanced",
       "category": "Financial Protocols",
       "website": "https://balanced.network/",
-      "logo": "https://v5.airtableusercontent.com/v3/u/44/44/1756375200000/gSdfH6KhkchgniD-j9PxZQ/_UKLvGolS98e53E17PwCzAEsXsfEYvSksM4cMo3QBYBwssChmXt_F2OXd-OGVLfBgXWtxWswdufmwZoeChu-QAjnsCs3xc_w0dQhv0pIiTytapzpRTbO4ZEMluSzAE6ogoZvu4FFtAS3zvupbAZ44VMXzzNfL_oFrF5vhRFma-k/ETgjSetowle0VqoGrseUdk1oAlmi41C-wNxx5tykJL8"
+      "logo": "dex/balanced.png"
+    },
+    {
+      "id": "recs6ABhhXKameAuh",
+      "name": "Blend",
+      "category": "Financial Protocols",
+      "website": "https://www.blend.capital/",
+      "logo": "Blend.png (https://dl.airtable.com/.directUploadAttachment/f0e511a807d2b3437a71744539b54507/3b8d5c24/Blend.png)"
+    },
+    {
+      "id": "recCYgRASN6NwFvUG",
+      "name": "BondHive:OnChain Fixed Deposit",
+      "category": "Financial Protocols",
+      "website": "https://bondhive.xyz"
+    },
+    {
+      "id": "recGEf6qKLyAE45Vh",
+      "name": "DeFindex: DeFi Made Easy",
+      "category": "Financial Protocols",
+      "website": "https://www.defindex.io/",
+      "logo": "Defindex.png (https://dl.airtable.com/.directUploadAttachment/c870f4b831daed192a3e68b9fd3bedd6/41fae4da/Defindex.png)"
+    },
+    {
+      "id": "recN4Z9ht1uKNWQvF",
+      "name": "Eascrow",
+      "category": "Financial Protocols",
+      "website": "https://eascrow.xyz/"
+    },
+    {
+      "id": "rec9Fi2pUFTW9KnD2",
+      "name": "Excellar",
+      "category": "Financial Protocols",
+      "website": "https://excellar.finance/",
+      "logo": "Excellar.png (https://dl.airtable.com/.directUploadAttachment/5410d224b59a503ea7e98ee664ec74aa/a179961c/Excellar.png)"
+    },
+    {
+      "id": "rec0nXzFpzpDp16ZH",
+      "name": "FxDAO",
+      "category": "Financial Protocols",
+      "website": "https://fxdao.io",
+      "logo": "FxDAO.png (https://dl.airtable.com/.directUploadAttachment/59a2d09b6ea079f3ac424400e56a631e/a5dfd9cb/FxDAO.png)"
+    },
+    {
+      "id": "rec000Qs6y5waIROO",
+      "name": "HiYield",
+      "category": "Financial Protocols",
+      "website": "https://hiyield.xyz"
+    },
+    {
+      "id": "recls7D8R2Ymm2UZu",
+      "name": "Hoops Finance",
+      "category": "Financial Protocols",
+      "website": "https://hoops.finance",
+      "logo": "Hoops Finance.png (https://dl.airtable.com/.directUploadAttachment/5b687f071bbed6d348062ed8bd859a50/60853016/HoopsFinance.png)"
+    },
+    {
+      "id": "rec7RkNHhusohzpKv",
+      "name": "Huma",
+      "category": "Financial Protocols",
+      "website": "https://huma.finance",
+      "logo": "Huma.png (https://dl.airtable.com/.directUploadAttachment/410f25265d8bb21471eb7145af0a2193/b4e2448c/Huma.png)"
+    },
+    {
+      "id": "recZ6Ju43rfEbkcRz",
+      "name": "NEAR Intents",
+      "category": "Financial Protocols"
+    },
+    {
+      "id": "rec95OwhNdGmbhvHo",
+      "name": "OrbitCDP",
+      "category": "Financial Protocols",
+      "website": "https://orbitcdp.finance/",
+      "logo": "Orbit.png (https://dl.airtable.com/.directUploadAttachment/36055c529e6c78771a8672590cfd1ed3/f1c0f86d/Orbit.png)"
+    },
+    {
+      "id": "recNcYQSIIvH3rHcZ",
+      "name": "Pelago (Airswift)",
+      "category": "Financial Protocols",
+      "website": "https://pelagotech.com/"
     },
     {
       "id": "recAdqJy858MIlmBY",
       "name": "Phoenix",
       "category": "Financial Protocols",
       "website": "https://www.phoenix-hub.io/",
-      "logo": "https://v5.airtableusercontent.com/v3/u/44/44/1756375200000/4Q8dtqBfeRnEJD9RJKpt5g/xUMV_j9spjPKa4J_5qC34XNdtJJ46tc6OSOnVHScbmfHF7pKnl2f42U2JgtbxB3Tbe_h_E9BYhvjItJJyJJCV3HV92Iyc6-AEMyA9g9rkLsqVhuTKJedPyXJ4tt3SvfVfCP8wQvDaiY13FhCYYyYKBLEPpN6CWOivDdxhdDXDYI/E5m6ZVBtqekFn5ea26mbosBw6Dl4w0NhMOGjzUpgCvQ"
+      "logo": "dex/phoenix.png"
     },
     {
       "id": "recxhfXLnRy878D3I",
       "name": "Raum Network",
       "category": "Financial Protocols",
       "website": "https://dex.raum.network",
-      "logo": "https://v5.airtableusercontent.com/v3/u/44/44/1756375200000/fYxtNAntA0-xzgQoiBbBjw/32JXhRqHYkCWWl3Fn6JVnz7jKcghqi2L7OdZ7wzoOz72Ru-N4FRqep2EPYtho5VceWExuLNsYabu5ML3A2XttkFRkG46g_Hw90kT30sDKPt4g-cStmeGwC0zf2cdl5pG9pXDIO14q4Z6kMwzHO_aMYccLq7mBGodLT2Gn5Lt7VQ/LhAc6RPJQwM1X4XvI2JG6bCtTtfJ03Gfo4KIvx7AReg"
+      "logo": "dex/raum-network.png"
+    },
+    {
+      "id": "recQp2DmRX4wMXyy8",
+      "name": "Slender",
+      "category": "Financial Protocols",
+      "website": "https://www.slender.fi/",
+      "logo": "Slender.png (https://dl.airtable.com/.directUploadAttachment/3a088630f6033b968b3d73161d742e32/351c7c1a/Slender.png)"
     },
     {
       "id": "recAcluo7x7RZsCFH",
       "name": "Soroswap.Finance",
       "category": "Financial Protocols",
       "website": "https://soroswap.finance/",
-      "logo": "https://v5.airtableusercontent.com/v3/u/44/44/1756375200000/bzF7WcNvMJavfMDHR9JzFg/Vh06XcRvgl-QWXBsnG1cK2w0Lopw9MlpZ00Rq1649tvmU4RuvyXZCj4a78Pw0H62H1mSEYnr95vJ1O-1KpJVKGvU_J4mCIEEoX8bFTpecz1ZArsYL4dow5q-NV5QbovC980Owpx2iVArjfSL1yfAmMgZ_-C3Qe9SZd0p3ox1zLA/maVFZgTxVEo6VsGmSCjArOtLUEa80BmLh6i5NkmabNc"
+      "logo": "dex/soroswap.finance.png"
     },
     {
       "id": "recMrt1EDuwwTGH38",
       "name": "StellarBroker",
       "category": "Financial Protocols",
       "website": "https://stellar.broker",
-      "logo": "https://v5.airtableusercontent.com/v3/u/44/44/1756375200000/eS0b3XhUaKaramSxexfKqA/0YSco9yx7KbTIqVkrIunjPeMhUcmuf6YTvo_-wHlPkaYaB2vtUzSVOKEHEQO-ncqiuxlTw9DBLx9S2LvBtTW9wrN1KE9DZWkV9lbWbWNh7EzAYGHRpswSar_-AOYhxVAZkj4TZBOK9H30JeGUKgFn-p44nxqrBm_AWuHU1ZfSbI/oI-juTF3YmLAlOdRqSkZgWseQCf5CAIn0pXQalTbus4"
+      "logo": "dex/stellarbroker.png"
+    },
+    {
+      "id": "recnkWcUkSpFMWlDv",
+      "name": "Untangled",
+      "category": "Financial Protocols",
+      "website": "https://www.untangled.finance/"
+    },
+    {
+      "id": "recjDf7KSzywBuWFS",
+      "name": "XycLoans",
+      "category": "Financial Protocols",
+      "website": "https://xycloo.com/",
+      "logo": "XycLoans.png (https://dl.airtable.com/.directUploadAttachment/33829d4b5728a81c07c25ecdc60a0fbb/ddffb1f8/XycLoans.png)"
     }
   ]
 }

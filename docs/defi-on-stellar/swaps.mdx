@@ -3,15 +3,30 @@ sidebar_label: 'Swaps'
 sidebar_position: 4
 ---
 
+import DefiDirectory from '@site/src/components/DefiDirectory';
+
 # Swaps
 
+Swaps are fundamental DeFi operations that allow users to exchange one token for another. On Stellar, swaps can happen through various mechanisms including decentralized exchanges (DEXs), automated market makers (AMMs), and swap aggregators.
 
 ## Swap Overview
 
-Placeholder content for Swap Overview. 
+Swaps on Stellar can be performed through multiple pathways. Since Stellar has a native DEX and AMM feature, wallets can use path payments to swap tokens directly. When defining a path payment from and to the same account, the swap will use the best path available both on the native DEX and native AMM.
+
+With Soroban, wallets can also leverage new protocols to swap tokens.
+
 
 ## Swap Aggregators
 
-Placeholder content for Swap Aggregators. 
+Swap aggregators can scan multiple DEXs and liquidity sources to find the best prices and routes for token swaps. They help users get better rates by splitting orders across different venues or finding more efficient trading paths.
 
-## Swap Providers
+A few swap aggregators on Stellar are:
+- [Soroswap Router](https://docs.soroswap.finance/01-concepts/router)
+- [xBull Swap API](https://swap.apis.xbull.app/openapi)
+- [Stellar Broker](https://stellar.broker/ )
+
+## Protocols
+
+Decentralized exchanges (DEXs) are the primary swap providers in the Stellar DeFi ecosystem. These protocols enable peer-to-peer trading without intermediaries, using various mechanisms like order books, automated market makers, and liquidity pools.
+
+<DefiDirectory filterTypes={["DEX"]} showFilters={false} />

@@ -1,0 +1,63 @@
+.defaultButton {
+  background: #e5e7eb;
+  color: #374151;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+}
+
+.defaultButton:hover {
+  background: #d1d5db;
+  transform: translateY(-1px);
+}
+
+.linkButton {
+  background: #007acc;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+}
+
+.linkButton:hover {
+  background: #005a99;
+  transform: translateY(-1px);
+}
+
+.buttonIcon {
+  font-size: 12px;
+}
+
+[data-theme='dark'] .defaultButton {
+  background: #4b5563;
+  color: #e5e7eb;
+}
+
+[data-theme='dark'] .defaultButton:hover {
+  background: #374151;
+}
+
+[data-theme='dark'] .linkButton {
+  background: #3b82f6;
+  color: white;
+}
+
+[data-theme='dark'] .linkButton:hover {
+  background: #2563eb;
+}

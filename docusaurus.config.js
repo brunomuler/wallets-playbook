@@ -10,9 +10,45 @@ import {themes as prismThemes} from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Wallets Playbook',
+  title: 'Stellar Wallet Playbook',
   tagline: 'A guide to building wallets on Stellar',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/favicon/favicon.ico',
+
+  headTags: [
+    {
+      tagName: 'link',
+      attributes: {
+        rel: 'icon',
+        type: 'image/png',
+        sizes: '32x32',
+        href: '/img/favicon/favicon-32x32.png',
+      },
+    },
+    {
+      tagName: 'link',
+      attributes: {
+        rel: 'icon',
+        type: 'image/png',
+        sizes: '16x16',
+        href: '/img/favicon/favicon-16x16.png',
+      },
+    },
+    {
+      tagName: 'link',
+      attributes: {
+        rel: 'apple-touch-icon',
+        sizes: '180x180',
+        href: '/img/favicon/apple-touch-icon.png',
+      },
+    },
+    {
+      tagName: 'link',
+      attributes: {
+        rel: 'manifest',
+        href: '/img/favicon/site.webmanifest',
+      },
+    },
+  ],
 
   // Set the production url of your site here
   url: 'https://your-docusaurus-site.example.com',
@@ -44,6 +80,10 @@ const config = {
         disableInDev: false,
       },
     ],
+  ],
+
+  clientModules: [
+    require.resolve('./src/clientModules/simpleFeedback.js'),
   ],
 
   presets: [
@@ -89,13 +129,23 @@ const config = {
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
       navbar: {
-        title: 'Wallets Playbook',
+        title: 'Stellar Wallet Playbook',
         logo: {
-          alt: 'My Site Logo',
-          src: 'img/logo.svg',
+          alt: 'Stellar Wallet Playbook Logo',
+          src: 'img/logo.png',
         },
         items: [
-
+          {
+            type: 'html',
+            position: 'right',
+            value: '<button class="feedback-navbar-button"><svg viewBox="0 0 512 512" width="16" height="16" fill="currentColor" style="margin-right: 6px;"><path d="M256 32C114.6 32 0 125.1 0 240c0 47.6 19.9 91.2 52.9 126.3C38 405.7 7 439.1 6.5 439.5c-6.6 7-8.4 17.2-4.6 26S14.4 480 24 480c61.5 0 110-25.7 139.1-46.3C192 442.8 223.2 448 256 448c141.4 0 256-93.1 256-208S397.4 32 256 32z"/></svg>Leave Feedback</button>',
+          },
+          {
+            href: 'https://github.com/brunomuler/wallets-playbook',
+            position: 'right',
+            className: 'header-github-link',
+            'aria-label': 'GitHub repository',
+          },
           // {
           //   type: 'docSidebar',
           //   sidebarId: 'tutorialSidebar',
@@ -103,11 +153,6 @@ const config = {
           //   label: 'Docs',
           // },
           // {to: '/blog', label: 'Blog', position: 'left'},
-          // {
-            // href: 'https://github.com/facebook/docusaurus',
-          //   label: 'GitHub',
-          //   position: 'right',
-          // },
         ],
       },
       footer: {

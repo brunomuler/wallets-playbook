@@ -70,6 +70,21 @@
   color: var(--ifm-font-color-base);
 }
 
+.cardDescription {
+  margin-bottom: 16px;
+}
+
+.cardDescription p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #6b7280;
+  line-height: 1.5;
+}
+
+:global([data-theme='dark']) .cardDescription p {
+  color: var(--ifm-font-color-secondary);
+}
+
 .cardBody {
   flex-grow: 1;
   display: flex;

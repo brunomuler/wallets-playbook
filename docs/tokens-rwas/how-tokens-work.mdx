@@ -11,10 +11,7 @@ Tokens on Stellar can represent real-world value digitally, enabling efficient p
 
 On the technical side, Stellar supports two primary types of tokens:
 
-1. **Tokens Issued by Stellar Accounts** (`G...` addresses)
-
-   * **Classic Tokens**
-   * Tokens using the built-in [Stellar Asset Contract (SAC)](https://developers.stellar.org/docs/tokens/stellar-asset-contract) implementation
+1. **Tokens Issued by Stellar Accounts** (`G...` addresses) and their [Stellar Asset Contract (SAC)](https://developers.stellar.org/docs/tokens/stellar-asset-contract) counterparts
 
 2. **[Contract Tokens](https://developers.stellar.org/docs/tokens#contract-tokens)** issued by deployed WASM contracts (`C...` addresses)
 
@@ -47,8 +44,6 @@ The introduction of Smart Contracts on Stellar also introduced **Stellar Asset C
 
 **Balances** work differently between Classic Tokens and their SAC counterparts. Classic Token balances are always stored directly on user accounts, while SAC balances for native tokens are stored within contract data entries. Even though they are separate, transfer between Classic Tokens and their SAC counterparts is seamless - Stellar automatically debits the sender's account balance and credits the corresponding contract balance.
 
-When transferring tokens between a Classic Token and its SAC instance, Stellar automatically debits the sender's account balance and credits the corresponding contract balance.
-
 For more details, refer to the [Stellar Asset Contract documentation](https://developers.stellar.org/docs/tokens/stellar-asset-contract).
 
 
@@ -56,8 +51,6 @@ For more details, refer to the [Stellar Asset Contract documentation](https://de
 ## Contract Tokens
 
 **Contract Tokens** are programmable assets issued and governed entirely by custom WASM smart contracts on Stellar. Unlike Classic Tokens and SAC tokens, contract tokens provide builders and developers with full control over token behavior and logic, enabling advanced tokenomics and bespoke use cases.
-
-### Benefits for Wallet Builders
 
 Contract Tokens are ideal for builders who need:
 
