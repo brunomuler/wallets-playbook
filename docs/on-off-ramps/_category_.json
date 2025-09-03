@@ -1,6 +1,10 @@
 {
   "label": "On and Off Ramps",
   "position": 4,
+  "className": "category-ramps",
+  "customProps": {
+    "icon": "heroicons:arrow-path"
+  },
   "link": {
     "type": "generated-index",
     "description": "Learn more about Ramps & Banking Connectivity."

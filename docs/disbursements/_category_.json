@@ -1,6 +1,10 @@
 {
   "label": "Disbursements",
   "position": 9,
+  "className": "category-disbursements",
+  "customProps": {
+    "icon": "heroicons:paper-airplane"
+  },
   "link": {
     "type": "generated-index",
     "description": "Learn more about Disbursements."

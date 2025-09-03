@@ -1,6 +1,10 @@
 {
   "label": "DeFi on Stellar",
   "position": 7,
+  "className": "category-defi",
+  "customProps": {
+    "icon": "heroicons:squares-2x2"
+  },
   "link": {
     "type": "generated-index",
     "description": "Learn more about DeFi on Stellar."

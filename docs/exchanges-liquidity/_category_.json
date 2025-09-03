@@ -1,6 +1,10 @@
 {
   "label": "Exchanges & Liquidity",
   "position": 5,
+  "className": "category-exchanges",
+  "customProps": {
+    "icon": "heroicons:chart-bar"
+  },
   "link": {
     "type": "generated-index",
     "description": "Learn more about Exchanges & Liquidity."

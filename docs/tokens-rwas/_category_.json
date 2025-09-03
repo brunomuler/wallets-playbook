@@ -1,6 +1,10 @@
 {
   "label": "Tokens and RWA",
   "position": 3,
+  "className": "category-tokens",
+  "customProps": {
+    "icon": "heroicons:currency-dollar"
+  },
   "link": {
     "type": "generated-index",
     "description": "Learn more about Tokens and RWAs."

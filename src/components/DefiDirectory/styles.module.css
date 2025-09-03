@@ -35,8 +35,13 @@
   height: 64px;
   object-fit: contain;
   border-radius: 8px;
+  border: 1px solid #d1d5db;
   margin-right: 1rem;
   flex-shrink: 0;
+}
+
+:global([data-theme='dark']) .logo {
+  border-color: var(--ifm-color-emphasis-300);
 }
 
 .logoPlaceholder {

@@ -227,3 +227,10 @@ p>img {
     margin: 0 2px;
   }
 }
+
+
+
+/* Sidebar category icon styling - clean approach with Iconify */
+.sidebar-category-icon {
+  color: inherit !important;
+}

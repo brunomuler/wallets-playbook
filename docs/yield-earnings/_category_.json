@@ -1,6 +1,10 @@
 {
   "label": "Yield & Earnings",
   "position": 8,
+  "className": "category-yield",
+  "customProps": {
+    "icon": "heroicons:chart-pie"
+  },
   "link": {
     "type": "generated-index",
     "description": "Learn more about Yield & Earnings."

@@ -1,6 +1,10 @@
 {
   "label": "TradFi Integrations",
   "position": 6,
+  "className": "category-tradfi",
+  "customProps": {
+    "icon": "heroicons:building-library"
+  },
   "link": {
     "type": "generated-index",
     "description": "Learn more about TradFi Integrations."

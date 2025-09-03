@@ -3,6 +3,7 @@ import assetsData from '@site/src/data-remote/assets.json';
 import ContributeNotice from '../ContributeNotice';
 import { getLogoUrl } from '@site/src/utils/imageMapper';
 import styles from './styles.module.css';
+import sharedStyles from '../shared/websiteButton.module.css';
 
 export default function AssetsDirectory({ yieldBearingOnly = false }) {
   const [expandedIssuers, setExpandedIssuers] = useState({});
@@ -139,11 +140,11 @@ export default function AssetsDirectory({ yieldBearingOnly = false }) {
                         href={issuer.website}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className={styles.issuerNameLink}
+                        className={sharedStyles.websiteLink}
                       >
                         {issuer.name}
                         <svg
-                          className={styles.externalIcon}
+                          className={sharedStyles.externalIcon}
                           fill="none"
                           stroke="currentColor"
                           viewBox="0 0 24 24"

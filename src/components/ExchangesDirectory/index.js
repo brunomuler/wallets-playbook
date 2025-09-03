@@ -4,6 +4,7 @@ import exchangesDataRaw from '@site/src/data-remote/exchanges.json';
 import ContributeNotice from '../ContributeNotice';
 import { getLogoUrl } from '@site/src/utils/imageMapper';
 import styles from './styles.module.css';
+import sharedStyles from '../shared/websiteButton.module.css';
 
 // Handle both wrapper format { data: [...] } and direct array format
 const exchangesData = (exchangesDataRaw.data || exchangesDataRaw) || [];
@@ -217,27 +218,29 @@ const ExchangesDirectory = () => {
                                     ) : (
                                         <div className={styles.exchangeLogoPlaceholder}></div>
                                     )}
-                                    <span className={styles.exchangeName}>{exchange.name}</span>
+                                    <div className={sharedStyles.nameContainer}>
+                                        <span className={styles.exchangeName}>{exchange.name}</span>
+                                        {exchange.website && (
+                                            <a href={exchange.website} target="_blank" rel="noopener noreferrer" className={sharedStyles.websiteLink}>
+                                                Website
+                                                <svg
+                                                    className={sharedStyles.externalIcon}
+                                                    fill="none"
+                                                    stroke="currentColor"
+                                                    viewBox="0 0 24 24"
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                >
+                                                    <path
+                                                        strokeLinecap="round"
+                                                        strokeLinejoin="round"
+                                                        strokeWidth={2}
+                                                        d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                                                    />
+                                                </svg>
+                                            </a>
+                                        )}
+                                    </div>
                                 </div>
-                                {exchange.website && (
-                                    <a href={exchange.website} target="_blank" rel="noopener noreferrer" className={styles.websiteLink}>
-                                        Website
-                                        <svg
-                                            className={styles.externalIcon}
-                                            fill="none"
-                                            stroke="currentColor"
-                                            viewBox="0 0 24 24"
-                                            xmlns="http://www.w3.org/2000/svg"
-                                        >
-                                            <path
-                                                strokeLinecap="round"
-                                                strokeLinejoin="round"
-                                                strokeWidth={2}
-                                                d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-                                            />
-                                        </svg>
-                                    </a>
-                                )}
                             </div>
                             {/* Exchange details temporarily hidden */}
                             {/* <div className={styles.exchangeDetails}>

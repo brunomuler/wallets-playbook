@@ -90,6 +90,7 @@ const config = {
 
   clientModules: [
     require.resolve('./src/clientModules/simpleFeedback.js'),
+    require.resolve('./src/clientModules/sidebarIcons.js'),
   ],
 
   presets: [

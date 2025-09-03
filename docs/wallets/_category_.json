@@ -1,6 +1,10 @@
 {
   "label": "Wallets",
   "position": 2,
+  "className": "category-wallets",
+  "customProps": {
+    "icon": "heroicons:wallet"
+  },
   "link": {
     "type": "generated-index",
     "description": "Learn more about Wallets on Stellar."

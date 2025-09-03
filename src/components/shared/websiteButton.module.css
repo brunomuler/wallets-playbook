@@ -1,0 +1,36 @@
+/* Shared website button styles for all directory components */
+.websiteLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 10px;
+  background-color: transparent;
+  color: var(--ifm-color-emphasis-700);
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: 500;
+  font-size: 0.8rem;
+  transition: all 0.2s ease;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  cursor: pointer;
+  align-self: flex-start;
+}
+
+.websiteLink:hover {
+  color: var(--ifm-color-primary);
+  text-decoration: none;
+  border-color: var(--ifm-color-primary-light);
+}
+
+.externalIcon {
+  width: 14px;
+  height: 14px;
+  stroke-width: 2;
+}
+
+/* Container for name + button layout */
+.nameContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}

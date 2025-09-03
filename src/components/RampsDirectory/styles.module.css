@@ -31,7 +31,7 @@
 }
 
 .rampHeader {
-  padding: 1.5rem;
+  padding: 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -39,7 +39,7 @@
 
 .rampIdentity {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 1rem;
 }
 
@@ -172,25 +172,27 @@
 }
 
 .geoTag {
-  --geo-tag-background: #f0f0f0;
-  --geo-tag-border-color: #e0e0e0;
+  --geo-tag-background: #e5e7eb;
 
   background-color: var(--geo-tag-background);
-  padding: 2px 6px;
-  border-radius: 4px;
+  padding: 4px 10px;
+  border-radius: 16px;
   cursor: pointer;
   display: inline-flex;
   align-items: center;
-  gap: 4px;
-  border: 1px solid var(--geo-tag-border-color);
-  font-size: 0.8em;
+  gap: 6px;
+  border: 1px solid #d1d5db;
+  font-size: 0.85em;
   vertical-align: baseline;
-  min-height: 16px;
+  min-height: 20px;
+  color: #374151;
+  transition: all 0.2s ease;
 }
 
 :global([data-theme='dark']) .geoTag {
-  --geo-tag-background: var(--ifm-color-emphasis-100);
-  --geo-tag-border-color: var(--ifm-color-emphasis-200);
+  --geo-tag-background: var(--ifm-color-emphasis-200);
+  color: var(--ifm-font-color-base);
+  border-color: var(--ifm-color-emphasis-300);
 }
 
 .flagIcon {
@@ -348,27 +350,35 @@
 }
 
 .expandButton {
-  background-color: var(--ifm-color-emphasis-200);
-  border: 1px solid var(--ifm-color-emphasis-300);
-  color: var(--ifm-font-color-base);
+  background-color: #dbeafe;
+  border: 1px solid #93c5fd;
+  color: #1d4ed8;
   cursor: pointer;
-  padding: 2px 6px;
+  padding: 8px 10px;
   margin: 2px;
-  font-size: 0.8em;
+  font-size: 0.85em;
   font-weight: 500;
-  border-radius: 4px;
+  border-radius: 16px;
   transition: all 0.2s ease;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   display: inline-flex;
   align-items: center;
-  vertical-align: baseline;
+  vertical-align: top;
+  line-height: 1;
+  min-height: auto;
 }
 
 .expandButton:hover {
+  background-color: #bfdbfe;
+}
+
+:global([data-theme='dark']) .expandButton {
+  background-color: var(--ifm-color-emphasis-200);
+  border-color: var(--ifm-color-emphasis-300);
+  color: var(--ifm-color-primary);
+}
+
+:global([data-theme='dark']) .expandButton:hover {
   background-color: var(--ifm-color-emphasis-300);
-  color: var(--ifm-font-color-base);
-  transform: translateY(-1px);
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
 }
 
 .filter {
@@ -402,20 +412,23 @@
 }
 
 .assetTag {
-    background-color: #f0f0f0;
-    padding: 4px 8px;
-    border-radius: 6px;
+    background-color: #e5e7eb;
+    padding: 6px 12px;
+    border-radius: 20px;
     display: inline-flex;
     align-items: center;
     gap: 6px;
-    border: 1px solid #e0e0e0;
-    font-size: 0.95em;
-    margin: 2px;
+    border: 1px solid #d1d5db;
+    font-size: 0.9em;
+    margin: 3px;
+    color: #374151;
+    transition: all 0.2s ease;
 }
 
 :global([data-theme='dark']) .assetTag {
-    background-color: var(--ifm-color-emphasis-100);
-    border-color: var(--ifm-color-emphasis-200);
+    background-color: var(--ifm-color-emphasis-200);
+    color: var(--ifm-font-color-base);
+    border-color: var(--ifm-color-emphasis-300);
 }
 
 .hiddenContent strong,

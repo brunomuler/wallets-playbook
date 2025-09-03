@@ -5,6 +5,7 @@ import bridgesDataRaw from '@site/src/data-remote/bridges.json';
 import ContributeNotice from '../ContributeNotice';
 import { getLogoUrl, getThumbnailUrl } from '@site/src/utils/imageMapper';
 import styles from './styles.module.css';
+import sharedStyles from '../shared/websiteButton.module.css';
 
 const DefiDirectory = ({ 
   dataSource = 'defi', 
@@ -150,9 +151,27 @@ const DefiDirectory = ({
                 </div>
               </div>
               <div className={styles.cardFooter}>
-                {item.website && <a href={item.website} target="_blank" rel="noopener noreferrer" className={styles.link}><FaGlobe /> Website</a>}
-                {item.github && <a href={item.github} target="_blank" rel="noopener noreferrer" className={styles.link}><FaGithub /> GitHub</a>}
-                {item.analytics && <a href={item.analytics} target="_blank" rel="noopener noreferrer" className={styles.link}><FaChartBar /> Analytics</a>}
+                {item.website && (
+                  <a href={item.website} target="_blank" rel="noopener noreferrer" className={sharedStyles.websiteLink}>
+                    Website
+                    <svg
+                      className={sharedStyles.externalIcon}
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                      />
+                    </svg>
+                  </a>
+                )}
+                {item.github && <a href={item.github} target="_blank" rel="noopener noreferrer" className={sharedStyles.websiteLink}><FaGithub /> GitHub</a>}
+                {item.analytics && <a href={item.analytics} target="_blank" rel="noopener noreferrer" className={sharedStyles.websiteLink}><FaChartBar /> Analytics</a>}
               </div>
             </div>
           );
