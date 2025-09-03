@@ -234,3 +234,33 @@ p>img {
 .sidebar-category-icon {
   color: inherit !important;
 }
+
+/* Fix list bullets that get removed by Tailwind CSS reset */
+.markdown ul {
+  list-style-type: disc !important;
+  padding-left: 1.5rem !important;
+}
+
+.markdown ol {
+  list-style-type: decimal !important;
+  padding-left: 1.5rem !important;
+}
+
+.markdown li {
+  display: list-item !important;
+}
+
+/* Apply to Docusaurus content areas */
+.theme-doc-markdown ul:not(.contains-task-list) {
+  list-style-type: disc !important;
+  padding-left: 1.5rem !important;
+}
+
+.theme-doc-markdown ol {
+  list-style-type: decimal !important;
+  padding-left: 1.5rem !important;
+}
+
+.theme-doc-markdown li {
+  display: list-item !important;
+}
