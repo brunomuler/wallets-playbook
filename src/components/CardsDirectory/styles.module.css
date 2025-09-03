@@ -2,14 +2,14 @@
 .gridContainer {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-  gap: 24px;
+  gap: 16px;
 }
 
 .card {
   background-color: #fff;
   border: 1px solid #e5e7eb;
   border-radius: 12px;
-  padding: 24px;
+  padding: 16px;
   display: flex;
   flex-direction: column;
   transition: box-shadow 0.3s ease, transform 0.3s ease;
@@ -34,7 +34,7 @@
 .cardHeader {
   display: flex;
   align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: 12px;
 }
 
 .logo {
@@ -121,7 +121,7 @@
 }
 
 .cardFooter {
-  margin-top: 24px;
+  margin-top: 16px;
 }
 
 .websiteButton {
