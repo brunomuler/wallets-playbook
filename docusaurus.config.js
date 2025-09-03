@@ -126,6 +126,10 @@ const config = {
         theme: {
           customCss: './src/css/custom.css',
         },
+        gtag: {
+          trackingID: 'G-3VCRCESQFD',
+          anonymizeIP: true,
+        },
       }),
     ],
   ],
@@ -135,12 +139,6 @@ const config = {
     ({
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
-      googleAnalytics: {
-        trackingID: 'G-3VCRCESQFD',
-      },
-      gtag: {
-        trackingID: 'G-3VCRCESQFD',
-      },
       algolia: {
         appId: '6E139FK2DL',
         apiKey: 'b748663e725287bb84c84276c9ee696c',
