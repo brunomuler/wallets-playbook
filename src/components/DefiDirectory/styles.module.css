@@ -31,8 +31,8 @@
 }
 
 .logo {
-  width: 48px;
-  height: 48px;
+  width: 64px;
+  height: 64px;
   object-fit: contain;
   border-radius: 8px;
   margin-right: 1rem;
@@ -40,8 +40,8 @@
 }
 
 .logoPlaceholder {
-  width: 48px;
-  height: 48px;
+  width: 64px;
+  height: 64px;
   margin-right: 1rem;
   border-radius: 8px;
   background-color: var(--ifm-color-emphasis-200);

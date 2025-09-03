@@ -9,6 +9,12 @@ function fetchRemoteDataPlugin(context, options) {
     name: 'fetch-remote-data-plugin',
     
     async loadContent() {
+      // Skip remote data fetching in development mode
+      if (process.env.SKIP_REMOTE_DATA === 'true') {
+        console.log('⏭️  Skipping remote data fetch (development mode)');
+        return { success: false };
+      }
+      
       console.log('🔄 Fetching remote data for build...');
       
       try {

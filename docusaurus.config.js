@@ -169,49 +169,44 @@ const config = {
         ],
       },
       footer: {
-        style: 'dark',
         links: [
-          // {
-          //   title: 'Docs',
-          //   items: [
-          //     {
-          //       label: 'Tutorial',
-          //       to: '/docs/intro',
-          //     },
-          //   ],
-          // },
-          // {
-          //   title: 'Community',
-          //   items: [
-          //     {
-          //       label: 'Stack Overflow',
-          //       href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-          //     },
-          //     {
-          //       label: 'Discord',
-          //       href: 'https://discordapp.com/invite/docusaurus',
-          //     },
-          //     {
-          //       label: 'X',
-          //       href: 'https://x.com/docusaurus',
-          //     },
-          //   ],
-          // },
-          // {
-          //   title: 'More',
-          //   items: [
-          //     {
-          //       label: 'Blog',
-          //       to: '/blog',
-          //     },
-          //     {
-          //       label: 'GitHub',
-          //       href: 'https://github.com/facebook/docusaurus',
-          //     },
-          //   ],
-          // },
+          {
+            title: 'Resources',
+            items: [
+              {
+                html: '<a href="https://developers.stellar.org/" class="footer__link-item"><span class="icon-[heroicons--document-text]" style="display: inline-block; width: 16px; height: 16px; margin-right: 6px; vertical-align: text-bottom;"></span>Stellar Documentation</a>',
+              },
+              {
+                html: '<a href="https://stellar.github.io/js-stellar-sdk/" class="footer__link-item"><span class="icon-[heroicons--code-bracket]" style="display: inline-block; width: 16px; height: 16px; margin-right: 6px; vertical-align: text-bottom;"></span>Stellar SDK Reference</a>',
+              },
+              {
+                html: '<a href="https://laboratory.stellar.org/" class="footer__link-item"><span class="icon-[heroicons--beaker]" style="display: inline-block; width: 16px; height: 16px; margin-right: 6px; vertical-align: text-bottom;"></span>Stellar Laboratory</a>',
+              },
+            ],
+          },
+          {
+            title: 'Community',
+            items: [
+              {
+                html: '<a href="https://discord.gg/stellardev" class="footer__link-item"><span class="icon-[simple-icons--discord]" style="display: inline-block; width: 16px; height: 16px; margin-right: 6px; vertical-align: text-bottom;"></span>Stellar Developer Discord</a>',
+              },
+              {
+                html: '<a href="https://stellar.stackexchange.com/" class="footer__link-item"><span class="icon-[simple-icons--stackexchange]" style="display: inline-block; width: 16px; height: 16px; margin-right: 6px; vertical-align: text-bottom;"></span>Stellar Stack Exchange</a>',
+              },
+            ],
+          },
+          {
+            title: 'Contribute',
+            items: [
+              {
+                html: '<a href="https://github.com/brunomuler/wallets-playbook" class="footer__link-item"><span class="icon-[simple-icons--github]" style="display: inline-block; width: 16px; height: 16px; margin-right: 6px; vertical-align: text-bottom;"></span>GitHub Repository</a>',
+              },
+              {
+                html: '<a href="#" class="footer__link-item" onclick="document.querySelector(\'.feedback-navbar-button\').click(); return false;"><span class="icon-[heroicons--chat-bubble-left-right]" style="display: inline-block; width: 16px; height: 16px; margin-right: 6px; vertical-align: text-bottom;"></span>Leave Feedback</a>',
+              },
+            ],
+          },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()}.`,
       },
       prism: {
         theme: prismThemes.github,
