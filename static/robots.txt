@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://stellarplaybook.com/sitemap.xml
+
+# Block search and other utility pages from indexing
+Disallow: /search
