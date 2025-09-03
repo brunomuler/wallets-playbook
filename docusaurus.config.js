@@ -48,6 +48,22 @@ const config = {
         href: '/img/favicon/site.webmanifest',
       },
     },
+    {
+      tagName: 'script',
+      attributes: {
+        async: true,
+        src: 'https://www.googletagmanager.com/gtag/js?id=G-3VCRCESQFD',
+      },
+    },
+    {
+      tagName: 'script',
+      innerHTML: `
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-3VCRCESQFD');
+      `,
+    },
   ],
 
   // Set the production url of your site here
