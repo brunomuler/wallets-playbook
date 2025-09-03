@@ -1,0 +1,5 @@
+[[redirects]]
+  from = "https://walletsplaybook.netlify.app/*"
+  to = "https://stellarplaybook.com/:splat"
+  status = 301
+  force = true
