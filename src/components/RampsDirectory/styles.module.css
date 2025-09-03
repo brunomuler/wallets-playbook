@@ -172,20 +172,20 @@
 }
 
 .geoTag {
-  --geo-tag-background: #e5e7eb;
+  --geo-tag-background: #f3f4f6;
 
   background-color: var(--geo-tag-background);
-  padding: 4px 10px;
+  padding: 2px 8px;
   border-radius: 16px;
   cursor: pointer;
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  border: 1px solid #d1d5db;
+  border: 1px solid #e5e7eb;
   font-size: 0.85em;
   vertical-align: baseline;
   min-height: 20px;
-  color: #374151;
+  color: #6b7280;
   transition: all 0.2s ease;
 }
 
@@ -350,11 +350,11 @@
 }
 
 .expandButton {
-  background-color: #dbeafe;
-  border: 1px solid #93c5fd;
-  color: #1d4ed8;
+  background-color: #eff6ff;
+  border: 1px solid #c7d2fe;
+  color: #3b82f6;
   cursor: pointer;
-  padding: 8px 10px;
+  padding: 2px 8px;
   margin: 2px;
   font-size: 0.85em;
   font-weight: 500;
@@ -412,16 +412,16 @@
 }
 
 .assetTag {
-    background-color: #e5e7eb;
-    padding: 6px 12px;
+    background-color: #f3f4f6;
+    padding: 3px 10px;
     border-radius: 20px;
     display: inline-flex;
     align-items: center;
     gap: 6px;
-    border: 1px solid #d1d5db;
+    border: 1px solid #e5e7eb;
     font-size: 0.9em;
     margin: 3px;
-    color: #374151;
+    color: #6b7280;
     transition: all 0.2s ease;
 }
 
