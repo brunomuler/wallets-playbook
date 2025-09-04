@@ -129,7 +129,8 @@ export default function AssetInfoModal({ asset, isOpen, onClose }) {
           {asset.fiat_asset && (
             <div className={styles.section}>
               <div className={styles.anchorInfo}>
-                Anchored to <strong>{asset.fiat_asset}</strong>
+                <span className={styles.anchorLabel}>Anchored to</span>
+                <span className={styles.fiatBadge}>{asset.fiat_asset}</span>
               </div>
             </div>
           )}
