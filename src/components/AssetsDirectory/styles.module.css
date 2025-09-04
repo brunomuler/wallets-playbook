@@ -212,6 +212,23 @@
   background-color: var(--ifm-color-emphasis-200);
 }
 
+.clickableAsset {
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.clickableAsset:hover {
+  background-color: #e5f3ff;
+  border-color: var(--ifm-color-primary-light);
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+:global([data-theme='dark']) .clickableAsset:hover {
+  background-color: var(--ifm-color-primary-darkest);
+  border-color: var(--ifm-color-primary-darker);
+}
+
 
 
 .assetItemInfo {
@@ -330,63 +347,7 @@
   border-top-color: #1f2937;
 }
 
-.assetExpertLink {
-  display: flex;
-  align-items: center;
-  color: var(--ifm-color-emphasis-700);
-  opacity: 0.8;
-  transition: all 0.2s ease;
-  text-decoration: none;
-}
 
-.assetExpertLink:hover {
-  color: var(--ifm-color-primary);
-  opacity: 1;
-}
-
-.smallExternalIcon {
-  width: 14px;
-  height: 14px;
-  stroke-width: 2;
-}
-
-.assetActions {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.assetInfoButton {
-  display: flex;
-  align-items: center;
-  gap: 4px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  color: var(--ifm-color-emphasis-700);
-  opacity: 0.85;
-  transition: all 0.2s ease;
-  padding: 4px 8px;
-  border-radius: 4px;
-  font-size: 0.75rem;
-  font-weight: 500;
-}
-
-.assetInfoButton:hover {
-  color: var(--ifm-color-primary);
-  opacity: 1;
-  background-color: var(--ifm-color-emphasis-200);
-}
-
-.smallInfoIcon {
-  width: 12px;
-  height: 12px;
-  stroke-width: 2;
-}
-
-.infoButtonText {
-  white-space: nowrap;
-}
 
 .collapseButton {
   display: flex;

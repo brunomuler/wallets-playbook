@@ -189,7 +189,12 @@ export default function AssetsDirectory({ yieldBearingOnly = false }) {
                 <div className={styles.assetsGrid}>
                   {assetsToShow.map(asset => {
                     return (
-                      <div key={asset.id} className={styles.assetItem}>
+                      <div 
+                        key={asset.id} 
+                        className={`${styles.assetItem} ${styles.clickableAsset}`}
+                        onClick={() => openModal(asset)}
+                        title="Click to view asset information"
+                      >
                         <div className={styles.assetItemInfo}>
                           <div className={styles.assetNameRow}>
                             <span className={styles.assetItemName}>{asset.name}</span>
@@ -206,55 +211,6 @@ export default function AssetsDirectory({ yieldBearingOnly = false }) {
                             <div className={styles.yieldBadgeRow}>
                               <span className={styles.yieldBadge}>Yield-Bearing</span>
                             </div>
-                          )}
-                        </div>
-                        <div className={styles.assetActions}>
-                          {hasAssetInfo(asset) && (
-                            <button
-                              onClick={() => openModal(asset)}
-                              className={styles.assetInfoButton}
-                              title="View asset information"
-                            >
-                              <svg
-                                className={styles.smallInfoIcon}
-                                fill="none"
-                                stroke="currentColor"
-                                viewBox="0 0 24 24"
-                                xmlns="http://www.w3.org/2000/svg"
-                              >
-                                <path
-                                  strokeLinecap="round"
-                                  strokeLinejoin="round"
-                                  strokeWidth={2}
-                                  d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                                />
-                              </svg>
-                              <span className={styles.infoButtonText}>Info</span>
-                            </button>
-                          )}
-                          {asset.issuer_address && (
-                            <a
-                              href={`https://stellar.expert/explorer/public/asset/${asset.name}-${asset.issuer_address}`}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className={styles.assetExpertLink}
-                              title="View on Stellar.Expert"
-                            >
-                              <svg
-                                className={styles.smallExternalIcon}
-                                fill="none"
-                                stroke="currentColor"
-                                viewBox="0 0 24 24"
-                                xmlns="http://www.w3.org/2000/svg"
-                              >
-                                <path
-                                  strokeLinecap="round"
-                                  strokeLinejoin="round"
-                                  strokeWidth={2}
-                                  d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-                                />
-                              </svg>
-                            </a>
                           )}
                         </div>
                       </div>

@@ -40,11 +40,87 @@
   background-color: var(--ifm-color-emphasis-100);
 }
 
+.modalHeaderContent {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.modalHeaderLogo {
+  flex-shrink: 0;
+}
+
+.headerLogo {
+  width: 48px;
+  height: 48px;
+  border-radius: 8px;
+  object-fit: contain;
+}
+
+.headerInitialsLogo {
+  width: 48px;
+  height: 48px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 16px;
+  background-color: var(--light-bg);
+  color: var(--dark-bg);
+}
+
+[data-theme='dark'] .headerInitialsLogo {
+  background-color: var(--dark-bg);
+  color: var(--light-bg);
+}
+
+.modalHeaderText {
+  flex: 1;
+  min-width: 0;
+}
+
 .modalTitle {
   margin: 0;
   font-size: 1.25rem;
   font-weight: 600;
   color: var(--ifm-font-color-base);
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.assetName {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--ifm-font-color-base);
+}
+
+.issuerName {
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: var(--ifm-color-emphasis-600);
+}
+
+.modalHeaderActions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.headerYieldBadge {
+  display: inline-block;
+  padding: 2px 6px;
+  background-color: #dcfce7;
+  color: #166534;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+[data-theme='dark'] .headerYieldBadge {
+  background-color: #166534;
+  color: #dcfce7;
 }
 
 .closeButton {
@@ -99,6 +175,32 @@
 
 .content a:hover {
   text-decoration: underline;
+}
+
+.anchorInfo {
+  color: var(--ifm-color-emphasis-700);
+  font-size: 0.9rem;
+  background-color: var(--ifm-color-emphasis-100);
+  padding: 8px 12px;
+  border-radius: 6px;
+}
+
+[data-theme='dark'] .anchorInfo {
+  background-color: var(--ifm-color-emphasis-200);
+}
+
+
+.modalFooter {
+  padding: 20px 24px;
+  border-top: 1px solid var(--ifm-color-emphasis-200);
+  background-color: #f8fafc;
+  display: flex;
+  justify-content: flex-start;
+  gap: 12px;
+}
+
+[data-theme='dark'] .modalFooter {
+  background-color: var(--ifm-color-emphasis-100);
 }
 
 /* Dark mode adjustments */
