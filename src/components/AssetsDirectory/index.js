@@ -1,12 +1,26 @@
 import React, { useState } from 'react';
 import assetsData from '@site/src/data-remote/assets.json';
 import ContributeNotice from '../ContributeNotice';
+import AssetInfoModal from '../AssetInfoModal';
 import { getLogoUrl } from '@site/src/utils/imageMapper';
 import styles from './styles.module.css';
-import sharedStyles from '../shared/websiteButton.module.css';
 
 export default function AssetsDirectory({ yieldBearingOnly = false }) {
   const [expandedIssuers, setExpandedIssuers] = useState({});
+  const [modalData, setModalData] = useState({ isOpen: false, asset: null });
+  
+  // Helper functions for modal
+  const openModal = (asset) => {
+    setModalData({ isOpen: true, asset });
+  };
+
+  const closeModal = () => {
+    setModalData({ isOpen: false, asset: null });
+  };
+
+  const hasAssetInfo = (asset) => {
+    return asset.description || asset.information;
+  };
   
   // Helper function to generate initials from issuer name
   const getInitials = (name) => {
@@ -140,11 +154,12 @@ export default function AssetsDirectory({ yieldBearingOnly = false }) {
                         href={issuer.website}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className={sharedStyles.websiteLink}
+                        className={styles.titleLink}
+                        title={`Visit ${issuer.name} website`}
                       >
-                        {issuer.name}
+{issuer.name}
                         <svg
-                          className={sharedStyles.externalIcon}
+                          className={styles.externalIcon}
                           fill="none"
                           stroke="currentColor"
                           viewBox="0 0 24 24"
@@ -193,30 +208,55 @@ export default function AssetsDirectory({ yieldBearingOnly = false }) {
                             </div>
                           )}
                         </div>
-                        {asset.issuer_address && (
-                          <a
-                            href={`https://stellar.expert/explorer/public/asset/${asset.name}-${asset.issuer_address}`}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className={styles.assetExpertLink}
-                            title="View on Stellar.Expert"
-                          >
-                            <svg
-                              className={styles.smallExternalIcon}
-                              fill="none"
-                              stroke="currentColor"
-                              viewBox="0 0 24 24"
-                              xmlns="http://www.w3.org/2000/svg"
+                        <div className={styles.assetActions}>
+                          {hasAssetInfo(asset) && (
+                            <button
+                              onClick={() => openModal(asset)}
+                              className={styles.assetInfoButton}
+                              title="View asset information"
                             >
-                              <path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                strokeWidth={2}
-                                d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-                              />
-                            </svg>
-                          </a>
-                        )}
+                              <svg
+                                className={styles.smallInfoIcon}
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  strokeLinecap="round"
+                                  strokeLinejoin="round"
+                                  strokeWidth={2}
+                                  d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                                />
+                              </svg>
+                              <span className={styles.infoButtonText}>Info</span>
+                            </button>
+                          )}
+                          {asset.issuer_address && (
+                            <a
+                              href={`https://stellar.expert/explorer/public/asset/${asset.name}-${asset.issuer_address}`}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className={styles.assetExpertLink}
+                              title="View on Stellar.Expert"
+                            >
+                              <svg
+                                className={styles.smallExternalIcon}
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  strokeLinecap="round"
+                                  strokeLinejoin="round"
+                                  strokeWidth={2}
+                                  d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                                />
+                              </svg>
+                            </a>
+                          )}
+                        </div>
                       </div>
                     );
                   })}
@@ -270,6 +310,11 @@ export default function AssetsDirectory({ yieldBearingOnly = false }) {
           );
         })}
       </div>
+      <AssetInfoModal 
+        asset={modalData.asset} 
+        isOpen={modalData.isOpen} 
+        onClose={closeModal} 
+      />
     </div>
   );
 } 

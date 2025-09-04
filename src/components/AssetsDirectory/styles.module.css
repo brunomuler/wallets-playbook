@@ -92,6 +92,36 @@
   color: var(--ifm-font-color-base);
 }
 
+.titleLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: inherit;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  padding: 2px 4px;
+  margin: -2px -4px;
+  border-radius: 4px;
+}
+
+.titleLink:hover {
+  color: var(--ifm-color-primary);
+  background-color: var(--ifm-color-emphasis-100);
+  text-decoration: none;
+}
+
+.externalIcon {
+  width: 16px;
+  height: 16px;
+  stroke-width: 2;
+  opacity: 0.7;
+  transition: opacity 0.2s ease;
+}
+
+.titleLink:hover .externalIcon {
+  opacity: 1;
+}
+
 .issuerNameLink {
   display: flex;
   align-items: center;
@@ -303,8 +333,8 @@
 .assetExpertLink {
   display: flex;
   align-items: center;
-  color: var(--ifm-color-emphasis-600);
-  opacity: 0.6;
+  color: var(--ifm-color-emphasis-700);
+  opacity: 0.8;
   transition: all 0.2s ease;
   text-decoration: none;
 }
@@ -318,6 +348,44 @@
   width: 14px;
   height: 14px;
   stroke-width: 2;
+}
+
+.assetActions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.assetInfoButton {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--ifm-color-emphasis-700);
+  opacity: 0.85;
+  transition: all 0.2s ease;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.assetInfoButton:hover {
+  color: var(--ifm-color-primary);
+  opacity: 1;
+  background-color: var(--ifm-color-emphasis-200);
+}
+
+.smallInfoIcon {
+  width: 12px;
+  height: 12px;
+  stroke-width: 2;
+}
+
+.infoButtonText {
+  white-space: nowrap;
 }
 
 .collapseButton {
@@ -411,13 +479,5 @@
 .websiteLink:hover {
   color: var(--ifm-color-primary-dark);
   text-decoration: underline;
-}
-
-
-
-.externalIcon {
-  width: 16px;
-  height: 16px;
-  stroke-width: 2;
 }
 
