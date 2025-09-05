@@ -1,20 +1,24 @@
 import React from 'react';
 import keyManagementData from '@site/src/data-remote/key-management.json';
 import ContributeNotice from '../ContributeNotice';
-import { getLogoUrl } from '@site/src/utils/imageMapper';
+import DirectoryCard from '../shared/DirectoryCard';
+import DirectoryGrid from '../shared/DirectoryGrid';
+import Logo from '../shared/Logo';
+import ExternalLink from '../shared/ExternalLink';
+import { useDirectoryData } from '../shared/dataUtils';
 import styles from './styles.module.css';
-import sharedStyles from '../shared/websiteButton.module.css';
 
 export default function KeyManagementDirectory() {
-  // Handle both wrapper format { data: [...] } and direct array format
-  const keyManagementEntities = (keyManagementData.data || keyManagementData) || [];
+  const { data: keyManagementEntities, isValid, EmptyState } = useDirectoryData(
+    keyManagementData, 
+    'No key management entities available at this time.'
+  );
   
-  // Handle empty or malformed data
-  if (!Array.isArray(keyManagementEntities) || keyManagementEntities.length === 0) {
+  if (!isValid) {
     return (
-      <div className={styles.gridContainer}>
+      <div>
         <ContributeNotice />
-        <p>No key management entities available at this time.</p>
+        <EmptyState />
       </div>
     );
   }
@@ -23,50 +27,23 @@ export default function KeyManagementDirectory() {
     <div>
       <ContributeNotice />
 
-      <div className={styles.gridContainer}>
+      <DirectoryGrid>
         {keyManagementEntities.map(entity => (
-          <div key={entity.id} className={styles.card}>
-            <div className={styles.cardHeader}>
-              {entity.logo ? (
-                <img
-                  src={getLogoUrl(entity.logo)}
-                  alt={`${entity.name} logo`}
-                  className={styles.logo}
-                />
-              ) : (
-                <div className={styles.logoPlaceholder}></div>
-              )}
-              <div className={sharedStyles.nameContainer}>
+          <DirectoryCard key={entity.id}>
+            <DirectoryCard.Header>
+              <Logo 
+                src={entity.logo} 
+                name={entity.name}
+                size="medium"
+              />
+              <div className={styles.nameContainer}>
                 <h3 className={styles.cardName}>{entity.name}</h3>
-                {entity.website && (
-                  <a
-                    href={entity.website}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={sharedStyles.websiteLink}
-                  >
-                    Website
-                    <svg
-                      className={sharedStyles.externalIcon}
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-                      />
-                    </svg>
-                  </a>
-                )}
+                <ExternalLink href={entity.website} text="Website" />
               </div>
-            </div>
-          </div>
+            </DirectoryCard.Header>
+          </DirectoryCard>
         ))}
-      </div>
+      </DirectoryGrid>
     </div>
   );
 }

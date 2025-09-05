@@ -1,19 +1,24 @@
 import React from 'react';
 import cardsData from '@site/src/data-remote/cards.json';
 import ContributeNotice from '../ContributeNotice';
-import { getLogoUrl } from '@site/src/utils/imageMapper';
+import DirectoryCard from '../shared/DirectoryCard';
+import DirectoryGrid from '../shared/DirectoryGrid';
+import Logo from '../shared/Logo';
+import ExternalLink from '../shared/ExternalLink';
+import { useDirectoryData } from '../shared/dataUtils';
 import styles from './styles.module.css';
-import sharedStyles from '../shared/websiteButton.module.css';
 
 export default function CardsDirectory() {
-  // Handle both wrapper format { data: [...] } and direct array format
-  const cards = (cardsData.data || cardsData) || [];
+  const { data: cards, isValid, EmptyState } = useDirectoryData(
+    cardsData, 
+    'No cards data available.'
+  );
   
-  // Handle empty or malformed data
-  if (!Array.isArray(cards) || cards.length === 0) {
+  if (!isValid) {
     return (
-      <div className={styles.gridContainer}>
-        <p>No cards data available.</p>
+      <div>
+        <ContributeNotice />
+        <EmptyState />
       </div>
     );
   }
@@ -22,50 +27,23 @@ export default function CardsDirectory() {
     <div>
       <ContributeNotice />
 
-      <div className={styles.gridContainer}>
+      <DirectoryGrid>
         {cards.map(card => (
-          <div key={card.id} className={styles.card}>
-            <div className={styles.cardHeader}>
-              {card.logo ? (
-                <img
-                  src={getLogoUrl(card.logo)}
-                  alt={`${card.name} logo`}
-                  className={styles.logo}
-                />
-              ) : (
-                <div className={styles.logoPlaceholder}></div>
-              )}
-              <div className={sharedStyles.nameContainer}>
+          <DirectoryCard key={card.id}>
+            <DirectoryCard.Header>
+              <Logo 
+                src={card.logo} 
+                name={card.name}
+                size="medium"
+              />
+              <div className={styles.nameContainer}>
                 <h3 className={styles.cardName}>{card.name}</h3>
-                {card.website && (
-                  <a
-                    href={card.website}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={sharedStyles.websiteLink}
-                  >
-                    Website
-                    <svg
-                      className={sharedStyles.externalIcon}
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-                      />
-                    </svg>
-                  </a>
-                )}
+                <ExternalLink href={card.website} text="Website" />
               </div>
-            </div>
-          </div>
+            </DirectoryCard.Header>
+          </DirectoryCard>
         ))}
-      </div>
+      </DirectoryGrid>
     </div>
   );
 } 

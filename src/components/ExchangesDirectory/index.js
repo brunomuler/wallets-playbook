@@ -1,311 +1,49 @@
-import React, { useState, useMemo, useEffect } from 'react';
-import Select from 'react-select';
+import React from 'react';
 import exchangesDataRaw from '@site/src/data-remote/exchanges.json';
 import ContributeNotice from '../ContributeNotice';
-import { getLogoUrl } from '@site/src/utils/imageMapper';
+import DirectoryCard from '../shared/DirectoryCard';
+import DirectoryGrid from '../shared/DirectoryGrid';
+import Logo from '../shared/Logo';
+import ExternalLink from '../shared/ExternalLink';
+import { useDirectoryData } from '../shared/dataUtils';
 import styles from './styles.module.css';
-import sharedStyles from '../shared/websiteButton.module.css';
 
-// Handle both wrapper format { data: [...] } and direct array format
-const exchangesData = (exchangesDataRaw.data || exchangesDataRaw) || [];
+export default function ExchangesDirectory() {
+  const { data: exchanges, isValid, EmptyState } = useDirectoryData(
+    exchangesDataRaw, 
+    'No exchanges data available.'
+  );
 
-const GEOGRAPHY_VISIBILITY_THRESHOLD = 10;
-
-const Flag = ({ code, country }) => {
-    const [error, setError] = useState(false);
-
-    if (error || !code) {
-        return null;
-    }
-
+  if (!isValid) {
     return (
-        <img
-            src={`/img/flags/${code}.png`}
-            alt={`${country} flag`}
-            className={styles.flagIcon}
-            onError={() => setError(true)}
-        />
+      <div>
+        <ContributeNotice />
+        <EmptyState />
+      </div>
     );
-};
+  }
 
-
-// Add custom styles for react-select to use Docusaurus colors and support dark mode
-const customSelectStyles = {
-    control: (provided, state) => ({
-        ...provided,
-        backgroundColor: 'var(--ifm-background-color)',
-        borderColor: state.isFocused ? 'var(--ifm-color-primary)' : 'var(--ifm-color-primary-light)',
-        boxShadow: state.isFocused ? '0 0 0 1px var(--ifm-color-primary)' : 'none',
-        '&:hover': {
-            borderColor: 'var(--ifm-color-primary)',
-        },
-    }),
-    menu: (provided) => ({
-        ...provided,
-        backgroundColor: 'var(--ifm-background-surface-color)',
-    }),
-    option: (provided, state) => ({
-        ...provided,
-        backgroundColor: state.isSelected ? 'var(--ifm-color-primary-lighter)' : state.isFocused ? 'var(--ifm-color-emphasis-200)' : 'var(--ifm-background-color)',
-        color: state.isSelected ? 'var(--ifm-color-primary-darkest)' : 'inherit',
-        '&:active': {
-            backgroundColor: 'var(--ifm-color-primary-light)',
-        },
-    }),
-    multiValue: (provided) => ({
-        ...provided,
-        backgroundColor: 'var(--ifm-color-emphasis-200)',
-        border: '1px solid var(--ifm-color-emphasis-300)',
-    }),
-    multiValueLabel: (provided) => ({
-        ...provided,
-        color: 'var(--ifm-font-color-base)',
-        fontWeight: 500,
-    }),
-    multiValueRemove: (provided) => ({
-        ...provided,
-        color: 'var(--ifm-font-color-secondary)',
-        ':hover': {
-            backgroundColor: 'var(--ifm-color-emphasis-300)',
-            color: 'var(--ifm-font-color-base)',
-        },
-    }),
-};
-
-const ExchangesDirectory = () => {
-    // Handle empty or malformed data
-    if (!Array.isArray(exchangesData) || exchangesData.length === 0) {
-        return (
-            <div>
-                <p>No exchanges data available.</p>
-            </div>
-        );
-    }
-    
-    const [selectedGeos, setSelectedGeos] = useState([]);
-    const [expandedExchanges, setExpandedExchanges] = useState({}); // { [exchangeId: string]: boolean }
-    const [countryCodeMapping, setCountryCodeMapping] = useState({});
-
-    useEffect(() => {
-        if (typeof window !== 'undefined') {
-            fetch('/data/country-code-mapping.json')
-                .then(res => res.json())
-                .then(data => setCountryCodeMapping(data))
-                .catch(err => console.error('Failed to load country code mapping:', err));
-        }
-    }, []);
-
-    const toggleExchangeExpansion = (exchangeId) => {
-        setExpandedExchanges(prev => ({
-            ...prev,
-            [exchangeId]: !prev[exchangeId]
-        }));
-    };
-
-    const formatOptionLabel = ({ value, label, alpha3 }) => {
-        const alpha2Code = countryCodeMapping[alpha3];
-        return (
-            <div className={styles.countryOption}>
-                <Flag code={alpha2Code} country={label} />
-                <span style={{ marginLeft: '10px' }}>{label}</span>
-            </div>
-        );
-    };
-
-    const geoOptions = useMemo(() => {
-        const geos = {};
-        exchangesData.forEach(exchange => {
-            exchange.geo_rollout.forEach(geo => {
-                if (!geos[geo.country]) {
-                    geos[geo.country] = {
-                        value: geo.country,
-                        label: geo.country,
-                        alpha3: geo.country_code,
-                    };
-                }
-            });
-        });
-        return Object.values(geos).sort((a, b) => a.label.localeCompare(b.label));
-    }, []);
-
-    const filteredExchanges = useMemo(() => {
-        if (!selectedGeos || selectedGeos.length === 0) {
-            return exchangesData;
-        }
-        const selectedCountries = selectedGeos.map(s => s.value.toLowerCase());
-        return exchangesData.filter(exchange =>
-            exchange.geo_rollout.some(geo =>
-                selectedCountries.includes(geo.country.toLowerCase())
-            )
-        );
-    }, [selectedGeos]);
-
-    const allGeos = useMemo(() => {
-        const geos = new Set();
-        exchangesData.forEach(exchange => {
-            exchange.geo_rollout.forEach(geo => {
-                geos.add(geo.country);
-            });
-        });
-        return Array.from(geos).sort();
-    }, []);
-
-    return (
-        <div>
-            <ContributeNotice />
-            {/* Geography filter temporarily hidden */}
-            {/* <div className={styles.filter}>
-                <label htmlFor="geoFilter">Filter by Geography:</label>
-                <Select
-                    id="geoFilter"
-                    isMulti
-                    options={geoOptions}
-                    onChange={setSelectedGeos}
-                    value={selectedGeos}
-                    formatOptionLabel={formatOptionLabel}
-                    placeholder="Type to search and select countries..."
-                    className={styles.geoSelect}
-                    styles={customSelectStyles}
-                />
-            </div> */}
-            <div className={styles.exchangesList}>
-                {filteredExchanges.map(exchange => {
-                    const allExchangeOptions = Array.from(new Set(exchange.geo_rollout.flatMap(g => g.ramp_options))).sort();
-                    const allPaymentMethods = Array.from(new Set(exchange.geo_rollout.flatMap(g => g.payment_methods.map(p => p.name)))).sort();
-
-                    const geosByCountry = exchange.geo_rollout.reduce((acc, geo) => {
-                        const countryName = geo.country;
-                        if (!acc[countryName]) {
-                            acc[countryName] = {
-                                country: countryName,
-                                country_code_alpha3: geo.country_code,
-                                currencies: new Set(),
-                                ramp_options: new Set(),
-                                payment_methods: [],
-                                payment_method_names: new Set()
-                            };
-                        }
-                        acc[countryName].currencies.add(geo.currency);
-                        geo.ramp_options.forEach(opt => acc[countryName].ramp_options.add(opt));
-                        geo.payment_methods.forEach(pm => {
-                            if (!acc[countryName].payment_method_names.has(pm.name)) {
-                                acc[countryName].payment_methods.push(pm);
-                                acc[countryName].payment_method_names.add(pm.name);
-                            }
-                        });
-                        return acc;
-                    }, {});
-
-                    Object.values(geosByCountry).forEach(geoData => {
-                        geoData.currencies = Array.from(geoData.currencies);
-                        geoData.ramp_options = Array.from(geoData.ramp_options).sort();
-                        geoData.payment_methods.sort((a, b) => a.name.localeCompare(b.name));
-                    });
-
-                    const uniqueGeos = Object.values(geosByCountry).sort((a,b) => a.country.localeCompare(b.country));
-
-                    const isExpanded = expandedExchanges[exchange.id];
-                    const hasTooManyGeos = uniqueGeos.length > GEOGRAPHY_VISIBILITY_THRESHOLD;
-                    const visibleGeos = hasTooManyGeos && !isExpanded
-                        ? uniqueGeos.slice(0, GEOGRAPHY_VISIBILITY_THRESHOLD)
-                        : uniqueGeos;
-
-
-                    return (
-                        <div key={exchange.id} className={styles.exchangeCard}>
-                            <div className={styles.exchangeHeader}>
-                                <div className={styles.exchangeIdentity}>
-                                    {exchange.logo ? (
-                                        <img src={getLogoUrl(exchange.logo)} alt={`${exchange.name} logo`} className={styles.exchangeLogo} />
-                                    ) : (
-                                        <div className={styles.exchangeLogoPlaceholder}></div>
-                                    )}
-                                    <div className={sharedStyles.nameContainer}>
-                                        <span className={styles.exchangeName}>{exchange.name}</span>
-                                        {exchange.website && (
-                                            <a href={exchange.website} target="_blank" rel="noopener noreferrer" className={sharedStyles.websiteLink}>
-                                                Website
-                                                <svg
-                                                    className={sharedStyles.externalIcon}
-                                                    fill="none"
-                                                    stroke="currentColor"
-                                                    viewBox="0 0 24 24"
-                                                    xmlns="http://www.w3.org/2000/svg"
-                                                >
-                                                    <path
-                                                        strokeLinecap="round"
-                                                        strokeLinejoin="round"
-                                                        strokeWidth={2}
-                                                        d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-                                                    />
-                                                </svg>
-                                            </a>
-                                        )}
-                                    </div>
-                                </div>
-                            </div>
-                            {/* Exchange details temporarily hidden */}
-                            {/* <div className={styles.exchangeDetails}>
-                                <div className={styles.detailItem}>
-                                    <strong>Geographies</strong>
-                                    <div className={styles.geographiesList}>
-                                        {visibleGeos.map((geo) => {
-                                            const alpha2Code = countryCodeMapping[geo.country_code_alpha3];
-                                            return (
-                                                <span key={`${exchange.id}-${geo.country}`} className={styles.geoTagContainer}>
-                                                    <span
-                                                        className={styles.geoTag}
-                                                    >
-                                                        <Flag code={alpha2Code} country={geo.country} />
-                                                        {geo.country}
-                                                    </span>
-                                                    <div className={styles.popover}>
-                                                        <div className={styles.popoverHeader}>
-                                                            <Flag code={alpha2Code} country={geo.country} />
-                                                            <h4>{geo.country}</h4>
-                                                        </div>
-                                                        <div className={styles.popoverContent}>
-                                                            <div className={styles.popoverSection}>
-                                                                <p><strong>Currencies:</strong> {geo.currencies.join(', ')}</p>
-                                                            </div>
-                                                            <div className={styles.popoverSection}>
-                                                                <p><strong>Ramp Options:</strong> {geo.ramp_options.join(', ') || 'N/A'}</p>
-                                                            </div>
-                                                            <div className={styles.popoverSection}>
-                                                                <strong>Payment Methods:</strong>
-                                                                <ul>
-                                                                    {geo.payment_methods.map((pm, pmIndex) => (
-                                                                        <li key={pmIndex}>
-                                                                            {pm.name}
-                                                                            {pm.description && <span> - {pm.description}</span>}
-                                                                        </li>
-                                                                    ))}
-                                                                </ul>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </span>
-                                            )
-                                        })}
-                                        {hasTooManyGeos && (
-                                            <button onClick={() => toggleExchangeExpansion(exchange.id)} className={styles.showMoreButton}>
-                                                {isExpanded ? 'Show less' : `Show ${uniqueGeos.length - GEOGRAPHY_VISIBILITY_THRESHOLD} more...`}
-                                            </button>
-                                        )}
-                                    </div>
-                                </div>
-
-                                <div className={styles.detailItem}>
-                                    <strong>Payment Methods</strong>
-                                    <p>{allPaymentMethods.length > 0 ? allPaymentMethods.join(', ') : 'N/A'}</p>
-                                </div>
-                            </div> */}
-                        </div>
-                    );
-                })}
-            </div>
-        </div>
-    );
-};
-
-export default ExchangesDirectory; 
+  return (
+    <div>
+      <ContributeNotice />
+      
+      <DirectoryGrid columns="repeat(2, 1fr)">
+        {exchanges.map(exchange => (
+          <DirectoryCard key={exchange.id}>
+            <DirectoryCard.Header>
+              <Logo 
+                src={exchange.logo} 
+                name={exchange.name}
+                size="large"
+              />
+              <div className={styles.nameContainer}>
+                <h3 className={styles.exchangeName}>{exchange.name}</h3>
+                <ExternalLink href={exchange.website} text="Website" />
+              </div>
+            </DirectoryCard.Header>
+          </DirectoryCard>
+        ))}
+      </DirectoryGrid>
+    </div>
+  );
+}

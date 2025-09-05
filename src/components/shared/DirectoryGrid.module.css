@@ -1,0 +1,13 @@
+/* Shared grid layout for all directory components */
+.directoryGrid {
+  display: grid;
+  grid-template-columns: var(--grid-template-columns);
+  gap: var(--grid-gap);
+}
+
+/* Responsive behavior for 2-column layouts */
+@media (max-width: 768px) {
+  .directoryGrid {
+    grid-template-columns: 1fr !important;
+  }
+}

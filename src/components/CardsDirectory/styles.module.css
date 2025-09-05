@@ -1,63 +1,8 @@
-/* Grid and card styles */
-.gridContainer {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-  gap: 16px;
-}
-
-.card {
-  --card-background: #fff;
-  --card-border-color: #e0e0e0;
-  --card-shadow: 0 2px 4px rgba(0,0,0,0.05);
-  --card-hover-shadow: 0 4px 12px rgba(0,0,0,0.1);
-
-  background-color: var(--card-background);
-  border: 1px solid var(--card-border-color);
-  border-radius: 8px;
-  padding: 20px;
+/* Component-specific styles for CardsDirectory */
+.nameContainer {
   display: flex;
   flex-direction: column;
-  transition: box-shadow 0.3s ease;
-  box-shadow: var(--card-shadow);
-}
-
-.card:hover {
-  box-shadow: var(--card-hover-shadow);
-}
-
-:global([data-theme='dark']) .card {
-  --card-background: var(--ifm-background-surface-color);
-  --card-border-color: var(--ifm-color-emphasis-300);
-  --card-shadow: 0 2px 4px rgba(0,0,0,0.2);
-  --card-hover-shadow: 0 4px 12px rgba(0,0,0,0.3);
-}
-
-.cardHeader {
-  display: flex;
-  align-items: flex-start;
-  margin-bottom: 0;
-}
-
-.logo {
-  width: 80px;
-  height: 80px;
-  margin-right: 16px;
-  border-radius: 8px;
-  border: 1px solid #d1d5db;
-  object-fit: contain;
-}
-
-:global([data-theme='dark']) .logo {
-  border-color: var(--ifm-color-emphasis-300);
-}
-
-.logoPlaceholder {
-  width: 80px;
-  height: 80px;
-  margin-right: 16px;
-  border-radius: 8px;
-  background-color: var(--ifm-color-emphasis-200);
-  border: 1px solid var(--ifm-color-emphasis-300);
+  gap: 0.5rem;
 }
 
 .cardName {

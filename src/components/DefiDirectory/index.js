@@ -3,6 +3,7 @@ import { FaGlobe, FaGithub, FaChartBar } from 'react-icons/fa';
 import defiDataRaw from '@site/src/data-remote/defi.json';
 import bridgesDataRaw from '@site/src/data-remote/bridges.json';
 import ContributeNotice from '../ContributeNotice';
+import TypeTag from '../shared/TypeTag';
 import { getLogoUrl, getThumbnailUrl } from '@site/src/utils/imageMapper';
 import styles from './styles.module.css';
 import sharedStyles from '../shared/websiteButton.module.css';
@@ -131,7 +132,7 @@ const DefiDirectory = ({
                   )}
                   <div className={styles.titleContainer}>
                     <h3>{item.title}</h3>
-                    <span className={styles.cardType}>{item.type}</span>
+                    <TypeTag type={item.type} />
                   </div>
                 </div>
               </div>

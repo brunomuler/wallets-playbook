@@ -1,20 +1,24 @@
 import React from 'react';
 import dexDataRaw from '@site/src/data-remote/dex.json';
 import ContributeNotice from '../ContributeNotice';
-import { getLogoUrl } from '@site/src/utils/imageMapper';
+import DirectoryCard from '../shared/DirectoryCard';
+import DirectoryGrid from '../shared/DirectoryGrid';
+import Logo from '../shared/Logo';
+import ExternalLink from '../shared/ExternalLink';
+import { useDirectoryData } from '../shared/dataUtils';
 import styles from './styles.module.css';
-import sharedStyles from '../shared/websiteButton.module.css';
 
 export default function DexDirectory() {
-  // Handle both wrapper format { data: [...] } and direct array format
-  const dexes = (dexDataRaw.data || dexDataRaw) || [];
+  const { data: dexes, isValid, EmptyState } = useDirectoryData(
+    dexDataRaw, 
+    'No DEX data available.'
+  );
 
-  // Handle empty or malformed data
-  if (!Array.isArray(dexes) || dexes.length === 0) {
+  if (!isValid) {
     return (
-      <div className={styles.gridContainer}>
+      <div>
         <ContributeNotice />
-        <p>No DEX data available.</p>
+        <EmptyState />
       </div>
     );
   }
@@ -23,50 +27,23 @@ export default function DexDirectory() {
     <div>
       <ContributeNotice />
 
-      <div className={styles.gridContainer}>
+      <DirectoryGrid columns="repeat(2, 1fr)">
         {dexes.map((dex) => (
-          <div key={dex.id || dex.name} className={styles.card}>
-            <div className={styles.cardHeader}>
-              {dex.logo ? (
-                <img
-                  src={getLogoUrl(dex.logo)}
-                  alt={`${dex.name} logo`}
-                  className={styles.logo}
-                />
-              ) : (
-                <div className={styles.logoPlaceholder}></div>
-              )}
-              <div className={sharedStyles.nameContainer}>
+          <DirectoryCard key={dex.id || dex.name}>
+            <DirectoryCard.Header>
+              <Logo 
+                src={dex.logo} 
+                name={dex.name}
+                size="large"
+              />
+              <div className={styles.nameContainer}>
                 <h3 className={styles.cardName}>{dex.name}</h3>
-                {dex.website && (
-                  <a
-                    href={dex.website}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={sharedStyles.websiteLink}
-                  >
-                    Website
-                    <svg
-                      className={sharedStyles.externalIcon}
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-                      />
-                    </svg>
-                  </a>
-                )}
+                <ExternalLink href={dex.website} text="Website" />
               </div>
-            </div>
-          </div>
+            </DirectoryCard.Header>
+          </DirectoryCard>
         ))}
-      </div>
+      </DirectoryGrid>
     </div>
   );
 }

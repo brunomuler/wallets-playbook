@@ -89,17 +89,6 @@
   white-space: nowrap;
 }
 
-.cardType {
-  background-color: var(--ifm-color-primary);
-  color: #ffffff;
-  padding: 0.35rem 0.75rem;
-  border-radius: 9999px;
-  font-size: 0.8em;
-  font-weight: 700;
-  line-height: 1;
-  text-transform: uppercase;
-  align-self: flex-start;
-}
 
 .cardBody {
   padding: 0 1.5rem;

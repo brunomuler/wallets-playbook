@@ -1,0 +1,43 @@
+/* Shared logo styles for all directory components */
+.logo {
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  object-fit: contain;
+}
+
+.logoPlaceholder {
+  background-color: #f3f4f6;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  flex-shrink: 0;
+}
+
+:global([data-theme='dark']) .logo {
+  border-color: var(--ifm-color-emphasis-500);
+}
+
+:global([data-theme='dark']) .logoPlaceholder {
+  background-color: var(--ifm-color-emphasis-200);
+  border-color: var(--ifm-color-emphasis-500);
+}
+
+/* Size variants */
+.small {
+  width: 40px;
+  height: 40px;
+}
+
+.medium {
+  width: 80px;
+  height: 80px;
+}
+
+.large {
+  width: 90px;
+  height: 90px;
+}
+
+.xlarge {
+  width: 120px;
+  height: 120px;
+}
