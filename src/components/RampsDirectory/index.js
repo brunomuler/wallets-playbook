@@ -76,18 +76,20 @@ const customSelectStyles = {
     }),
     multiValue: (provided) => ({
         ...provided,
-        backgroundColor: 'var(--ifm-color-primary-lightest)',
+        backgroundColor: 'var(--ifm-color-emphasis-200)',
+        border: '1px solid var(--ifm-color-emphasis-300)',
     }),
     multiValueLabel: (provided) => ({
         ...provided,
-        color: 'var(--ifm-color-primary-darkest)',
+        color: 'var(--ifm-font-color-base)',
+        fontWeight: 500,
     }),
     multiValueRemove: (provided) => ({
         ...provided,
-        color: 'var(--ifm-color-primary-darkest)',
+        color: 'var(--ifm-font-color-secondary)',
         ':hover': {
-            backgroundColor: 'var(--ifm-color-primary-light)',
-            color: 'var(--ifm-color-primary-darkest)',
+            backgroundColor: 'var(--ifm-color-emphasis-300)',
+            color: 'var(--ifm-font-color-base)',
         },
     }),
 };

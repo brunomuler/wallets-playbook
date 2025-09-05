@@ -1,7 +1,7 @@
 .cardsGrid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 1.5rem;
+  gap: 16px;
 }
 
 @media (max-width: 768px) {
@@ -14,7 +14,7 @@
   border: 1px solid #e0e0e0;
   border-radius: 8px;
   padding: 0;
-  margin-bottom: 1.5rem;
+  margin-bottom: 16px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.05);
   transition: box-shadow 0.3s ease;
   background-color: #fff;
@@ -63,7 +63,7 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  margin-bottom: 1rem;
+  margin-bottom: 16px;
   padding: 1.5rem 1.5rem 0 1.5rem;
 }
 
@@ -106,7 +106,7 @@
 }
 
 .descriptionContainer {
-  margin-bottom: 1.5rem;
+  margin-bottom: 16px;
 }
 
 .description {

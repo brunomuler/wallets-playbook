@@ -1,7 +1,7 @@
 .gridContainer {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 24px;
+  gap: 16px;
 }
 
 .card {
@@ -34,7 +34,7 @@
 .cardHeader {
   display: flex;
   align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: 16px;
 }
 
 .logo {
@@ -221,7 +221,7 @@
   background-color: #e5f3ff;
   border-color: var(--ifm-color-primary-light);
   transform: translateY(-1px);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05), 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 :global([data-theme='dark']) .clickableAsset:hover {
