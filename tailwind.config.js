@@ -22,6 +22,7 @@ module.exports = {
     'icon-[heroicons--squares-2x2]',
     'icon-[heroicons--chart-pie]',
     'icon-[heroicons--paper-airplane]',
+    'icon-[heroicons--rocket-launch]',
   ],
   theme: {
     extend: {},
