@@ -11,15 +11,15 @@ Your choice between wallet types will depend on your specific use case, desired 
 
 ## Classic Wallets
 
-**Classic Wallets** utilize Stellar’s traditional account model, relying entirely on features native to the Stellar protocol. They do not leverage Soroban smart contracts.
+**Classic Wallets** utilize Stellar’s traditional [account model](https://developers.stellar.org/docs/learn/fundamentals/stellar-data-structures/accounts), relying entirely on features native to the Stellar protocol. They do not leverage Soroban smart contracts.
 
 ### Structure
 
 Classic Wallets:
 
 * Are backed by **Classic Stellar Accounts** (addresses beginning with G...)
-* Employ **Ed25519 public/private keypairs** for transaction signing
-* Store account data (balances, thresholds, signers) directly within **Stellar Core**
+* Employ **Ed25519 public/private keypairs** for [transaction signing](https://developers.stellar.org/docs/learn/fundamentals/transactions/signatures-multisig)
+* Store account data ([called subentries](https://developers.stellar.org/docs/learn/fundamentals/stellar-data-structures/accounts#subentries)) directly within **Stellar Core**
 
 ### Key Features
 
