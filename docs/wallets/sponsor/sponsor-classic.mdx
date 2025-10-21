@@ -12,7 +12,7 @@ This section assumes the reader has a basic understanding of [Lumens](https://de
 
 ## Classic Wallets
 
-Before looking into sponsorship, it's important to first understand reserves and fees on the Stellar Network for Classic Wallets and why they exist. 
+Before looking into sponsorship, it's important to first understand reserves and fees on the Stellar network for Classic Wallets and why they exist. 
 
 
 [Skip ahead if you're already familiar with this section.](#how-sponsorship-works)
@@ -22,7 +22,7 @@ Before looking into sponsorship, it's important to first understand reserves and
 
 The base reserve is an amount of Lumens (currently set to 0.5 XLM), used as a multiplier to calculate the minimum balance. The minimum balance is the amount of XLM necessary to create a wallet or to change a wallet options that require saving data to the network. Think about it as a way to pay for storing data on the network and to avoid spam.
 
-Even if an application's features only use assets other than XLM, having a minimum balance of XLM is still required to operate it. [Learn more](https://developers.stellar.org/docs/learn/fundamentals/stellar-data-structures/accounts#base-reserves-and-subentries). 
+Even if an application's features only use assets other than XLM, having a minimum balance of XLM is still required to operate it. [Learn more about base reserves](https://developers.stellar.org/docs/learn/fundamentals/stellar-data-structures/accounts#base-reserves-and-subentries). 
 
 :::note
 The most common base reserves used by accounts are:
@@ -52,7 +52,7 @@ Without sponsorship, the lumens were actually transferred from account A to acco
 
 > **Note**: This section covers reserves for Classic wallets. Smart wallets work in a different way. To learn more about Smart wallets, see [Sponsor Smart Wallets](./sponsor-smart).
 
-### Fees
+### [Fees](https://developers.stellar.org/docs/learn/fundamentals/fees-resource-limits-metering)
 
 When a Stellar account submits a transaction to the network, it will need to pay a fee to be processed. This is also called "gas" in some networks. This fee in the Stellar Network, although small, helps avoid spam on the network and can be used to prioritize transactions, especially if there's a network [surge](https://developers.stellar.org/docs/learn/fundamentals/fees-resource-limits-metering#surge-and-dynamic-pricing). The minimum fee on the Network is set to 100 stroops (stoop is the minimum fraction of lumens: 0.0000001 XLM) or 0.00001 XLM.
 
@@ -70,7 +70,7 @@ As an example, without using fee sponsoring, sending 1 XLM from an account A to 
 This guide covers both base reserve and fee sponsorship (fee bump). These are independent features - you can implement either one or both, depending on your application's needs.
 :::
 
-### Sponsoring base reserves
+### [Sponsoring base reserves](https://developers.stellar.org/docs/build/guides/transactions/sponsored-reserves)
 
 When sponsoring base reserves, the application will elect to lock Lumens on behalf of the users, so users don't need to hold any lumens. To do this, the application will format a transaction that includes an operation that defines that all the following operations in that same transaction that require reserves will be sponsored by its own account. Then, after defining all the necessary operations, it needs to define another operation that closes the sponsorship. This allows the application to say which operations it wants to sponsor explicitly, and the need to stop sponsoring in the same transaction guarantees that no additional sponsor reserves can be created without the sponsor's consent. If the user decides to change their own account in ways that require additional reserves, these won't be locked on the sponsor's account.
 

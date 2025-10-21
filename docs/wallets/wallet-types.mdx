@@ -26,7 +26,7 @@ Classic Wallets:
 Classic wallets natively support:
 
 * Sending and receiving XLM and other issued assets
-* Trustline management
+* [Trustline management](https://developers.stellar.org/docs/learn/fundamentals/stellar-data-structures/accounts#trustlines)
 * Signer management (adding/removing signers)
 * Trading via the Stellar Decentralized Exchange (DEX)
 * Account or trustline sponsorship
@@ -42,15 +42,15 @@ Classic wallets are suitable for:
 
 
 
-## Smart Wallets
+## [Smart Wallets](https://developers.stellar.org/docs/build/apps/smart-wallets):
 
-**Smart Wallets** leverage Soroban smart contracts, using programmable contract logic for transaction authorization and state management. This allows fully customizable on-chain functionality.
+**Smart Wallets** leverage Stellar smart contracts, using programmable contract logic for transaction authorization and state management. This allows for fully customizable on-chain functionality.
 
 ### Structure
 
 Smart Wallets:
 
-* Are backed by **Soroban Contract Accounts**
+* Are backed by **Stellar Contract Accounts**
 * Utilize contract logic for authorization rather than individual keys
 * Can be created and initialized via external apps or directly by users
 
@@ -81,7 +81,7 @@ Smart wallets are ideal for:
 
 | Feature                    | Classic Wallet            | Smart Wallet                   |
 | -------------------------- | ------------------------- | ------------------------------ |
-| Backed By                  | Stellar Core Account      | Soroban Contract Account       |
+| Backed By                  | Stellar Core Account      | Stellar Contract Account       |
 | Authorization              | Keypair & multi-signature | Programmable via Soroban logic |
 | On-Chain Logic             | No                        | Yes                            |
 

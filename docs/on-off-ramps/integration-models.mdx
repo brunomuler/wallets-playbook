@@ -34,14 +34,14 @@ Two standards exist for wallet and ramp integrations:
   - Regulatory compliance.  
   - Fiat settlement.
 - **Wallet Responsibilities:**  
-  - Initiate the flow using [`/transactions/interactive`](https://developers.stellar.org/docs/sep-24#1-request-interactive-flow).  
+  - Initiate the flow using `/transactions/interactive`.
   - Handle callback and transaction status updates.
 
 ### Integration Steps
-1. [Discover ramp endpoints via SEP-1](https://developers.stellar.org/docs/sep-1).
-2. Initiate an [interactive deposit or withdrawal request](https://developers.stellar.org/docs/sep-24#1-request-interactive-flow).
+1. [Discover ramp endpoints via SEP-1](https://developers.stellar.org/platforms/anchor-platform/next/admin-guide/sep1).
+2. Initiate an interactive deposit or withdrawal request
 3. Display the returned URL in a browser or iframe.
-4. Poll [`/transactions`](https://developers.stellar.org/docs/sep-24#polling-for-transaction-status) to track status.
+4. Poll the `/transactions` endpoint to track status.
 
 
 
