@@ -5,3 +5,4 @@ data-remote
 .DS_Store
 .docusaurus
 build
+.claude/settings.local.json
