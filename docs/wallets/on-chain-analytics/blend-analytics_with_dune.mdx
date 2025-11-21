@@ -22,16 +22,11 @@ This guide covers Blend-specific metrics:
 
 ![Blend Dashboard](/img/docs/dune_blend.png)
 
----
-
 ## Step 1: Identify Blend Pools (Materialized Query)
 
 This query identifies all Blend lending pools and their assets. **This is not wallet-specific** and can be shared across all wallets.
 
 You can use the [public materialized view](https://dune.com/queries/6025577) `dune.stellar.result_blend_pools` to get the list of Blend pools and their assets.
-
-
----
 
 ## Step 2: Get Current Blend Positions (Materialized Query)
 
@@ -85,8 +80,6 @@ FROM wallet_usdc_positions
 
 **Setup:** Create single value visualizations for each metric.
 
----
-
 ## Step 4: Daily Active Blend Users
 
 Track daily unique Blend users and identify first-time users:
@@ -136,8 +129,6 @@ ORDER BY day DESC
 
 **Setup:** Create a line chart with day on X-axis and unique users on Y-axis. Add a secondary axis for cumulative users.
 
----
-
 ## Step 5: All Assets in Blend
 
 To track all assets (not just USDC), modify Step 3:
@@ -173,8 +164,6 @@ ORDER BY net_position DESC
 
 **Setup:** Create a table visualization showing each asset and its totals.
 
----
-
 ## Understanding Blend Metrics
 
 ### Collateral vs Supply
@@ -183,18 +172,8 @@ ORDER BY net_position DESC
 - **Supply**: Assets supplied to the pool earning interest but not used as collateral for borrowing.
 - **Liabilities**: The amount borrowed by the user.
 
-
----
-
-
 ## Resources
 
 - [Blend Protocol Documentation](https://docs.blend.capital/)
 - [General Wallet Analytics Guide](./wallet-analytics_with_dune)
 - [Dune Documentation](https://docs.dune.com/)
-
----
-
-## Support
-
-For Blend-specific questions, visit the [Blend Discord](https://discord.gg/blend). For Dune query help, see the [Dune Discord](https://discord.gg/dune).
