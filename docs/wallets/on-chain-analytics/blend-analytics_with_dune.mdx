@@ -1,0 +1,200 @@
+---
+sidebar_label: 'Blend Analytics with Dune'
+sidebar_position: 2
+---
+# Wallet Blend Analytics Guide for Dune
+
+## Introduction
+
+This guide helps wallet builders track their users' activity on **Blend Protocol**. It builds upon the [General Wallet Analytics Guide](./wallet-analytics_with_dune) and focuses specifically on DeFi metrics.
+
+This tracking considers direct interaction with Blend without any intermediary contract such DeFindex or Blend Vaults. For Defindex, check the [DeFindex Dashboard Guide](https://dune.com/paltalabs/defindex) for a sample dashboard.
+
+
+## Overview
+
+This guide covers Blend-specific metrics:
+- Blend pool identification
+- User positions (collateral, liabilities, supply)
+- Daily active Blend users
+- USDC in Blend across your wallet's users
+- New vs. returning Blend users
+
+![Blend Dashboard](/img/docs/dune_blend.png)
+
+---
+
+## Step 1: Identify Blend Pools (Materialized Query)
+
+This query identifies all Blend lending pools and their assets. **This is not wallet-specific** and can be shared across all wallets.
+
+You can use the [public materialized view](https://dune.com/queries/6025577) `dune.stellar.result_blend_pools` to get the list of Blend pools and their assets.
+
+
+---
+
+## Step 2: Get Current Blend Positions (Materialized Query)
+
+This query extracts the latest Blend positions for all accounts across all pools. **This is also shared across wallets.**
+
+You can use the [public materialized view](https://dune.com/queries/6025459) `dune.stellar.result_blend_positions` to get the latest Blend positions for all accounts across all pools.
+
+
+## Step 3: USDC in Blend for Your Wallet
+
+Now we can filter the shared Blend positions to only your wallet's users. This example is using USDC as the asset, but you can replace it with any asset by updating the asset_code and asset_issuer.
+
+```sql
+-- Query: Wallet USDC in Blend
+-- Total USDC across all Blend positions for your wallet's accounts
+
+WITH wallet_usdc_positions AS (
+    SELECT
+        bp.address,
+        SUM(COALESCE(bp.collateral, 0)) AS total_collateral,
+        SUM(COALESCE(bp.liabilities, 0)) AS total_liabilities,
+        SUM(COALESCE(bp.supply, 0)) AS total_supply,
+        SUM(COALESCE(bp.collateral, 0) - COALESCE(bp.liabilities, 0)) AS net_position
+    FROM dune.stellar.result_blend_positions AS bp
+    INNER JOIN dune.[your_team_name].result_[your_wallet_name]_accounts AS wallet
+        ON bp.address = wallet.account_id
+    WHERE bp.asset_code = 'USDC'
+        AND bp.asset_issuer = 'GA5ZSEJYB37JRC5AVCIA5MOP4RHTM335X2KGX3IHOJAPP5RE34K4KZVN'
+    GROUP BY bp.address
+)
+
+SELECT
+    SUM(total_collateral) AS total_usdc_collateral,
+    SUM(total_liabilities) AS total_usdc_liabilities,
+    SUM(total_supply) AS total_usdc_supply,
+    SUM(net_position) AS net_usdc_position,
+    COUNT(DISTINCT address) AS wallet_accounts_with_usdc_positions,
+    COUNT(DISTINCT CASE WHEN net_position >= 1 THEN address END) AS accounts_with_usdc_gte_1,
+    SUM(CASE WHEN net_position >= 1 THEN net_position END) /
+        NULLIF(COUNT(DISTINCT CASE WHEN net_position >= 1 THEN address END), 0) AS avg_usdc_held_blend_gte_1
+FROM wallet_usdc_positions
+```
+
+**Metrics Explained:**
+- `total_usdc_collateral`: USDC deposited as collateral across all users
+- `total_usdc_liabilities`: USDC borrowed across all users
+- `total_usdc_supply`: USDC supplied to the pool (earning interest)
+- `net_usdc_position`: Net USDC position (collateral - liabilities)
+- `accounts_with_usdc_gte_1`: Users with at least 1 USDC net in Blend
+- `avg_usdc_held_blend_gte_1`: Average USDC per user (excluding dust positions)
+
+**Setup:** Create single value visualizations for each metric.
+
+---
+
+## Step 4: Daily Active Blend Users
+
+Track daily unique Blend users and identify first-time users:
+
+```sql
+-- Query: Daily Blend Users
+-- Daily unique Blend users for your wallet (any Blend contract interaction)
+-- Tracks all Blend interactions: positions, liquidations, rewards, etc.
+-- Also identifies first-time Blend users
+
+WITH wallet_blend_activity AS (
+    SELECT
+        DATE(closed_at) AS day,
+        CAST(JSON_EXTRACT(key_decoded, '$.vec[1].address') AS VARCHAR) AS user_address,
+        MIN(DATE(closed_at)) OVER (PARTITION BY CAST(JSON_EXTRACT(key_decoded, '$.vec[1].address') AS VARCHAR)) AS first_interaction_day
+    FROM stellar.contract_data
+    WHERE deleted = FALSE
+        AND contract_id IN (
+            SELECT DISTINCT pool_contract_id
+            FROM dune.stellar.result_blend_pools
+        )
+        -- Extract address from various key patterns (vec[1].address is common pattern)
+        AND JSON_EXTRACT(key_decoded, '$.vec[1].address') IS NOT NULL
+        AND CAST(JSON_EXTRACT(key_decoded, '$.vec[1].address') AS VARCHAR) IN (
+            SELECT account_id
+            FROM dune.[your_team_name].result_[your_wallet_name]_accounts
+        )
+)
+
+SELECT
+    day,
+    COUNT(DISTINCT user_address) AS unique_wallet_users,
+    COUNT(*) AS position_updates,
+    COUNT(DISTINCT CASE WHEN day = first_interaction_day THEN user_address END) AS new_blend_users,
+    SUM(COUNT(DISTINCT CASE WHEN day = first_interaction_day THEN user_address END))
+        OVER (ORDER BY day) AS cumulative_blend_users
+FROM wallet_blend_activity
+GROUP BY day
+ORDER BY day DESC
+```
+
+**Metrics:**
+- `unique_wallet_users`: Daily active Blend users from your wallet
+- `position_updates`: Number of position changes (deposits, withdrawals, borrows, repayments)
+- `new_blend_users`: First-time Blend users on that day
+- `cumulative_blend_users`: Running total of unique Blend users
+
+**Setup:** Create a line chart with day on X-axis and unique users on Y-axis. Add a secondary axis for cumulative users.
+
+---
+
+## Step 5: All Assets in Blend
+
+To track all assets (not just USDC), modify Step 3:
+
+```sql
+-- Query: All Assets in Blend for Your Wallet
+WITH wallet_all_positions AS (
+    SELECT
+        bp.asset_code,
+        bp.asset_issuer,
+        bp.address,
+        SUM(COALESCE(bp.collateral, 0)) AS total_collateral,
+        SUM(COALESCE(bp.liabilities, 0)) AS total_liabilities,
+        SUM(COALESCE(bp.supply, 0)) AS total_supply
+    FROM dune.stellar.result_blend_positions AS bp
+    INNER JOIN dune.[your_team_name].result_[your_wallet_name]_accounts AS wallet
+        ON bp.address = wallet.account_id
+    GROUP BY bp.asset_code, bp.asset_issuer, bp.address
+)
+
+SELECT
+    asset_code,
+    asset_issuer,
+    SUM(total_collateral) AS total_collateral,
+    SUM(total_liabilities) AS total_liabilities,
+    SUM(total_supply) AS total_supply,
+    SUM(total_collateral - total_liabilities) AS net_position,
+    COUNT(DISTINCT address) AS unique_users
+FROM wallet_all_positions
+GROUP BY asset_code, asset_issuer
+ORDER BY net_position DESC
+```
+
+**Setup:** Create a table visualization showing each asset and its totals.
+
+---
+
+## Understanding Blend Metrics
+
+### Collateral vs Supply
+
+- **Collateral**: Assets deposited that can be borrowed against. These assets are "locked" as collateral for loans.
+- **Supply**: Assets supplied to the pool earning interest but not used as collateral for borrowing.
+- **Liabilities**: The amount borrowed by the user.
+
+
+---
+
+
+## Resources
+
+- [Blend Protocol Documentation](https://docs.blend.capital/)
+- [General Wallet Analytics Guide](./wallet-analytics_with_dune)
+- [Dune Documentation](https://docs.dune.com/)
+
+---
+
+## Support
+
+For Blend-specific questions, visit the [Blend Discord](https://discord.gg/blend). For Dune query help, see the [Dune Discord](https://discord.gg/dune).
